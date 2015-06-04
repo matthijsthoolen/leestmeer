@@ -1,4 +1,4 @@
-node_modules
+node_modules/ep_etherpad-lite
 settings.json
 !settings.json.template
 APIKEY.txt
