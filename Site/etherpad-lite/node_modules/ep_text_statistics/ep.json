@@ -1,0 +1,14 @@
+{
+  "parts": [
+    {
+      "name": "ep_text_statistics",
+      "client_hooks": {
+        "aceEditEvent" : "ep_text_statistics/static/js/editEvent"
+      },
+      "hooks": {
+        "eejsBlock_scripts" : "ep_text_statistics/scripts",
+        "eejsBlock_editbarMenuRight" : "ep_text_statistics/eejs"
+      }
+    }
+  ]
+}

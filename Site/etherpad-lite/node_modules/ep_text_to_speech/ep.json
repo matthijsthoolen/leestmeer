@@ -1,0 +1,13 @@
+{
+  "parts": [
+    {
+      "name": "text_to_speech",
+      "client_hooks": {
+        "postAceInit": "ep_text_to_speech/static/js/index:postAceInit"
+      },
+      "hooks": {
+        "eejsBlock_dd_help":"ep_text_to_speech/eejs"
+      }
+    }
+  ]
+}
