@@ -1,0 +1,34 @@
+/*
+  custom css files are loaded after core css files. Simply use the same selector to override a style.
+  Example:
+      #editbar LI {border:1px solid #000;}
+    overrides
+      #editbar LI {border:1px solid #d5d5d5;}
+    from pad.css
+*/
+
+/* Custom CSS for the side bar */
+#editorcontainer {
+	right: 20%;
+}
+
+#sidebar {
+	top: 38px;
+	left: 80%;
+	right: 0;
+	bottom: 0;
+	z-index: 1;
+	background-color: gray;
+	position: absolute;
+	background-color: #eee;
+	color: #888!important;
+	border-left: 1px solid #ccc;
+  	min-width: 200px;
+}
+
+#sidebarInner {
+	color: #666;
+	padding: 10px;
+}
+
+
