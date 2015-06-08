@@ -1,35 +1,40 @@
-var autobahn = require('autobahn');
+try {
+	var autobahn = require('autobahn');
+} catch (e) {
+	// when running in browser, AutobahnJS will
+	// be included without a module system
+}
 
 var connection = new autobahn.Connection({
-         url: 'ws://127.0.0.1:9000/',
-         realm: 'realm1'
-      });
+	url: 'ws://127.0.0.1:8080/ws',
+	realm: 'analyze'}
+										);
 
 connection.onopen = function (session) {
-	
-	console.log('hello you?');
 
-   // 1) subscribe to a topic
-   function onevent(args) {
-      console.log("Event:", args[0]);
-   }
-   session.subscribe('com.myapp.hello', onevent);
+	session.call('com.analyze.async').then(
+		function (now) {
+			console.log("Current time:", now);
+			connection.close();
+		},
+		function (error) {
+			console.log("Call failed:", error);
+			connection.close();
+		}
+	);
 
-   // 2) publish an event
-   session.publish('com.myapp.hello', ['Hello, world!']);
+	var received = 0;
 
-   // 3) register a procedure for remoting
-   function add2(args) {
-      return args[0] + args[1];
-   }
-   session.register('com.myapp.add2', add2);
+	function onevent1(args) {
+		console.log("Got event:", args[0]);
+		received += 1;
+		if (received > 5) {
+			console.log("Closing ..");
+			connection.close();
+		}
+	}
 
-   // 4) call a remote procedure
-   session.call('com.myapp.add2', [2, 3]).then(
-      function (res) {
-         console.log("Result:", res);
-      }
-   );
+	session.subscribe('com.analyze.async', onevent1);
 };
 
 connection.open();
