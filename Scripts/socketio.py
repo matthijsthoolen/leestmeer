@@ -19,21 +19,19 @@ class SocketIO:
 		self.close()
  
 	def handshake(self,host,port):
-# 		u = urlopen("http://%s:%d/socket.io/1" % (host, port))
-# 		print u.getcode()
-# 		if u.getcode() == 200:
-# 			response = u.readline()
-# 			print response
-# 			(sid, hbtimeout, ctimeout, supported) = response.split(":")
-# 			supportedlist = supported.split(",")
-# 			if "websocket" in supportedlist:
-# 				return (sid, hbtimeout, ctimeout)
-# 			else:
-# 				raise TransportException()
-# 		else:
-# 			raise InvalidResponseException()
-		print 'haha'
-		return ('10', '10', '10')
+		u = urlopen("http://%s:%d/socket.io/1" % (host, port))
+		print u.getcode()
+		if u.getcode() == 200:
+			response = u.readline()
+			print response
+			(sid, hbtimeout, ctimeout, supported) = response.split(":")
+			supportedlist = supported.split(",")
+			if "websocket" in supportedlist:
+				return (sid, hbtimeout, ctimeout)
+			else:
+				raise TransportException()
+		else:
+			raise InvalidResponseException()
  
 	def connect(self):
 		try:
@@ -51,7 +49,6 @@ class SocketIO:
 		self.ws.send('5:1::{"name":"%s","args":"%s"}' % (event, message))
  
 	def close(self):
-		print "closihg!"
 		self.ws.close()
  
 if __name__ == "__main__":
