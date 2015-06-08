@@ -21,7 +21,10 @@ def main(testset):
 			#print(test)
 			values = re.split('\s+', test)
 			print("Test "+ values[0] +" True AVI score:  "+ values[3])
-			os.system("c:\python34\python .\..\AVIscore.py --corpus sentences\\"+ values[0] +".txt")
+			os.system("c:\python34\python .\..\AVIscore.py --output avi --corpus sentences\\"+ values[0] +".txt")
+			print("Test "+ values[0] +" True AVI Age:  "+ values[4])
+			os.system("c:\python34\python .\..\AVIscore.py --output age --corpus sentences\\"+ values[0] +".txt")
+
 
 			
 # This function states the commandline arguments that are needed
