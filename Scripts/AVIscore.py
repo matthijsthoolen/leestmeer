@@ -48,7 +48,7 @@ def main(corpus):
 
 	print('Average amount of words per sentence: ' + str(avgWords))
 	print('Average amount of syllables per word: ' + str(avgSyllables))
-	aviScore = math.ceil(195 - (2 * avgWords) - (200/3*avgSyllables))
+	aviScore = math.ceil(195 - (2 * avgWords) - (200/3*avgSyllables)-0.5)
 	print('AVI Score: ' + str(aviScore))
 
 # This function is used in order to count the number of syllables a
