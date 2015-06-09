@@ -7,6 +7,8 @@ def main(corpus):
 	# 2. category   (type of the article)
 	# 3. title      (title of the article)
 	# 4. body       (body of the article)
+	# All of these can be accessed like this:
+	# 'dictionary name'['feature name']
 	content = pickle.load(open('articles.pickle', mode='rb'))
 
 	# Here the empty variables and their types should be defined
