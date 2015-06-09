@@ -1,0 +1,16 @@
+{
+   "pid": 560,
+   "options": {
+      "reactor": null,
+      "loglevel": "info",
+      "command": "start",
+      "logdir": null,
+      "debug": false,
+      "config": "/home/cabox/workspace/Scripts/router/.crossbar/config.json",
+      "cbdir": "/home/cabox/workspace/Scripts/router/.crossbar"
+   },
+   "argv": [
+      "/usr/local/bin/crossbar",
+      "start"
+   ]
+}

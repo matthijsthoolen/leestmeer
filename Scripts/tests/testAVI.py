@@ -10,7 +10,7 @@ def main(testset):
 		# text = text.replace('\.\n','\. ').replace('\n','')
 		file.close()	
 	except IOError:	
-		print('Cannot open '+corpus)
+		print('Cannot open '+testset)
 		sys.exit()
 
 	tests = re.split('\n', text)
