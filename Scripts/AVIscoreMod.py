@@ -32,7 +32,7 @@ def mainO(x):
 		totalText += body
 		totalText += '\n\n'
 		x['text'][index] = item
-	x['overall[0]']['aviscore'] = mainAVI(totalText, 'avi')
+	x['overall'][0]['aviscore'] = mainAVI(totalText, 'avi')
 
 def mainF(corpus,output):
 	try:
