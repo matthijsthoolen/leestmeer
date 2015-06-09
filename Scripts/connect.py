@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 from __future__ import print_function
 from os import environ
 import datetime
@@ -7,8 +9,7 @@ from twisted.internet.defer import inlineCallbacks
 from autobahn.twisted.util import sleep
 from autobahn.twisted.wamp import ApplicationSession, ApplicationRunner
 
-import json
-from collections import namedtuple
+import jsonpickle
 
 import AVIscoreMod
 
@@ -22,15 +23,24 @@ class Component(ApplicationSession):
 		print("session attached")
 
 		def analyze(message):
-			print(message)
+			#print(message)
+			#print()
 			
 			# Parse JSON into an object with attributes corresponding to dict keys.
-			x = json.loads(message, object_hook=lambda d: namedtuple('X', d.keys())(*d.values()))
-			print(x.info.id)
-			print(x.overall[0].aviscore)
+			#x = json.loads(message, object_hook=lambda d: namedtuple('X', d.keys())(*d.values()))
+			
+			x = jsonpickle.decode(message)
+		
+			print(x['text'][0]['paragraph'])
+			
+			#print(json.dumps(x))
+			
 			answer = AVIscoreMod.main(x,'avi','object')
 			print(answer.overall[0].aviscore)
-			return 'hello'
+			
+			encode = jsonpickle.encode(answer)
+			
+			return encode
 
 		try:
 			yield self.register(analyze, 'com.analyze.async')

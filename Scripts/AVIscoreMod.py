@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 from collections import Counter
 import sys, getopt, argparse, re, math
 
@@ -20,16 +22,17 @@ def main(obj, output, option):
 def mainO(x):
 	index = -1
 	totalText = ""
-	textarray = x.text
+	textarray = x['text']
 	for item in textarray:
 		index+=1
-		body = unicode(item.paragraph, 'utf-8')
-		item.aviscore = mainAVI(body, 'avi')
+		body = item['paragraph'].encode("utf-8")
+		print(item['aviscore'])
+		item['aviscore'] = mainAVI(body, 'avi')
 
 		totalText += body
 		totalText += '\n\n'
-		x.text[index] = item
-	x.overall[0].aviscore = mainAVI(totalText, 'avi')
+		x['text'][index] = item
+	x['overall'][0]['aviscore'] = mainAVI(totalText, 'avi')
 
 def mainF(corpus,output):
 	try:
