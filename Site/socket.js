@@ -8,13 +8,40 @@ try {
 var connection = new autobahn.Connection({
 	url: 'ws://127.0.0.1:8080/ws',
 	realm: 'analyze'}
-										);
+);
 
 connection.onopen = function (session) {
 
-	session.call('com.analyze.async').then(
-		function (now) {
-			console.log("Current time:", now);
+	var id = 'Me!';
+	var message = 
+		{
+			info: { 
+				id: 1,
+				name: 'My first etherpad'
+			},
+			overall: [{
+				aviscore: '?',
+				analytics: {
+					words: 5000,
+					paragraphs: 5
+				}
+			}],
+			text: [{
+				paragraph: "Lorem ipsum dolor sit amet",
+				aviscore: 40,
+				analytics: {
+					words: 5000,
+					paragraphs: 5
+				},
+				changed: false
+			}]
+		};
+	
+	var jsonmessage = JSON.stringify(message);
+	
+	session.call('com.analyze.async', [jsonmessage]).then(
+		function (resp) {
+			console.log("Response:", resp);
 			connection.close();
 		},
 		function (error) {
@@ -22,19 +49,6 @@ connection.onopen = function (session) {
 			connection.close();
 		}
 	);
-
-	var received = 0;
-
-	function onevent1(args) {
-		console.log("Got event:", args[0]);
-		received += 1;
-		if (received > 5) {
-			console.log("Closing ..");
-			connection.close();
-		}
-	}
-
-	session.subscribe('com.analyze.async', onevent1);
 };
 
 connection.open();
