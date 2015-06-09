@@ -1,23 +1,28 @@
-from collections import Counter
-import sys, getopt, argparse, re, pickle
+import sys, getopt, argparse, re, pickle, urllib.parse
 
 def main(corpus):
-	contents = pickle.load(open('articles.pickle', mode='rb'))
-	# print(contents)
-	# for article in contents:
-	# 	print(article)
-	# for identifier, identifierC, category, categoryC, title, titleC, body, bodyC in contents:
-		# print(identifier)
-	for identifier, category, title, body in contents:
-		print('identifier')
-		for ident,identC in identifier:
-			print(ident + ': ' + identC)
+	# Opens the pickled file as 'content'. This is a dictionary of features
+	# of every article:
+	# 1. identifier (source of the article)
+	# 2. category   (type of the article)
+	# 3. title      (title of the article)
+	# 4. body       (body of the article)
+	content = pickle.load(open('articles.pickle', mode='rb'))
 
+	# Here the empty variables and their types should be defined
+	# e.g.: domains = []
+	domains = []
+
+	# Body of the function
+	for article in content:
+		loc = urllib.parse.urlparse(article['identifier']).netloc
+		if domains.count(loc) == 0:
+			domains.append(loc)
 
 
 if __name__ == "__main__":
 	parser = argparse.ArgumentParser()
-	parser.add_argument("-corpus", "--corpus", help="Textfile of corpus", default="input.txt")
-	#Name and location of the text file to be parsed
+	parser.add_argument("-corpus", "--corpus", help="Textfile of corpus", default="articles.pickle")
+	# Name and location of the pickled articles file
 	args = parser.parse_args()
 	main(args.corpus)
