@@ -3,12 +3,37 @@
 from collections import Counter
 import sys, getopt, argparse, re, math
 
+
 # This is the main function of the code which calculates the AVI score
 # of a body of text. It does this by first calculating the average
 # number of words per sentence and the average number of syllables
 # per word. These two numbers are used in the final equation that 
 # computes the AVI score.
-def main(corpus, output):
+def main(obj, output, option):
+	if option=='file':
+		return mainF(obj, output)
+	elif option=='object':
+		return mainO(obj)
+	else:
+		print('Wrong option defined')
+		print('Expected: "file" or "object"')
+		print('Got: ' + str(option))
+
+def mainO(x):
+	index = -1
+	totalText = ""
+	textarray = x.text
+	for item in textarray:
+		index+=1
+		body = item.paragraph
+		item.aviscore = mainAVI(body, 'avi')
+
+		totalText += body
+		totalText += '\n\n'
+		x.text[index] = item
+	x.overall[0].aviscore = mainAVI(totalText, 'avi')
+
+def mainF(corpus,output):
 	try:
 		file = open(corpus, encoding='utf-8', mode='r')
 		text = file.read()
@@ -18,7 +43,9 @@ def main(corpus, output):
 	except IOError:	
 		print('Cannot open '+corpus)
 		sys.exit()
+	return mainAVI(text, output)
 
+def mainAVI(corpus, output):
 	wordCount = 0
 	syllableCount = 0
 	totWords = 0
@@ -119,7 +146,7 @@ def isSyllable(curLetter, prevLetter):
 
 # This function contains several exceptions in the dutch language that
 # count as new syllables. Rather than being a vowel followed by a consonant,
-# an 'A' following an 'E', as well as those letters with tremas can denote a new syllable
+# an 'A' following an 'E', as well as those letters with diaeresis can denote a new syllable
 def syllableExceptions(curLetter, prevLetter):
 	e = 'E'
 	a = 'A'
@@ -146,6 +173,7 @@ if __name__ == "__main__":
 	parser = argparse.ArgumentParser()
 	parser.add_argument("-corpus", "--corpus", help="Textfile of corpus", default="input.txt")
 	parser.add_argument("-output", "--output", help="Give the type of output, avi=avi score, age=avi age, debug=info", default="avi")
+	parser.add_argument("-option", "--option", help="Type of the corpus", default="file")
 	#Name and location of the text file to be parsed
 	args = parser.parse_args()
-	main(args.corpus, args.output)
+	main(args.corpus, args.output, args.option)

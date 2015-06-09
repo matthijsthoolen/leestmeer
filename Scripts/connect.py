@@ -10,7 +10,7 @@ from autobahn.twisted.wamp import ApplicationSession, ApplicationRunner
 import json
 from collections import namedtuple
 
-#import AVIscore
+import AVIscoreMod
 
 class Component(ApplicationSession):
 	"""
@@ -27,12 +27,11 @@ class Component(ApplicationSession):
 			# Parse JSON into an object with attributes corresponding to dict keys.
 			x = json.loads(message, object_hook=lambda d: namedtuple('X', d.keys())(*d.values()))
 			print(x.info.id)
-			print(x.overall[0].analytics.words)
-			
-			#AVIscore.main(x, 'avi');
 			
 			print(json.dumps(x, skipkeys=False))
 			
+			answer = AVIscoreMod.main(x,'avi','object')
+			print(answer.overall[0].aviscore)
 			return 'hello'
 
 		try:
