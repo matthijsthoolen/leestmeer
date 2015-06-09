@@ -1,4 +1,5 @@
 import sys, getopt, argparse, re, pickle, urllib.parse
+import xml.etree.ElementTree as ET
 
 def main(corpus):
 	# Opens the pickled file as 'content'. This is a dictionary of features
@@ -20,10 +21,14 @@ def main(corpus):
 		loc = urllib.parse.urlparse(article['identifier']).netloc
 		if domains.count(loc) == 0:
 			domains.append(loc)
-		print('--------------')
-		bod = article['body'].replace('<[\S]+>','')
+		bod = remove_tags(article['body'])
 		print(bod)
+		print('--------------')
 
+def remove_tags(text):
+	TAG_RE = re.compile(r'<[^>]+>')
+	textN = text.replace('<p> | <\\p>', '\n')
+	return TAG_RE.sub('', text)
 
 if __name__ == "__main__":
 	parser = argparse.ArgumentParser()
