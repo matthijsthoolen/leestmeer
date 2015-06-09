@@ -14,9 +14,12 @@ def main(obj, output, option):
 		return mainF(obj, output)
 	elif option=='object':
 		return mainO(obj)
+	elif option=='text':
+		(aviScore,totWords,totSentences) = mainAVI(obj,'avi')
+		return aviScore
 	else:
 		print('Wrong option defined')
-		print('Expected: "file" or "object"')
+		print('Expected: "file", "object" or "text"')
 		print('Got: ' + str(option))
 
 def mainO(x):
@@ -26,25 +29,33 @@ def mainO(x):
 	for item in textarray:
 		index+=1
 		body = item['paragraph'].encode("utf-8")
-		print(item['aviscore'])
-		item['aviscore'] = mainAVI(body, 'avi')
-
+		# print(item['aviscore'])
+		(aviScore,totWords,totSentences) = mainAVI(body, 'avi')
+		item['aviScore'] = aviScore
+		item['analytics']['total-words'] = totWords
+		item['analytics']['average-sentence'] is totWords/totSentences
 		totalText += body
 		totalText += '\n\n'
 		x['text'][index] = item
-	x['overall'][0]['aviscore'] = mainAVI(totalText, 'avi')
+	(aviScore,totWords,totSentences)= mainAVI(totalText, 'avi')
+	x['overall'][0]['aviscore'] = aviScore
+	x['overall'][0]['analytics']['paragraphs'] is index+1
+	return x
 
 def mainF(corpus,output):
 	try:
 		file = open(corpus, encoding='utf-8', mode='r')
 		text = file.read()
 		text = text.replace('\n',' ').replace('\"','')
-		# text = text.replace('\.\n','\. ').replace('\n','')
 		file.close()	
 	except IOError:	
 		print('Cannot open '+corpus)
 		sys.exit()
-	return mainAVI(text, output)
+	if output=='avi':
+		(aviScore,totWords,totSentences) = mainAVI(text, output)
+		return aviScore
+	else:
+		return mainAVI(text, output)
 
 def mainAVI(text, output):
 	wordCount = 0
@@ -84,16 +95,17 @@ def mainAVI(text, output):
 	
 	aviScore = math.ceil(195 - (2 * avgWords) - (200/3*avgSyllables)-0.5)
 	aviAge = calcAge(aviScore)
+	tup = (aviScore,totWords,totSentences)
 	
 	if output=='avi':
-		print('AVI Score: ' + str(aviScore))
-		return aviScore
+		# print('AVI Score: ' + str(aviScore))
+		return tup
 	elif output=='age':
 		if (aviAge > 0):
-			print('AVI Age: ' + str(aviAge))
+			# print('AVI Age: ' + str(aviAge))
 			return aviAge
 		else:
-			print('AVI Age: unspecified')
+			# print('AVI Age: unspecified')
 			return 'unspecified'
 			
 #aviScore is used to calculate the AVI Age
