@@ -10,6 +10,8 @@ from autobahn.twisted.wamp import ApplicationSession, ApplicationRunner
 import json
 from collections import namedtuple
 
+#import AVIscore
+
 class Component(ApplicationSession):
 	"""
     An application component that publishes an event every five seconds.
@@ -25,7 +27,11 @@ class Component(ApplicationSession):
 			# Parse JSON into an object with attributes corresponding to dict keys.
 			x = json.loads(message, object_hook=lambda d: namedtuple('X', d.keys())(*d.values()))
 			print(x.info.id)
-			print(x.overall[0].aviscore)
+			print(x.overall[0].analytics.words)
+			
+			#AVIscore.main(x, 'avi');
+			
+			print(json.dumps(x, skipkeys=False))
 			
 			return 'hello'
 

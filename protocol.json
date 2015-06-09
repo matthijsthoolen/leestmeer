@@ -10,7 +10,7 @@
 				"analytics": {
 					"words": "10455",
 					"paragraphs": "2",
-					"average-sentence": "10"
+					"avgSentence": "10"
 				}
 			}	
 		],
@@ -20,7 +20,7 @@
 				"aviscore": "40",
 				"analytics": {
 					"words": "5000",
-					"average-sentence": "8"
+					"avgSentence": "8"
 				},
 				"changed": "TRUE"
 			},
@@ -29,7 +29,7 @@
 				"aviscore": "50",
 				"analytics": {
 					"words": "5455",
-					"average-sentence": "12"
+					"avgSentence": "12"
 				},
 				"changed": "FALSE"
 			}
