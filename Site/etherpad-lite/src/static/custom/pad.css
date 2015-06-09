@@ -31,4 +31,19 @@
 	padding: 10px;
 }
 
+#analyseButton {
+    background: linear-gradient(#fff, #f0f0f0);
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	color: #858585;
+	cursor: pointer;
+	min-height: 18px;
+	padding: 4px 5px;
+	min-width: 18px;
+	font-weight: bold;
+	vertical-align: 10px;
+}
 
+#analyseButton span.buttonicon {
+	  margin-top: -2px;
+}
