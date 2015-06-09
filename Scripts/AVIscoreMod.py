@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+# -*- coding: latin-1 -*-
 from collections import Counter
 import sys, getopt, argparse, re, math
 
