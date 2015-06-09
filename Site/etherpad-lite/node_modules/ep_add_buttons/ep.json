@@ -1,0 +1,15 @@
+{
+  "parts":[
+    {
+      "name": "add_buttons",
+      "client_hooks": {
+        "postAceInit": "ep_add_buttons/static/js/add_buttons"
+      },
+      "hooks": {
+        "handleMessage": "ep_add_buttons/handleMessage",
+        "eejsBlock_scripts": "ep_add_buttons/add_buttons",
+        "eejsBlock_styles": "ep_add_buttons/add_buttons"
+      }
+    }
+  ]
+}

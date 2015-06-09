@@ -6,7 +6,7 @@ import sys, getopt, argparse, re, math
 # number of words per sentence and the average number of syllables
 # per word. These two numbers are used in the final equation that 
 # computes the AVI score.
-def main(corpus):
+def main(corpus, output):
 	try:
 		file = open(corpus, encoding='utf-8', mode='r')
 		text = file.read()
@@ -26,7 +26,9 @@ def main(corpus):
 	avgSyllables = 0
 	sentences = re.split('\.[\s+]', text)
 	sentences = re.split('\.[\s|\n]|\!+|\?+',text)
-	print(sentences)
+	
+	if output=='debug':
+		print(sentences)
 
 	for sentence in sentences:
 		# print(sentence)
@@ -36,7 +38,7 @@ def main(corpus):
 			wordCount = len(words)
 			for word in words:
 				syllableCount = countSyllables(word)
-				if syllableCount > 0:
+				if (syllableCount > 0) & (output=='debug'):
 					print(word + ': ' +  str(syllableCount))
 				totSyllables += syllableCount
 			totWords += wordCount
@@ -46,10 +48,44 @@ def main(corpus):
 	avgWords = totWords/totSentences
 	avgSyllables = totSyllables/totWords
 
-	print('Average amount of words per sentence: ' + str(avgWords))
-	print('Average amount of syllables per word: ' + str(avgSyllables))
-	aviScore = math.ceil(195 - (2 * avgWords) - (200/3*avgSyllables))
-	print('AVI Score: ' + str(aviScore))
+	if output=='debug':
+		print('Average amount of words per sentence: ' + str(avgWords))
+		print('Average amount of syllables per word: ' + str(avgSyllables))
+	
+	aviScore = math.ceil(195 - (2 * avgWords) - (200/3*avgSyllables)-0.5)
+	aviAge = calcAge(aviScore)
+	
+	if output=='avi':
+		print('AVI Score: ' + str(aviScore))
+	elif output=='age':
+		if (aviAge > 0):
+			print('AVI Age: ' + str(aviAge))
+		else:
+			print('AVI Age: unspecified')
+			
+#aviScore is used to calculate the AVI Age
+def calcAge(aviScore):
+	if 127 >= aviScore >= 123:
+		return 1
+	elif 123 >= aviScore >= 112:
+		return 2
+	elif 112 >= aviScore >= 108:
+		return 3
+	elif 108 >= aviScore >= 100:
+		return 4
+	elif 99 >= aviScore >= 94:
+		return 5
+	elif 93 >= aviScore >= 89:
+		return 6
+	elif 88 >= aviScore >= 84:
+		return 7
+	elif 83 >= aviScore >= 79:
+		return 8
+	elif 78 >= aviScore >= 74:
+		return 9
+	else:
+		return 0
+
 
 # This function is used in order to count the number of syllables a
 # word contains. It does this by evaluating each letter in the word
@@ -104,6 +140,7 @@ def syllableExceptions(curLetter, prevLetter):
 if __name__ == "__main__":
 	parser = argparse.ArgumentParser()
 	parser.add_argument("-corpus", "--corpus", help="Textfile of corpus", default="input.txt")
+	parser.add_argument("-output", "--output", help="Give the type of output, avi=avi score, age=avi age, debug=info", default="avi")
 	#Name and location of the text file to be parsed
 	args = parser.parse_args()
-	main(args.corpus)
+	main(args.corpus, args.output)
