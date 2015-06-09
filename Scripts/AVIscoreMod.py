@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from collections import Counter
 import sys, getopt, argparse, re, math
 
@@ -169,9 +170,9 @@ def syllableExceptions(curLetter, prevLetter):
 # for the program to run.
 if __name__ == "__main__":
 	parser = argparse.ArgumentParser()
-	parser.add_argument("-obj", "--obj", help="Object or textfile", default="input.txt")
+	parser.add_argument("-obj", "--obj", help="Object or textfile", default="text1.txt")
 	parser.add_argument("-output", "--output", help="Give the type of output, avi=avi score, age=avi age, debug=info", default="avi")
-	parser.add_argument("-option", "--option", help="Type of the corpus", default="file")
+	parser.add_argument("-option", "--option", help="Type of the object", default="file")
 	#Name and location of the text file to be parsed
 	args = parser.parse_args()
-	main(args.corpus, args.output, args.option)
+	main(args.obj, args.output, args.option)
