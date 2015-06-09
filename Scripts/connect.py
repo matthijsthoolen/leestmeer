@@ -23,23 +23,18 @@ class Component(ApplicationSession):
 		print("session attached")
 
 		def analyze(message):
-			#print(message)
-			#print()
 			
-			# Parse JSON into an object with attributes corresponding to dict keys.
-			#x = json.loads(message, object_hook=lambda d: namedtuple('X', d.keys())(*d.values()))
-			
+			# Decode the json to python object
 			x = jsonpickle.decode(message)
-		
-			print(x['text'][0]['paragraph'])
 			
-			#print(json.dumps(x))
-			
+			# Run the AVIscore program
 			answer = AVIscoreMod.main(x,'avi','object')
-			print(answer.overall[0].aviscore)
+			print(answer)
 			
+			# encode it to JSON
 			encode = jsonpickle.encode(answer)
 			
+			#send back response
 			return encode
 
 		try:

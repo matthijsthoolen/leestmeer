@@ -10,14 +10,31 @@ var connection = new autobahn.Connection({
 	realm: 'analyze'}
 );
 
+
 connection.onopen = function (sessionLocal) {
 	console.log("Connection opened!");
 };
 
+
+/*
+ * Start the connection
+ */
 function start() {
 	connection.open();
 }
 
+
+/*
+ * Stop the connection
+ */
+function stop() {
+	connection.close();
+}
+
+
+/*
+ * Send analyze request to the server
+ */
 function sendAnalyzeRequest(message) {
 	var jsonmessage = JSON.stringify(message);
 	
@@ -27,53 +44,62 @@ function sendAnalyzeRequest(message) {
 		function (resp) {
 			console.log("Response:", resp);
 			//connection.close();
+			return JSON.parse(resp);
 		},
 		function (error) {
 			console.log("Call failed:", error);
-			connection.close();
+			//connection.close();
+			return false;
 		}
 	);
 }
 
-start();
 
-setTimeout(function() {
-    console.log('Sending stuff');
-	
-	var message = 
-	{
-		info: { 
-			id: 1,
-			name: 'My first etherpad'
-		},
-		overall: [{
-			aviscore: '?',
-			analytics: {
-				words: 1300,
-				paragraphs: 5
-			}
-		}],
-		text: [{
-			paragraph: 'Lorem ipsum dolor sit amet',
-			aviscore: '?',
-			analytics: {
-				words: 500,
-				avgSentence: 5
-			},
-			changed: true
-		},
+/*
+ * Debug function
+ */
+function test() {
+
+	start();
+
+	setTimeout(function() {
+		console.log('Sending stuff');
+
+		var message = 
 		{
-			paragraph: 'Second Lorem ipsum dolor sit amet',
-			aviscore: 40,
-			analytics: {
-				words: 800,
-				avgSentence: 5
+			info: { 
+				id: 1,
+				name: 'My first etherpad'
 			},
-			changed: false
-		}]
-	};
-	
-	if (connection.isConnected) {
-		sendAnalyzeRequest(message);
-	}
-}, 1500);
+			overall: [{
+				aviscore: '?',
+				analytics: {
+					words: 1300,
+					paragraphs: 5
+				}
+			}],
+			text: [{
+				paragraph: 'Lorem ipsum dolor sit amet',
+				aviscore: '?',
+				analytics: {
+					words: 500,
+					avgSentence: 5
+				},
+				changed: true
+			},
+			{
+				paragraph: 'Second Lorem ipsum dolor sit amet',
+				aviscore: 40,
+				analytics: {
+					words: 800,
+					avgSentence: 5
+				},
+				changed: false
+			}]
+		};
+
+		if (connection.isConnected) {
+			sendAnalyzeRequest(message);
+		}
+	}, 1500);
+}
