@@ -45,7 +45,7 @@ def mainF(corpus,output):
 		sys.exit()
 	return mainAVI(text, output)
 
-def mainAVI(corpus, output):
+def mainAVI(text, output):
 	wordCount = 0
 	syllableCount = 0
 	totWords = 0
