@@ -1,4 +1,3 @@
-# -*- coding: latin-1 -*-
 from collections import Counter
 import sys, getopt, argparse, re, math
 
@@ -24,7 +23,7 @@ def mainO(x):
 	textarray = x.text
 	for item in textarray:
 		index+=1
-		body = item.paragraph
+		body = unicode(item.paragraph, 'utf-8')
 		item.aviscore = mainAVI(body, 'avi')
 
 		totalText += body
