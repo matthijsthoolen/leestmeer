@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 from collections import Counter
 import sys, getopt, argparse, re, math
 
@@ -23,7 +25,8 @@ def mainO(x):
 	textarray = x.text
 	for item in textarray:
 		index+=1
-		body = unicode(item.paragraph, 'utf-8')
+		body = item.paragraph.encode("utf-8")
+		print(item.aviscore)
 		item.aviscore = mainAVI(body, 'avi')
 
 		totalText += body

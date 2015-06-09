@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 from __future__ import print_function
 from os import environ
 import datetime
@@ -22,13 +24,15 @@ class Component(ApplicationSession):
 		print("session attached")
 
 		def analyze(message):
-			print(message)
+			#print(message)
+			#print()
 			
 			# Parse JSON into an object with attributes corresponding to dict keys.
 			x = json.loads(message, object_hook=lambda d: namedtuple('X', d.keys())(*d.values()))
-			print(x.info.id)
+			#print(x)
+			#print()
 			
-			print(json.dumps(x, skipkeys=False))
+			#print(json.dumps(x))
 			
 			answer = AVIscoreMod.main(x,'avi','object')
 			print(answer.overall[0].aviscore)
