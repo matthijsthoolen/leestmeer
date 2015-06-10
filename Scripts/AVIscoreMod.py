@@ -30,16 +30,20 @@ def mainO(x):
 		index+=1
 		body = item['paragraph'].encode("utf-8")
 		# print(item['aviscore'])
-		(aviScore,totWords,totSentences) = mainAVI(body, 'avi')
+		(aviScore,totWords,totSentences,aviAge) = mainAVI(body, 'avi')
 		item['aviScore'] = aviScore
-		item['analytics']['total-words'] = totWords
-		item['analytics']['average-sentence'] is totWords/totSentences
+		item['aviAge'] = aviAge
+		item['analytics']['totalWords'] = totWords
+		item['analytics']['avgSentence'] is totWords/totSentences
 		totalText += body
 		totalText += '\n\n'
 		x['text'][index] = item
-	(aviScore,totWords,totSentences)= mainAVI(totalText, 'avi')
-	x['overall'][0]['aviscore'] = aviScore
+	(aviScore,totWords,totSentences,aviAge)= mainAVI(totalText, 'avi')
+	x['overall'][0]['aviScore'] = aviScore
 	x['overall'][0]['analytics']['paragraphs'] is index+1
+	x['overall'][0]['aviAge'] = aviAge
+	for item in x['text']:
+		if item['aviAge'] - 
 	return x
 
 def mainF(corpus,output):
@@ -52,7 +56,7 @@ def mainF(corpus,output):
 		print('Cannot open '+corpus)
 		sys.exit()
 	if output=='avi':
-		(aviScore,totWords,totSentences) = mainAVI(text, output)
+		(aviScore,totWords,totSentences,aviAge) = mainAVI(text, output)
 		return aviScore
 	else:
 		return mainAVI(text, output)
@@ -95,7 +99,7 @@ def mainAVI(text, output):
 	
 	aviScore = math.ceil(195 - (2 * avgWords) - (200/3*avgSyllables)-0.5)
 	aviAge = calcAge(aviScore)
-	tup = (aviScore,totWords,totSentences)
+	tup = (aviScore,totWords,totSentences,aviAge)
 	
 	if output=='avi':
 		# print('AVI Score: ' + str(aviScore))
