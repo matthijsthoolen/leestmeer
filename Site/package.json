@@ -1,0 +1,12 @@
+{ "name": "Leestmeer node.js",
+  "description": "Node.js server/client side voor KI second year KI project",
+  "version": "1.2.3",
+  "devDependencies": {
+    "nodemon": "latest"
+  },
+ "dependencies": {
+	"express": "latest",
+	"autobahn": "latest"
+ },
+  "main": "server.js"
+}
