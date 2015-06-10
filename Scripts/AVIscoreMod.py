@@ -15,8 +15,8 @@ def main(obj, output, option):
 	elif option=='object':
 		return mainO(obj)
 	elif option=='text':
-		(aviScore,totWords,totSentences) = mainAVI(obj,'avi')
-		return aviScore
+		(aviScore,totWords,totSentences,aviAge) = mainAVI(obj,'avi')
+		return (aviScore,aviAge)
 	else:
 		print('Wrong option defined')
 		print('Expected: "file", "object" or "text"')
@@ -34,14 +34,22 @@ def mainO(x):
 		item['aviScore'] = aviScore
 		item['aviAge'] = aviAge
 		item['analytics']['totalWords'] = totWords
-		item['analytics']['avgSentence'] is totWords/totSentences
+		avgSentence is totWords/totSentences
+		item['analytics']['avgSentence'] = avgSentence
 		totalText += body
 		totalText += '\n\n'
 		x['text'][index] = item
 	(aviScore,totWords,totSentences,aviAge)= mainAVI(totalText, 'avi')
 	x['overall'][0]['aviScore'] = aviScore
-	x['overall'][0]['analytics']['paragraphs'] is index+1
-	x['overall'][0]['aviAge'] = aviAge
+	numSentences is index+1
+	x['overall'][0]['analytics']['paragraphs'] = numSentences
+	x['overall'][0]['aviAge'] = aviAge 
+	for item in x['text']:
+		aviDiff is item['aviAge'] - x['overall'][0]['aviAge']
+		if (aviDiff > 1) | (aviDiff < -1):
+			item['paragraphColour'] = '#FF0000'
+		else:
+			item['paragraphColour'] = '#FFFFFF'
 	return x
 
 def mainF(corpus,output):
