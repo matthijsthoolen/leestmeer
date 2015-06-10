@@ -1,1 +1,4 @@
 node_modules/
+!node_modules/ep_add_buttons
+!node_modules/fs
+!node_modules/ep_etherpad-lite
