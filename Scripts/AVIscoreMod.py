@@ -42,8 +42,6 @@ def mainO(x):
 	x['overall'][0]['aviScore'] = aviScore
 	x['overall'][0]['analytics']['paragraphs'] is index+1
 	x['overall'][0]['aviAge'] = aviAge
-	for item in x['text']:
-		if item['aviAge'] - 
 	return x
 
 def mainF(corpus,output):
