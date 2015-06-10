@@ -33,7 +33,7 @@ def mainO(x):
 		(aviScore,totWords,totSentences) = mainAVI(body, 'avi')
 		item['aviScore'] = aviScore
 		item['analytics']['total-words'] = totWords
-		item['analytics']['average-sentence'] is totWords/totSentences
+		item['analytics']['avgSentence'] is totWords/totSentences
 		totalText += body
 		totalText += '\n\n'
 		x['text'][index] = item
