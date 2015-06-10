@@ -1,5 +1,6 @@
 import sys, getopt, argparse, re, pickle, urllib.parse
 import xml.etree.ElementTree as ET
+import AVIscoreMod
 
 def main(corpus):
 	# Opens the pickled file as 'content'. This is a dictionary of features
@@ -17,18 +18,23 @@ def main(corpus):
 	domains = []
 
 	# Body of the function
+	file = open('articles.txt','w')
 	for article in content:
 		loc = urllib.parse.urlparse(article['identifier']).netloc
 		if domains.count(loc) == 0:
 			domains.append(loc)
+		# print(article['body'])
 		bod = remove_tags(article['body'])
-		print(bod)
-		print('--------------')
+		file.write('AVI score: ' + str(AVIscoreMod.main(bod,'avi','text')))
+		file.write('\n')
+		file.write(bod)
+		file.write('\n ----------------------- \n')
 
 def remove_tags(text):
 	TAG_RE = re.compile(r'<[^>]+>')
-	textN = text.replace('<p> | <\\p>', '\n')
-	return TAG_RE.sub('', text)
+	P_RE = re.compile('<\/p><p>')
+	textN = P_RE.sub('\n', text)
+	return TAG_RE.sub('', textN)
 
 if __name__ == "__main__":
 	parser = argparse.ArgumentParser()
