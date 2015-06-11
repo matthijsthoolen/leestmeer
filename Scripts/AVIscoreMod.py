@@ -23,6 +23,9 @@ def main(obj, output, option):
 		print('Got: ' + str(option))
 
 def mainO(x):
+	avgSentence = 0
+	numSentences = 0
+	aviDiff = 0
 	index = -1
 	totalText = ""
 	textarray = x['text']
