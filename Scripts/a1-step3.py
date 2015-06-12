@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+
 ######Authors:##############
 #Rutger Kraaijer - 10382259#
 ###Jan Geestman - 10375406##
@@ -14,7 +15,7 @@ from itertools import permutations
 #Main function that prepares the corpus as list, adds start stop to every paragraph and calls functions based on arguments given by the user.
 def main(trainCorpus, testCorpus, n, smoothing):
 	try:
-		file = open(trainCorpus, 'r')
+		file = open(trainCorpus, 'r', encoding='utf-8', errors='ignore')
 		lines = file.read().splitlines()
 		file.close()
 		words = []
@@ -40,7 +41,8 @@ def main(trainCorpus, testCorpus, n, smoothing):
 
 	except IOError: 
 		print('Cannot open '+trainCorpus)
-
+	nGrams = makeNgrams(n, words)
+	print('Profile: ' + str(nGrams))
 	smooth(n, testCorpus, trainCorpus, smoothing)
 
 #Function that allows for two different types of smoothing. 
@@ -99,7 +101,8 @@ def smooth(n, testCorpus, trainCorpus, smoothing):
 		nProb = seqProb(n,sentence,nGrams,nGramsMin,nGramSum,smoothing,reverseDict)
 		if nProb == 0:
 			zeroCount += 1
-	print("'"+str(zeroCount/lineCount*100) + "'% of paragraphs has a probability of 0.0")
+	# print('linecount: ' + str(lineCount))
+	# print("'"+str(zeroCount/lineCount*100) + "'% of paragraphs has a probability of 0.0")
 
 
 #Applies Good Turing Smoothing to given frequency 'r'
@@ -157,7 +160,6 @@ def makeNgrams(n, words):
 #Function that returns the m most common nGrams	
 def getMostCommon(nGrams,m):
 	return nGrams.most_common(m)
-
 #Function that returns the number of nGrams
 def getSum(nGrams):
 	return sum(nGrams.values())

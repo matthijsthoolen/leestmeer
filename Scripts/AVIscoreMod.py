@@ -43,6 +43,8 @@ def mainO(x):
 		totalText += '\n\n'
 		x['text'][index] = item
 	(aviScore,totWords,totSentences,aviAge)= mainAVI(totalText, 'avi')
+	if aviScore > 127:
+		aviScore = 127
 	x['overall'][0]['aviScore'] = aviScore
 	numSentences is index+1
 	x['overall'][0]['analytics']['paragraphs'] = numSentences
