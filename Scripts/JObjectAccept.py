@@ -20,7 +20,7 @@ def main(obj):
 	for item in parObj:
 		index += 1
 		body = item['paragraph']
-		text = prepareText(body)
+		text = prepareText(body).decode('latin-1')
 		(aviScore,totWords,totSentences,aviAge) = AVIscoreMod.mainAVI(body)
 		(CLIB, CILT) = CITOMod.mainCITO(body)
 		item['aviScore'] = aviScore

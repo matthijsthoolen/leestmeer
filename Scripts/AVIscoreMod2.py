@@ -178,8 +178,8 @@ def isSyllable(curLetter, prevLetter):
 # count as new syllables. Rather than being a vowel followed by a consonant,
 # an 'A' following an 'E', as well as those letters with diaeresis can denote a new syllable
 def syllableExceptions(curLetter, prevLetter):
-	curLetter = curLetter.encode('utf-8').decode('latin-1')
-	prevLetter = prevLetter.encode('utf-8').decode('latin-1')
+	curLetter = curLetter.decode('latin-1')
+	prevLetter = prevLetter.decode('latin-1')
 	e = 'E'
 	a = 'A'
 	trema = 'ËÏ'
