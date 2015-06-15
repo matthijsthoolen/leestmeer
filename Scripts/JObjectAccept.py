@@ -2,7 +2,8 @@
 
 from collections import Counter
 import sys, getopt, argparse, re, math, json
-import AVIscoreMod, CITOMod
+import AVIscoreMod2 as AVIscoreMod
+import CITOMod
 
 
 # def main(f):
