@@ -11,7 +11,7 @@ from autobahn.twisted.wamp import ApplicationSession, ApplicationRunner
 
 import jsonpickle
 
-import AVIscoreMod
+import JObjectAccept
 
 class Component(ApplicationSession):
 	"""
@@ -28,7 +28,7 @@ class Component(ApplicationSession):
 			x = jsonpickle.decode(message)
 			
 			# Run the AVIscore program
-			answer = AVIscoreMod.main(x,'avi','object')
+			answer = JObjectAccept.main(x)
 			
 			# encode it to JSON
 			encode = jsonpickle.encode(answer)
