@@ -29,7 +29,6 @@ class Component(ApplicationSession):
 			
 			# Run the AVIscore program
 			answer = AVIscoreMod.main(x,'avi','object')
-			print(answer)
 			
 			# encode it to JSON
 			encode = jsonpickle.encode(answer)
