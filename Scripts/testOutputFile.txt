@@ -1,0 +1,9 @@
+Art N V Prep N N Prep N V Art Adj N Prep Adj N 
+Prep Art N Prep Adj N N V V Num N Misc V Art N Misc Adj 
+Prep N V Adj N Adv Art N N Prep V 
+Prep Art Num N V Pron 
+Prep Art Adj N Art Misc 
+Art N Prep Misc Adv Prep N V V V Punc V Adv Prep Art N Num V Conj Art Adj Prep Pron N V 
+Adv V Adj N Num N Prep Art N V 
+Art N Prep N Adj Misc V Prep Num Adj N Prep Art Num N 
+Adv Num V Art Adj N Prep Art V 
