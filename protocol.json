@@ -1,37 +1,42 @@
-	{
-		"info": 
-		{
-			"id": "Connection ID/key",
-			"name": "Etherpad pad name"
-		}
-		"overall": [
-			{
-				"aviscore": "45",
-				"analytics": {
-					"words": "10455",
-					"paragraphs": "2",
-					"avgSentence": "10"
-				}
-			}	
-		],
-		"text": [
-			{
-				"paragraph": "Lorem ipsum dolor sit amet",
-				"aviscore": "40",
-				"analytics": {
-					"words": "5000",
-					"avgSentence": "8"
-				},
-				"changed": "TRUE"
-			},
-			{
-				"paragraph": "Tweede lorem ipsum paragraaf",
-				"aviscore": "50",
-				"analytics": {
-					"words": "5455",
-					"avgSentence": "12"
-				},
-				"changed": "FALSE"
-			}
-		]
-	}
+{
+    "info": [
+        {
+            "id": "Connection ID/key",
+            "corpusSet": "NOS"
+        }
+    ],
+    "overall": [
+        {
+            "avi-score": "45",
+            "cilt-score": "10",
+            "clib-score": "15",
+            "analytics": {
+                "total-words": "10455",
+                "paragraphs": "2",
+                "average-sentence": "10",
+            }
+        }   
+    ],
+    "text": [
+        {
+            "paragraph": "Lorem ipsum dolor sit amet",
+            "paragraphColour": "#123456",
+            "avi-score": "40",
+            "analytics": {
+                "total-words": "5000",
+                "average-sentence": "8"
+            },
+            "changed": "TRUE"
+        },
+        {
+            "paragraph": "Tweede lorem ipsum paragraaf",
+            "paragraphColour": "#123456",
+            "avi-score": "50",
+            "analytics": {
+                "total-words": "5455",
+                "average-sentence": "12"
+            },
+            "changed": "FALSE"
+        }
+    ]
+}
