@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 from collections import Counter
 import sys, getopt, argparse, re, math
 
@@ -9,68 +7,6 @@ import sys, getopt, argparse, re, math
 # number of words per sentence and the average number of syllables
 # per word. These two numbers are used in the final equation that 
 # computes the AVI score.
-# def main(obj, output, option):
-# 	if option=='file':
-# 		return mainF(obj, output)
-# 	elif option=='object':
-# 		return mainO(obj)
-# 	elif option=='text':
-# 		(aviScore,totWords,totSentences,aviAge) = mainAVI(obj,'avi')
-# 		return (aviScore,aviAge)
-# 	else:
-# 		print('Wrong option defined')
-# 		print('Expected: "file", "object" or "text"')
-# 		print('Got: ' + str(option))
-
-# def mainO(x):
-# 	avgSentence = 0
-# 	numSentences = 0
-# 	aviDiff = 0
-# 	index = -1
-# 	totalText = ""
-# 	textarray = x['text']
-# 	for item in textarray:
-# 		index+=1
-# 		body = item['paragraph'].encode("utf-8")
-# 		# print(item['aviscore'])
-# 		(aviScore,totWords,totSentences,aviAge) = mainAVI(body, 'avi')
-# 		item['aviScore'] = aviScore
-# 		item['aviAge'] = aviAge
-# 		item['analytics']['totalWords'] = totWords
-# 		avgSentence is totWords/totSentences
-# 		item['analytics']['avgSentence'] = avgSentence
-# 		totalText += body
-# 		totalText += '\n\n'
-# 		x['text'][index] = item
-# 	(aviScore,totWords,totSentences,aviAge)= mainAVI(totalText, 'avi')
-# 	if aviScore > 127:
-# 		aviScore = 127
-# 	x['overall'][0]['aviScore'] = aviScore
-# 	numSentences is index+1
-# 	x['overall'][0]['analytics']['paragraphs'] = numSentences
-# 	x['overall'][0]['aviAge'] = aviAge 
-# 	for item in x['text']:
-# 		aviDiff is item['aviAge'] - x['overall'][0]['aviAge']
-# 		if (aviDiff > 1) | (aviDiff < -1):
-# 			item['paragraphColour'] = '#FF0000'
-# 		else:
-# 			item['paragraphColour'] = '#FFFFFF'
-# 	return x
-
-# def mainF(corpus,output):
-# 	try:
-# 		file = open(corpus, encoding='utf-8', mode='r')
-# 		text = file.read()
-# 		text = text.replace('\n',' ').replace('\"','')
-# 		file.close()	
-# 	except IOError:	
-# 		print('Cannot open '+corpus)
-# 		sys.exit()
-# 	if output=='avi':
-# 		(aviScore,totWords,totSentences,aviAge) = mainAVI(text, output)
-# 		return aviScore
-# 	else:
-# 		return mainAVI(text, output)
 
 def mainAVI(text):
 	wordCount = 0
@@ -81,50 +17,25 @@ def mainAVI(text):
 	avgWords = 0
 	avgSyllables = 0
 	sentences = text.splitlines()
-	# sentences = re.split('\.[\s+]', text)
-	# sentences = re.split('\.[\s|\n]|\!+|\?+',text)
-	
-	# if output=='debug':
-	# 	print(sentences)
 
 	for sentence in sentences:
-		# print(sentence)
 		if sentence:
 			totSentences += 1
 			words = re.split('\s',sentence)
 			wordCount = len(words)
 			for word in words:
 				syllableCount = countSyllables(word)
-				# if (syllableCount > 0) & (output=='debug'):
-				# 	print(word + ': ' +  str(syllableCount))
 				totSyllables += syllableCount
 			totWords += wordCount
 
-	# print(totNumberofWords)
-	# print(totSyllableCount)
 	avgWords = totWords/totSentences
 	avgSyllables = totSyllables/totWords
 
-	# if output=='debug':
-	# 	print('Average amount of words per sentence: ' + str(avgWords))
-	# 	print('Average amount of syllables per word: ' + str(avgSyllables))
-	
 	aviScore = math.ceil(195 - (2 * avgWords) - (200/3*avgSyllables)-0.5)
 	aviAge = calcAge(aviScore)
 	tup = (aviScore,totWords,totSentences,aviAge)
 	return tup
-	
-	# if output=='avi':
-	# 	# print('AVI Score: ' + str(aviScore))
-	# 	return tup
-	# elif output=='age':
-	# 	if (aviAge > 0):
-	# 		# print('AVI Age: ' + str(aviAge))
-	# 		return aviAge
-	# 	else:
-	# 		# print('AVI Age: unspecified')
-	# 		return 'unspecified'
-			
+		
 #aviScore is used to calculate the AVI Age
 def calcAge(aviScore):
 	if 127 >= aviScore >= 123:
@@ -183,19 +94,11 @@ def syllableExceptions(curLetter, prevLetter):
 	e = 'E'
 	a = 'A'
 	trema = 'ËÏ'
-	# print(curLetter)
-	# print('found: ' + str(trema.find(curLetter)))
 	if not(e.find(prevLetter.upper()) == -1):
-		# print('1')
 		if not(a.find(curLetter.upper()) == -1):
-			# print('2')
 			return  True	
-
 	if not(trema.find(curLetter.upper()) == -1):
-		# print('3')
 		return True
-	
-	# print('4')
 	return False
 
 

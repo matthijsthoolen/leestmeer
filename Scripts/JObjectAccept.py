@@ -1,15 +1,7 @@
-# -*- coding: utf-8 -*-
-
 from collections import Counter
 import sys, getopt, argparse, re, math, json
 import AVIscoreMod2 as AVIscoreMod
-import CITOMod
-
-
-# def main(f):
-# 	obj = json.loads(f)
-# 	print('hello')
-# 	print(mainB(obj)['overall'][aviScore])
+import CITOMod2 as CITOMod
 
 def main(obj):
 	index = -1
@@ -20,7 +12,7 @@ def main(obj):
 	for item in parObj:
 		index += 1
 		body = item['paragraph']
-		text = prepareText(body).decode('latin-1')
+		text = prepareText(body)
 		(aviScore,totWords,totSentences,aviAge) = AVIscoreMod.mainAVI(body)
 		(CLIB, CILT) = CITOMod.mainCITO(body)
 		item['aviScore'] = aviScore
@@ -56,6 +48,5 @@ def prepareText(body):
 if __name__ == "__main__":
 	parser = argparse.ArgumentParser()
 	parser.add_argument("-obj", "--obj", help="Object to be analyzed")
-	#Name and location of the text file to be parsed
 	args = parser.parse_args()
 	main(args.obj)
