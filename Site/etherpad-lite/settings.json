@@ -5,7 +5,7 @@
 */
 {
   // Name your instance!
-  "title": "Etherpad",
+  "title": "Leestmeer editor",
 
   // favicon default name
   // alternatively, set up a fully specified Url to your own favicon
@@ -48,13 +48,13 @@
   */
   
   //the default text of a pad
-  "defaultPadText" : "Welcome to Etherpad!\n\nThis pad text is synchronized as you type, so that everyone viewing this page sees the same text. This allows you to collaborate seamlessly on documents!\n\nGet involved with Etherpad at http:\/\/etherpad.org\n",
+  "defaultPadText" : "Welkom bij leestmeer tekst editor.\n\nSchrijf hier uw teksten voor het leestmeer platform. Uw tekst kan automatisch worden geanalyseerd door op de knop in de rechter sidebar te klikken.",
 
   /* Default Pad behavior, users can override by changing */
   "padOptions": {
-    "noColors": false,
+    "noColors": true,
     "showControls": true,
-    "showChat": true,
+    "showChat": false,
     "showLineNumbers": true,
     "useMonospaceFont": false,
     "userName": false,
@@ -62,11 +62,11 @@
     "rtl": false,
     "alwaysShowChat": false,
     "chatAndUsers": false,
-    "lang": "en-gb"
+    "lang": "nl"
   },
   
   /* Shoud we suppress errors from being visible in the default Pad Text? */
-  "suppressErrorsInPadText" : false,
+  "suppressErrorsInPadText" : true,
 
   /* Users must have a session to access pads. This effectively allows only group pads to be accessed. */
   "requireSession" : false,
