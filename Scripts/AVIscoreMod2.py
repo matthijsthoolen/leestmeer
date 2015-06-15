@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 from collections import Counter
 import sys, getopt, argparse, re, math
 
@@ -93,13 +95,13 @@ def syllableExceptions(curLetter, prevLetter):
 	prevLetter = prevLetter.decode('latin-1')
 	e = 'E'
 	a = 'A'
-	trema = 'ËÏ'
+# 	trema = 'ËÏ'
 	if not(e.find(prevLetter.upper()) == -1):
 		if not(a.find(curLetter.upper()) == -1):
 			return  True	
-	if not(trema.find(curLetter.upper()) == -1):
-		return True
-	return False
+# 	if not(trema.find(curLetter.upper()) == -1):
+# 		return True
+ 	return False
 
 
 # This function states the commandline arguments that are needed

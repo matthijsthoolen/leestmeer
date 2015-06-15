@@ -7,7 +7,7 @@ import sys, getopt, argparse, re, math
 
 def mainCITO(text):
 	text = text.decode('latin-1')
-	commonFile = 'database\\common.txt'
+	common = 'database/common.txt'
 	lettersCount = 0
 	totLetters = 0
 	totSentences = 0
