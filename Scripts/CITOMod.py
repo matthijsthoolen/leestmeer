@@ -6,7 +6,8 @@ import sys, getopt, argparse, re, math
 # This is the main function of the code which calculates the CITO score
 
 def mainCITO(text):
-	commonFile = 'database\\common.txt'
+	text = text.decode('latin-1')
+	common = 'database/common.txt'
 	lettersCount = 0
 	totLetters = 0
 	totSentences = 0

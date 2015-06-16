@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import sys, getopt, argparse, re, pickle, urllib.parse
 from html.parser import HTMLParser as HP
 import html
