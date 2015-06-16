@@ -20,19 +20,20 @@ def main(obj):
 	for item in parObj:
 		index += 1
 		body = item['paragraph']
-		text = prepareText(body).decode('latin-1')
-		(aviScore,totWords,totSentences,aviAge) = AVIscoreMod.mainAVI(body)
-		(CLIB, CILT) = CITOMod.mainCITO(body)
-		item['aviScore'] = aviScore
-		item['aviAge'] = aviAge
-		item['clibScore'] = CLIB
-		item['ciltScore'] = CILT
-		item['analytics']['totalWords'] = totWords
-		avgSentence is totWords/totSentences
-		item['analytics']['avgSentence'] = avgSentence
-		totalText += body
-		totalText += '\n\n'
-		obj['text'][index] = item
+		if body:
+			text = prepareText(body).decode('latin-1')
+			(aviScore,totWords,totSentences,aviAge) = AVIscoreMod.mainAVI(body)
+			(CLIB, CILT) = CITOMod.mainCITO(body)
+			item['aviScore'] = aviScore
+			item['aviAge'] = aviAge
+			item['clibScore'] = CLIB
+			item['ciltScore'] = CILT
+			item['analytics']['totalWords'] = totWords
+			avgSentence is totWords/totSentences
+			item['analytics']['avgSentence'] = avgSentence
+			totalText += body
+			totalText += '\n\n'
+			obj['text'][index] = item
 	(aviScore,totWords,totSentences,aviAge) = AVIscoreMod.mainAVI(totalText)
 	(CLIB, CILT) = CITOMod.mainCITO(totalText)
 	overall = obj['overall'][0]
