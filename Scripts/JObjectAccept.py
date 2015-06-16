@@ -25,8 +25,8 @@ def main(obj):
 		(CLIB, CILT) = CITOMod.mainCITO(body)
 		item['aviScore'] = aviScore
 		item['aviAge'] = aviAge
-		item['CLIB'] = CLIB
-		item['CILT'] = CILT
+		item['clibScore'] = CLIB
+		item['ciltScore'] = CILT
 		item['analytics']['totalWords'] = totWords
 		avgSentence is totWords/totSentences
 		item['analytics']['avgSentence'] = avgSentence
@@ -41,12 +41,14 @@ def main(obj):
 	index = -1
 	for item in obj['text']:
 		index += 1
-		if (item['aviAge'] - overall['aviAge'] > 1) | (item['aviAge'] - overall['aviAge'] < -1):
+		if (item['aviScore'] > overall['aviScore']):
 			obj['text'][index]['Colour'] = '#FF0000'
+		elif (item['aviScore'] < overall['aviScore']):
+			obj['text'][index]['Colour'] = '#0000FF'
 		else:
 			obj['text'][index]['Colour'] = '#FFFFFF'
-	overall['CILT'] = CILT
-	overall['CLIB'] = CLIB
+	overall['ciltScore'] = CILT
+	overall['clibScore'] = CLIB
 	obj['overall'][0] = overall
 	return obj
 
