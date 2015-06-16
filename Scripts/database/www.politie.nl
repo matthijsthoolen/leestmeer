@@ -1,4 +1,4 @@
-Dinsdag 4 november staat het regionale opsporingsprogramma weer volledig in het teken van misdrijven uit de regio
+Dinsdag 4 november staat het regionale opsporingsprogramma weer volledig in het teken van misdrijven uit de regio aan
 
 Met hulp van de kijkers hoopt de politie, onder voorbehoud, de volgende zaken op te kunnen lossen:
 

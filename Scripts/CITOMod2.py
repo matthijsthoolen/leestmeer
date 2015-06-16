@@ -13,16 +13,17 @@ def mainCITO(text):
 	avgLetters = 0
 	sentences = text.splitlines()
 	for sentence in sentences:
-		wordCount = 0
 		if sentence:
-			totSentences += 1
+			wordCount = 0
+			if sentence:
+				totSentences += 1
 
-		words = re.split('\s+',sentence)
-		wordCount += len(words)
-		for word in words:
-			lettersCount = len(word)
-			totLetters += lettersCount
-		totWords += wordCount
+			words = re.split('\s+',sentence)
+			wordCount += len(words)
+			for word in words:
+				lettersCount = len(word)
+				totLetters += lettersCount
+			totWords += wordCount
 
 	uniqueWords = Counter(words)
 	typeTokenFrequency = len(uniqueWords) / totWords
@@ -40,8 +41,8 @@ def mainCITO(text):
 	avgWords = totWords/totSentences
 	avgLetters = totLetters/totWords
 
-	CLIB = 46 - 6.603 * avgLetters + 0.474 * freqCommonWords - 0.365 * typeTokenFrequency + 1.425 * avgWords
-	CILT = 105 - (114.49 + 0.28 * freqCommonWords - 12.33 * avgLetters)
+	CLIB = math.round(46 - 6.603 * avgLetters + 0.474 * freqCommonWords - 0.365 * typeTokenFrequency + 1.425 * avgWords)
+	CILT = math.round(105 - (114.49 + 0.28 * freqCommonWords - 12.33 * avgLetters))
 
 	return (CLIB, CILT)
 
