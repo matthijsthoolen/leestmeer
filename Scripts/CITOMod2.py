@@ -13,16 +13,17 @@ def mainCITO(text):
 	avgLetters = 0
 	sentences = text.splitlines()
 	for sentence in sentences:
-		wordCount = 0
 		if sentence:
-			totSentences += 1
+			wordCount = 0
+			if sentence:
+				totSentences += 1
 
-		words = re.split('\s+',sentence)
-		wordCount += len(words)
-		for word in words:
-			lettersCount = len(word)
-			totLetters += lettersCount
-		totWords += wordCount
+			words = re.split('\s+',sentence)
+			wordCount += len(words)
+			for word in words:
+				lettersCount = len(word)
+				totLetters += lettersCount
+			totWords += wordCount
 
 	uniqueWords = Counter(words)
 	typeTokenFrequency = len(uniqueWords) / totWords

@@ -24,6 +24,7 @@ def main(obj):
 		(aviScore,totWords,totSentences,aviAge) = AVIscoreMod.mainAVI(body)
 		(CLIB, CILT) = CITOMod.mainCITO(body)
 		item['aviScore'] = aviScore
+		item['aviAge'] = aviAge
 		item['CLIB'] = CLIB
 		item['CILT'] = CILT
 		item['analytics']['totalWords'] = totWords
@@ -36,6 +37,7 @@ def main(obj):
 	(CLIB, CILT) = CITOMod.mainCITO(totalText)
 	overall = obj['overall'][0]
 	overall['aviScore'] = aviScore
+	overall['aviAge'] = aviAge
 	overall['CILT'] = CILT
 	overall['CLIB'] = CLIB
 	obj['overall'][0] = overall
