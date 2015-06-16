@@ -31,6 +31,7 @@ def mainAVI(text):
 			totWords += wordCount
 
 	avgWords = totWords/totSentences
+		
 	avgSyllables = totSyllables/totWords
 
 	aviScore = math.ceil(195 - (2 * avgWords) - (200/3*avgSyllables)-0.5)

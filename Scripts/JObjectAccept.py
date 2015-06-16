@@ -40,7 +40,7 @@ def main(obj):
 	overall['aviScore'] = aviScore
 	overall['aviAge'] = aviAge
 	index = -1
-	for item in obj['text']
+	for item in obj['text']:
 		index += 1
 		if (item['aviScore'] > overall['aviScore']):
 			obj['text'][index]['Colour'] = '#FF0000'
