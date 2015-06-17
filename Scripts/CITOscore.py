@@ -7,8 +7,9 @@ import sys, getopt, argparse, re, math
 
 def main():
 	outputFile = open('database\\averages', 'w+')
-	# List = ['www.3fm.nl', 'www.360magazine.nl', 'www.bright.nl', 'www.kidsweek.nl', 'www.nos.nl', 'www.nrc.nl', 'www.politie.nl']
-	List = ['www.politie.nl']
+	List = ['www.3fm.nl', 'www.360magazine.nl', 'www.bright.nl', 'www.kidsweek.nl', 'www.nos.nl', 'www.nrc.nl', 'www.politie.nl']
+	# List = ['www.nos.nl']
+	# List = ['test']
 	for source in List:
 		corpus = 'database\\' + source
 		output = 'banaan'
@@ -20,7 +21,7 @@ def main():
 		outputFile.write('avgLetters: ' + str(avgLetters) + '\n')
 		outputFile.write('freqCommonWords: ' + str(freqCommonWords) + '\n')
 		outputFile.write('typeTokenFrequency: ' + str(typeTokenFrequency) + '\n')
-		outputFile.write('avgWords: ' + str(avgWords) + '\n')
+		outputFile.write('avgWords: ' + str(avgWords) + '\n\n')
 def main2(corpus, output, common):
 	try:
 		file = open(corpus, mode='r')
@@ -43,7 +44,9 @@ def main2(corpus, output, common):
 	# text = re.replace(':|,|;', '', text)
 	sentences = text.splitlines()
 	for sentence in sentences:
-		sentence = sentence.replace(':|,|;', '')
+		# sentence = sentence.replace('[:|,|;|-]', '')
+		sentence = re.sub(r'[:|,|;|-]', '', sentence)
+		# print(sentence)
 		wordCount = 0
 		if sentence:
 			totSentences += 1
@@ -60,8 +63,8 @@ def main2(corpus, output, common):
 		# print(allWords)
 		# allWords += words
 
-	uniqueWords = Counter(allWords)
-	# print(uniqueWords)
+	uniqueWords = Counter(allWords.split())
+	# print(list(uniqueWords.elements()))
 	typeTokenFrequency = len(uniqueWords) / totWords
 
 	commonFile = open(common, encoding='utf-8', mode='r')
@@ -71,8 +74,8 @@ def main2(corpus, output, common):
 	totCommonWords = 0
 
 	for commonWord in commonWords:
-		if uniqueWords[commonWord] > 0:
-			print(commonWord)
+		# if uniqueWords[commonWord] > 5:
+		# 	print(str(commonWord + ' exists: '+ str(uniqueWords[commonWord])))
 		totCommonWords += uniqueWords[commonWord]
 	print('totCommonwords: ' + str(totCommonWords))
 		

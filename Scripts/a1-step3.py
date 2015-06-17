@@ -1,15 +1,6 @@
-#!/usr/bin/python3
-
-
-######Authors:##############
-#Rutger Kraaijer - 10382259#
-###Jan Geestman - 10375406##
-###Ruben Blom - 10684980####
-############################
-
 from collections import Counter
 from collections import OrderedDict
-import sys, getopt, argparse
+import sys, getopt, argparse, re
 from itertools import permutations
 
 #Main function that prepares the corpus as list, adds start stop to every paragraph and calls functions based on arguments given by the user.
@@ -21,32 +12,27 @@ def main(trainCorpus, testCorpus, n, smoothing):
 		words = []
 		prevempty = 1
 		for line in lines:
-			if line and prevempty == 1:
-				prevempty = 0
+			if line:
+				wordline = re.split(' ', line)
 				i=0
 				prepend = []
 				while i < n-2:
-					prepend = ['<s>'] + prepend
+					words.append('<s>')
 					i += 1
-				words.extend(prepend)
 				words.append('<s>')
-				linewords = line.split()
-				words.extend(linewords)
-			elif line and prevempty == 0:
-				linewords = line.split()
-				words.extend(linewords)
-			elif not line and prevempty == 0:
-				prevempty = 1
+				for x in wordline:
+					if x:
+						words.append(x)
 				words.append('</s>')
-
 	except IOError: 
 		print('Cannot open '+trainCorpus)
 	nGrams = makeNgrams(n, words)
-	print('Profile: ' + str(nGrams))
-	smooth(n, testCorpus, trainCorpus, smoothing)
+	if n == 3:
+		del nGrams['</s> <s> <s>']
+	smooth(n, testCorpus, nGrams, smoothing)
 
 #Function that allows for two different types of smoothing. 
-def smooth(n, testCorpus, trainCorpus, smoothing):
+def smooth(n, testCorpus, trainCorpusGrams, smoothing):
 	try:
 		file = open(testCorpus, 'r')
 		lines = file.read().splitlines()
@@ -54,26 +40,22 @@ def smooth(n, testCorpus, trainCorpus, smoothing):
 		words = []
 		prevempty = 1
 		for line in lines:
-			if line and prevempty == 1:
-				prevempty = 0
+			if line:
+				wordline = re.split(' ', line)
 				i=0
 				prepend = []
 				while i < n-2:
-					prepend = ['<s>'] + prepend
+					words.append('<s>')
 					i += 1
-				words.extend(prepend)
 				words.append('<s>')
-				linewords = line.split()
-				words.extend(linewords)
-			elif line and prevempty == 0:
-				linewords = line.split()
-				words.extend(linewords)
-			elif not line and prevempty == 0:
-				prevempty = 1
+				for x in wordline:
+					if x:
+						words.append(x)
 				words.append('</s>')
 	except IOError:
 		print('Cannot open '+testCorpus)
 	nGrams = makeNgrams(n, words)
+	print(nGrams)
 	nGramsMin = makeNgrams(n-1, words)
 	nGramSum = getSum(nGrams)
 	reverseDict = dict()
@@ -97,12 +79,15 @@ def smooth(n, testCorpus, trainCorpus, smoothing):
 			sentences.append(' '.join(sentence))
 			sentence = []
 			lineCount += 1
+	# print(sentences)
 	for sentence in sentences:
+		# print('hella low')
 		nProb = seqProb(n,sentence,nGrams,nGramsMin,nGramSum,smoothing,reverseDict)
+		print(nProb)
 		if nProb == 0:
 			zeroCount += 1
-	# print('linecount: ' + str(lineCount))
-	# print("'"+str(zeroCount/lineCount*100) + "'% of paragraphs has a probability of 0.0")
+	print('linecount: ' + str(lineCount))
+	print("'"+str(zeroCount/lineCount*100) + "'% of paragraphs has a probability of 0.0")
 
 
 #Applies Good Turing Smoothing to given frequency 'r'

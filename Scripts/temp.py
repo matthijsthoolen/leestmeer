@@ -1,19 +1,26 @@
 from collections import Counter
 from collections import OrderedDict
-import sys, getopt, argparse, re
+import sys, getopt, argparse, re, pickle
 from itertools import permutations
 
 # Prepares an already tagged corpus and creates N-Gram model
-def main(text, n):
-	words = prepareText(text)
-	nGrams = makeNgrams(n, words)
+def main(corpus, n):
+	file = open(corpus, 'r')
+	text = file.read()
+	file.close()
+	words = prepareText(text, 3)
+	nGrams = makeNgrams(3, words)
 	if n == 3:
 		del nGrams['</s> <s> <s>']
 	c = Counter(nGrams)
-	return nGrams
+	# print(c)
+	file = open(corpus+'_nGrams', 'wb')
+	pickle.dump(c,file)
+	file.close()
+	# return nGrams
 
 
-def prepareText(corpus):
+def prepareText(corpus, n):
 	lines = corpus.splitlines()
 	words = []
 	for line in lines:

@@ -1,13 +1,13 @@
 {
-   "pid": 29923,
+   "pid": 10914,
    "options": {
       "reactor": null,
       "loglevel": "info",
       "command": "start",
       "logdir": null,
       "debug": false,
-      "config": "/home/cabox/workspace/Scripts/router/.crossbar/config.json",
-      "cbdir": "/home/cabox/workspace/Scripts/router/.crossbar"
+      "config": "/home/tjalling/Desktop/leestmeer/Scripts/router/.crossbar/config.json",
+      "cbdir": "/home/tjalling/Desktop/leestmeer/Scripts/router/.crossbar"
    },
    "argv": [
       "/usr/local/bin/crossbar",
