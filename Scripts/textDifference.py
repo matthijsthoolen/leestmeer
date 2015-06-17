@@ -9,11 +9,13 @@ def main(corpus):
 	try:
 		with open(corpus, 'rb') as f:
 			P1 = normalize(pickle.load(f))
+			# print(P1)
 			# P1 = ast.literal_eval(s)
-			file = open('database\\bright_POStags', 'r')
+			file = open('database\\politie_POStags', 'r')
 			text = file.read()
 			file.close
 			P2 = normalize(ngramProfiler.main(text,3))
+			print(P2)
 	except IOError: 
 		print('Cannot open '+corpus)
 	calcDiff(P1, P2)
@@ -24,16 +26,18 @@ def calcDiff(P1, P2):
 	part = 0.0
 	union = P1 + P2
 	for x in union:
-		print(P1[x] - P2[x])
+		# print(P1[x] - P2[x])
 		part is ((P1[x] - P2[x])/((P1[x] + P2[x])/2))**2
 		D += part
-	print(D)
+	# print(D)
 	return D
 
 def normalize(P):
 	unique = len(P)
 	tot = sum(P.values())
-	for 
+	for x in P:
+		P[x] = P[x]/tot
+	return P
 
 # This function states the commandline arguments that are needed
 # for the program to run.
