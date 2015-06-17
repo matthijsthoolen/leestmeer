@@ -39,7 +39,6 @@ def main(obj):
 			totalText += body
 			totalText += '\n\n'
 			obj['text'][index] = item
-
 	(aviScore,totWords,totSentences,aviAge) = AVIscoreMod.mainAVI(totalText)
 	(CLIB, CILT) = CITOMod.mainCITO(totalText)
 	overall = obj['overall'][0]

@@ -1,14 +1,14 @@
 from collections import Counter
-import sys, argparse, re
+import sys, argparse, re, pickle
 import ngramProfiler
 import ast
 
 def main(corpus):
 	try:
 		with open(corpus, 'r') as f:
-			s = f.read()
-			P1 = ast.literal_eval(s)
-			P2 = ngramProfiler.main('Art Adj Adj Prep V V Adv Adj\nConj Prep Art Adj Adv Adv\nAdj Int Prep Pron V Art Prep Art Adj N\nNum N Prep Pron Adv',3)
+			P1 = pickle.load(f)
+			# P1 = ast.literal_eval(s)
+			P2 = ngramProfiler.main('database\\www.politie.nl',3)
 	except IOError: 
 		print('Cannot open '+corpus)
 
