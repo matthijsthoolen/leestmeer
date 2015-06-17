@@ -12,6 +12,7 @@ import ngramProfiler
 # 	print('hello')
 # 	print(mainB(obj)['overall'][aviScore])
 
+# accepts a JSON object, unpacks it, analyzes it and sends it back
 def main(obj):
 	index = -1
 	avgSentence = 0
@@ -38,6 +39,11 @@ def main(obj):
 											
 			print("Ngram analyse van paragraaf")
 			print(nGrams)
+
+			# text.getMetrics
+			# corpus.getMetrics
+			# variableList = compare(text.Metrics, corpus.metrics)
+			# item['variables'] = variableList
 			
 			# Put data in the JSON object
 			item['aviScore'] = aviScore
@@ -69,7 +75,7 @@ def main(obj):
 	obj['overall'][0] = overall
 	return obj
 
-
+# prepare text by putting each sentence on a new line
 def prepareText(body):
 	text = ""
 	body.replace("&nbsp;"," ")
