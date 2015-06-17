@@ -1,11 +1,11 @@
 Art Adj Adj Prep V V Adv Adj 
 Conj Prep Art Adj Adv Adv 
-Adj Int Prep Pron V Art Prep Art Adj N 
+Adj Num Prep Num V Art Prep Art Adj N 
 Num N Prep Pron Adv 
 
-Pron Adj N V Conj V N Art Adj N Misc Art Adj Adj Adj 
-Art N Misc Conj N Prep Prep V Prep N Prep N 
-Adj V Conj Pron Adv Adv Prep Pron Adj 
+Pron Adj N V Conj V N Art Adj N Prep Art Adj Adj Adj 
+Art N Prep Conj N Prep Prep V Prep N Prep N 
+Adj V Conj Adv Adv Adv Prep Pron Adj 
 Conj Adv V Pron Art Num Adv 
 N Misc Art Num N V Pron Adv Pron N Prep Adv Pron V Art Adv Prep Art Num N Prep Misc Conj Pron V Pron V 
 Art V Adv Adv Adj Conj Art N V Adj Int Adv V Num N Prep V Prep Art N Prep Art N 
@@ -15,12 +15,12 @@ Prep Art V Adv Adv Prep Art Adj Conj Adj Prep Art Adj V
 N Art N V Pron Prep Pron Adj Prep N Prep N 
 Adv Adj V Pron Adv Adj N Misc 
 Adj N V Adj Adv Prep Art N Prep Art Adj N N 
-Int Prep Pron Adj 
+Adj Prep Pron Adj 
 N Num N V Pron Num N V 
 Prep N Conj Adv Prep Pron Adj 
-Art V N V Adj Adj Misc Conj Art Adj N Prep Prep V V 
+Art V N V Adj Adj V Conj Art Adj N Prep Prep V V 
 Pron V Adv Adv Num N Prep N Prep Art Adj V Adj 
-Art N N Adv V Pron V Prep Misc Prep Art Pron Adj 
+Art N N Adv V Pron V Prep N Prep Art Pron Adj 
 Art V Adv Adj Conj Adv Prep N Art Adj Prep Art N V Adj Num N Prep 
 Pron V V V Prep N Prep N Prep N 
 Adj N V Art N Prep Pron Adj N V 
@@ -31,21 +31,21 @@ Pron V Pron Adv Adv
 Adj Conj Adv Adv V 
 Conj Pron Pron 
 Art N Prep Art Adj N Misc Pron Adv Pron Adj Conj N N Adv V N N V 
-Conj Art Adj Conj Adv Pron Adj Prep Misc V Pron N Prep Prep Art Adj N 
+Conj Art N Conj Adv Pron N Prep V V Pron N Prep Prep Art Adj N 
 Adv Int Int Int Conj Adj Art Adj 
 Art N V Adj N Prep Prep Art N 
 Prep Adv Pron N V Art Adj Adv Prep Adv Num N 
 Adv V Art N Adv Num Adj N Prep Art N Prep N N V 
 Art N V Adv Conj N Pron N Adv Adj 
-Adj V Pron Adv Adv Pron V Adv V Conj Prep V 
-Conj Pron N Pron V Punc V Adv Adj 
+Adj V Pron V Conj Pron V Adv V Conj Prep V 
+Conj Pron N Pron V V V Adv Adj 
 Adv Adv Adv V Pron Adv Art Adj N Prep Art N 
 Adv Prep Art N V Adv Art Num N Conj Adv Prep Art Adj N N N V 
 Adj N V Art N Art N Prep N Conj N Prep Prep V Prep N N Conj Adj Misc 
 Pron V Prep Prep Art N Prep Num Prep Adj 
-Art N V Misc Conj N Conj Adj V Adv Prep Adj Misc Art Adj Prep N 
-N N V Adv Adv Conj Art Adj Conj Conj Art N Prep N 
-Int Int 
+Art N V Adj Conj N Conj Adj V Adv Prep Adj N Art Adj Prep N 
+N N V Adv Adv Conj Art N Conj Conj Art N Prep N 
+N N 
 Prep Art Adj Num N V Misc V Art Num N Prep N V 
 Pron V Prep N Prep Art N Prep Num N Conj Pron N Adv Adj Prep V 
 Prep Art Adj N V Misc Art Misc Adv Prep N Prep V Conj Art Adj N N Prep Prep V 
@@ -57,74 +57,74 @@ Int V Adv Adj Prep Art V Prep N Prep Pron N
 Conj Adv Prep Art N V Pron Art Adj N Prep 
 Pron N V Art N Misc Misc Conj Misc Conj V Prep Art Adj N Misc Conj Pron N Prep N 
 Prep N V Pron V N Art N Prep Misc 
-Adj Pron Int 
+Adj Pron N 
 Prep Art Adj Adv V Pron Pron N Prep Adv Prep Adj N 
 N Pron Pron V Prep V Prep V Conj Pron Adv Adv Adv Adj V V 
 Conj Pron V Pron V 
 N V Art Adj N Art N Prep Art N Conj Adj Adj Prep V 
 Num N V Pron V 
-Pron V Prep Prep Num Adj Conj Adj N Prep Prep Pron Art Adj Art Adj Prep N Conj Art Adj N 
-N N N N Misc Misc V Prep N Conj V Adv Adv Adv Prep Pron 
-Prep Adj Misc Misc Misc Art N Misc Misc Misc Misc Misc Misc Misc Misc Misc Conj Misc Misc Art N Conj Prep V Prep Art Adj Art N Conj Adv Adj Prep Art N V 
-Punc Prep Art N Num Prep Art N V Prep Num N 
-N N N V Art N Conj V Prep Art V Misc Misc 
-Punc Prep N Prep N 
+Pron V Prep Prep Adj Adj Conj Adj N Prep Prep Pron Art N Art Adj Prep N Conj Art Adj N 
+N N Adv Num Num V Prep N Conj V Adv Adv Adv Prep Pron 
+Prep Adj Num N Num Art N Misc Num Int Num N Num N Num Conj N Num Art N Conj Prep V Prep Art N Art N Conj Adv Adj Prep Art N V 
+Prep Art N Num Prep Art N V Prep Num N 
+N N N V Art N Conj V Prep Art V N V 
+Prep N Prep N 
 Conj Int Pron N Pron Prep V Prep Pron Adj 
 Adv Conj Adv Pron N V 
-Adj N Int V Adj Pron Pron Prep N Art Adj V V Conj Pron Adj V V 
-Int V Art Adj Prep N N 
-Adj Int N Int Int V Misc Conj V Prep Art Adv Pron Adj Misc Conj Pron V Pron Adv Pron N N 
+Adj Int V Adj Pron Pron Prep N Art Adj V V Conj Pron Adj V V 
+Misc V Art N Prep N N 
+Adj Num Int Num V Adj Conj V Prep Art Adv Pron Adj N Conj Pron V Pron Adv Pron N N 
 Punc Adv V Pron N Adj Adv Prep N 
-Conj Pron N V Conj V Misc V Art Prep N Conj N Conj Art Adj N Prep V Pron Art Adj V 
+Conj Pron N V Conj V V V Art Prep N Conj N Conj Art Adj N Prep V Pron Art Adj V 
 N V Adj N Conj V Num 
-Num V Adj N Int 
+Num V Adj N 
 Adj Conj Pron Misc V Art N 
 Art Adv V V Art N Conj V Pron Adv Prep Art V N Prep Art N 
-Art N Prep Art Adj N Conj Adj 
-Art N Prep Num Prep Pron Adj Misc Punc Misc Art N Prep N Adv Adj Punc V Prep Art N N Prep Pron N 
+Art N Prep Art N Prep Conj Adj 
+Art N Prep Num Prep Pron Adj Num Punc Int Art N Prep N Adv Adj Punc V Prep Art N N Prep Pron N 
 Prep N N V Pron Adj Misc Prep Art N 
 Pron V Art Adv Adv Adv 
 Punc 
 Pron V Pron Adj Conj Pron V 
 Pron V Art Pron Art N Misc V Int Prep N 
-N Pron Num N Adv V Prep Num V Pron N Adv Adv Adv Adv Adj Adv 
+N Pron Num N Adv V Prep V V Pron N Adv Adv Adv Adv Adj Adv 
 Pron V Adv Adj Adv Pron Pron N V V 
-Adj Pron V Adv V Int Misc Pron N Misc 
+Adj Pron V Adv V Prep V Pron N Misc 
 Conj Pron V Prep Conj V V 
-Adv Prep Pron Adj Adv Num Prep N V V 
+Adv Prep Pron N Adv Num Prep N V V 
 Art N Prep N V Adv Adv N V 
-Adv V Pron Prep Art Adj Adv 
-Pron V Adj Pron Prep N V Art N Adj Prep Pron Adj Adj V Art Num 
+Adv V Pron Prep Art N Adv 
+Pron V Adj Pron Prep N V Art N Adj Prep Pron Adj Pron V Art Num 
 Pron V Art N Prep Prep V 
 V Pron N Pron Prep V Prep Art N Conj Pron Art N Prep Art Adj N V 
-Adj Adv V Art Adj Adv Adv Adj Adj Conj V 
+Adj Adv V Art Adj Adv Adv Adj V Conj V 
 Conj Pron V Adv Adj Pron N 
 Prep Art N V Conj Adv Adj N Prep Misc V Pron Pron 
 Pron V Adv Pron Adj 
 Int Pron V Adj Pron Prep Art 
 Art Adj Adj Prep V V Adv Adj 
 Conj Prep Art Adj Adv Adv 
-Adj Int Prep Pron V Int Prep Art Adj N 
+Adj Num Prep Num V Art Prep Art Adj N 
 Pron N V Art Adj N V 
 Prep Pron N V Num N Art Adj Adj Adj Misc Conj N Prep Prep V Prep Art N Prep N 
-Pron V Pron Pron V Conj V 
-Adj Int V Art Prep Pron Pron N 
+Pron V Pron V V Conj V 
+Adj Num V Art Prep Pron Pron N 
 Pron V N Art Adj Prep Prep Pron Adj Adj 
 Prep N Art N V Pron Prep Pron Adj Prep N Prep N 
 Adv Adj V Pron Adv Adj N Misc Adj N V Adj Adv Prep Art N Prep Art Adj N N 
-Int Prep Pron Adj 
+Adj Prep Pron Adj 
 N Num N V Pron Num N V 
 Prep N Conj Adv Prep Pron Adj 
-Art V N V Adj Adj Misc Conj Prep Art Adj N Art Adj Prep Prep V V 
+Art V N V Adj Adj V Conj Prep Art Adj N Art Adj Prep Prep V V 
 Pron V Adv Adv Num N Prep N Prep Art Adj V Adj 
-Art N N Adv V Pron Adv V Prep Misc Prep Art Pron Adj 
+Art N N Adv V Pron Adv V Prep N Prep Art Pron Adj 
 Art V Adv Adj Conj Adv Prep Adj 
 Prep Art Adj Prep Art N V Adj Num N Prep Prep V 
 Pron V Adv V V Prep N Prep N Prep N 
 Adj N V Art N Prep Pron Adj N V 
 Conj Pron Prep V Pron Adv Conj N Art Adj N V 
 Adv V Pron Adv Pron Prep Pron 
-Adj V Adv V Prep Pron Pron N Art N Misc Conj Pron Adv Art Adj V Pron 
+Adj V Adv V Prep Pron Pron N Art N V Conj Pron Adv Art Adj V Pron 
 Pron V Adv Adj Pron Adv V Prep Pron Adj 
 Art N V Pron Adv Conj Adv Misc 
 Conj Adv Prep Art N 
@@ -134,26 +134,26 @@ Pron V Adv Adj Conj Pron Prep V
 Punc 
 V Pron Adv Adv Adj N V 
 N Adv Prep Art Adj Prep N 
-N Pron Adv Adj Prep Art N Prep Art Adj N V Num N Adv Adv Adj V 
+N Pron Adv Prep Prep Art N Prep Art Adj N V Num N Adv Adv Adj V 
 Adv V V Art Adj Adj N Adv V 
 Prep Art N V Adv N Num Prep V 
 Art V Adv N 
-N V N V Conj V Adv Adv Prep Pron N Conj Int Conj Adv Prep V Misc V 
-Conj Art N Misc V Adv Art Pron 
+N V N V Conj V Adv Adv Prep N V Conj V Conj Adv Prep V Misc V 
+Conj Art N V V Adv Art Pron 
 Pron V Pron Prep Art Adj N Misc Misc 
 Pron V Conj Adj Prep V Prep Pron N Prep Pron N Prep V 
-Adv Art N Misc V Pron Adv Prep Pron Adj 
-Prep Art Adj Pron Adv Num Num N Prep Art N V Misc V Pron Adv Art Adj Adv Conj Art Adj Adv 
+Adv Art N V V Pron Adv Prep Pron N 
+Prep Art Adj Pron Adv Num Num N Prep Art N V V V Pron Adv Art Adj Adv Conj Art Adj Adv 
 Conj Int Prep 
-Art N Prep Art Adj Pron Adv Prep N V Misc V Adv Adv Adv 
+Art N Prep Art N Pron Adv Prep N V V V Adv Adv Adv 
 Prep Pron N Prep Art N Conj 
-Conj Pron V Adv V Art Adj N Num Num N Adj Prep Art N 
+Conj Pron V V V Art Adj N Num Num N Adj Prep Art N 
 Adv V Art Adj Prep Art N Adv V Conj Misc V Art Adj N Misc N Adj 
-Int Conj Prep Art Adj N V Pron Num Adj N V Conj Prep Art Adj 
-Adv Art N Prep Art N Adv Adv Int V Adv V V 
+Adj Conj Prep Art Adj N V Pron Num Adj N V Conj Prep Art Adj 
+Adv Art N Prep Art N Adv Adv V V Adv V V 
 Adj Pron V V Prep Num V Prep Art N N 
 Art V Prep Art Adj N Prep V Prep Adj V 
-Pron V Adv Conj Pron Art Adj Adj V Int V Art N 
+Pron V Adv Conj Pron Art Adj Adj V V V Art N 
 Prep Adv Pron V Conj Adv Adv V 
 Adv Adv Art Num N Adj V V Prep N V Prep Art Adj 
 V N V Art Prep V V 
@@ -162,7 +162,7 @@ Adv Art N N V Adv
 
 Art N V Adv 
 Art N Pron Art N Prep Art N V V Pron Adj 
-Num Adj Misc Conj Adv Art N 
+Num Adj N Conj Adv Art N 
 Art V N V Pron V Prep Pron V Prep Num 
 Adv Pron Pron V V Conj Pron Art Num N Prep Art Num N Adv Prep 
 Num Prep Art N Num N Conj Num Prep Art N Num N 
@@ -170,17 +170,17 @@ Prep Adj N Misc Misc Misc Art N V Pron V N Prep Art Adj V N Misc Art N Prep Adj 
 Conj Adv Art Adj Art Num N Conj N Adv V Prep N Prep Art N Prep Art Adj N Misc Art Adj 
 Adv V Pron Art Adj N 
 V Pron Adv Adv 
-Art N Prep Art N Num N V Misc 
-Art N Prep N Punc Misc Misc Misc Misc Art Adj N Misc Misc Misc Misc Misc Misc Misc Misc Prep N N Misc Prep Art N Misc Misc Misc Misc Prep Art N Misc Misc Misc Misc Misc Misc Misc 
-Pron V Adv Pron N Adv Prep Art N Misc Misc 
-Art N Prep Art N Num N Misc Misc Misc Misc Misc Misc Misc Misc Misc Misc Prep Num N Misc Misc Misc Conj Misc Misc Misc Art N Conj Art Adj Prep Misc Misc Misc Misc Misc V Prep Art Adj 
-Adj Punc N Misc Misc Misc 
+Art N Prep Art N Num N N Misc 
+Art N Prep N Punc Misc Misc Misc Misc Art Adj N Misc Misc Misc Art Adj N Misc N Prep N N Misc Prep Art N Misc Misc Misc Misc Prep Art N Misc Misc Misc Prep Misc Misc 
+Pron V Adv Pron N Adv Prep Art N N Misc 
+Art N Prep Art N Num N Misc Misc Misc Misc Misc Misc Art Adj Adj Misc Prep Num N Misc Misc Misc Conj Misc Misc Misc Art N Conj Art Adj Prep Misc Misc Misc Prep Art N Prep Art Adj 
+Adj Punc N Misc Art N 
 Art Adj Adj N Misc Misc Misc Misc 
 Art Num N Prep Art N V Prep Art Adj Art N Adj 
 Pron N V Prep N Num N Prep Art N Prep Art N 
-Pron V Adv Adv Pron Pron N Misc Art Adj Prep Art N 
+Pron V Adv Adv Pron Pron N Prep Art Adj Prep Art N 
 Adj N V Pron V Prep Pron Art Adj Conj Art N Prep Art N Prep Misc N 
-Art N Prep Adj N Misc Misc 
+Art N Prep Adj N N N 
 N Prep Art Adj Conj Art Adj Prep Art V Adj Adj Prep Pron V 
 Pron V Art N V 
 Art Num N V Adv Conj N N Adj Prep V Conj V Conj V 
@@ -194,25 +194,25 @@ Art N V Prep Adj N V
 Art Adj N V Num N Conj Num N 
 Num N 
 Num N V 
-Pron V N Misc N Adv Prep Pron N V 
-Conj Adv Adv V Prep Art Adj Misc Conj Art Adj Adj Adj Misc Prep N 
+Pron V N Num N Adv Prep Pron N V 
+Conj Adv Adv V Prep Art Adj N Conj Art Adj Adj Adj Prep Prep N 
 Art Adj N 
 Pron V Adv Conj Pron N Adv V Pron V N 
-Pron V Adv Prep Pron Adj Pron Int Int Conj N Adv Prep Art Adj Misc Art N Adv N Adv Adv Adj Art Adj V Conj Num Adj N Prep Prep V Prep N 
-Art V Art Adv Adj Int Adv Adv Art Adj Pron N Prep V V 
-N V Adv Num N Misc Art Num N V Pron Prep Art N Conj Pron Art Adj Prep V Adj Pron Int N Conj N V Art Adj Prep V 
+Pron V Adv Prep Pron N Pron N N Conj N Adv Prep Art Adj N Art N Adv N Adv Adv Adj Art Adj V Conj Num Adj N Prep Prep V Prep N 
+Art V Art Adv Adj N Adv Adv Art Adj Pron N Prep V V 
+N V Adv Num N Prep Art Num N V Pron Prep Art N Conj Pron Art Adj Prep V Adj Pron N N Conj N V Art Adj Prep V 
 Art V Pron Adv Adj Conj Art Pron Prep Prep Adj N V Num V 
-Art Adj V Art N Prep Art Adj Adv V Adj Misc 
+Art Adj V Art N Prep Art N Adv V Adj Misc 
 N Adv Num N V Pron V 
-Pron V Prep Pron N V Conj Prep Adj Adj N V Conj Prep N Misc Prep Art N V Num N V V 
-Conj Pron Pron N Misc Adv Adj V V 
+Pron V Prep Pron N V Conj Prep V Adj N V Conj Prep N Misc Prep Art N V Num N V V 
+Conj Pron Pron N V Adv Adj V V 
 Adv Conj N N 
 N Prep Art Adj V Adv Conj Adv V Conj V Prep N 
 Prep Art N Prep Art Adj N Misc Misc Pron N Art Adj N Adv Adv Art N V 
-Int Adj Adv 
+N Adj N 
 Pron V Adv Adv Adj V Conj Adj V Prep Art Adj Conj Art Adj N Prep Art Num N V Adv Adv Adv Prep 
 Pron V Num N Prep Conj V Pron Pron Adv V 
-Pron V Pron Adv Adv Adj Conj Pron V Pron Adv Adv V Prep N Conj Adj Prep Art Adj N 
+Pron V Pron Adv Adv Adv Conj Pron V Pron Adv Adv V Prep N Conj Adj Prep Art Adj N 
 Art N V Adv Adv Adv V Conj Prep Pron N Adj Prep N 
 V Pron Art V Conj V Pron Adv Adj V 
 
@@ -221,25 +221,25 @@ Prep N V Pron Art Adj N
 Art N Prep Adv Art Adj V N 
 Adv Adv V V N Prep Art N Adj Prep N 
 Pron V Adv Art Adj Prep Art Prep N N Conj V Art Adj N V 
-Conj Adv Adv Int Art N Prep N Prep Misc 
+Conj Adv Adv Adj Art N Prep N Prep Misc 
 Int 
 N Prep Misc 
 N Prep Misc V Art N Pron Pron V Conj Pron Art N Prep N N Prep N Conj N N V 
 Art Adj V V Prep N V Prep Adj N Prep Prep N 
-Pron N Prep Adj Adj Misc V Art N 
+Pron N Prep Adj Adj Num V Art N 
 Conj Pron V Adv Adv 
 Art V Pron N Num N Adv Conj Art Adj V Conj Adv V Adv Art N Prep Adj Prep Art N Adv Prep Art N Prep Prep N 
 Adj N Art N V Art N Prep Art N Prep Art Adj N Prep Art N Prep Art N V 
 Prep Pron N V Adj N Adv Pron Adj V 
-Pron V Adj Num N Conj Pron Adv Misc V Misc Misc 
+Pron V Adj Num N Conj Pron Adv Misc V Misc Num 
 N Pron V Adv Adj Adj 
 Int 
-Adj Pron V Prep Art Adj Conj Adv Art N Prep Art Prep N Misc Conj V Pron Adv Adv Adv 
-Int V Int Int 
+Adj Pron V Prep Art Adj Conj Adv Art N Prep Art Prep N V Conj V Pron Adv Adv Adv 
+Int V N Num 
 Pron V Conj Adv Adv Adv N Prep Art N V 
 N N V Adj Adv Misc 
-N Int Int V N Conj Art N Prep Adj N V Conj Prep Art N Prep Art N V Pron Art Pron Adv Adj Misc Art Adj N Adj V Prep Adj N V Pron Adv Adv Adv V 
-Conj Pron Num Adj N Misc V Pron Adv Adj Art N Adj Misc V Misc 
+N Num N V N Conj Art N Prep Adj N V Conj Prep Art N Prep Art N V Pron Art Pron Adv Adj Misc Art Adj N Adj V Prep Adj N V Pron Adv Adv Adv V 
+Conj Pron Num Adj N V V Pron Adv Adj Art N Adj Misc V Misc 
 Pron V Pron Prep Pron N Conj Pron Adv 
 Art V Adv 
 Adv Pron Adj Adv Prep Adj 
@@ -257,34 +257,34 @@ Num N V Adv Adv Adv Prep Num N
 Pron V Adv Adj Pron 
 Adv V Pron Adv Conj Adv Art Adj Adj N Prep Art N 
 Conj Adv Adv Adv Art N N 
-Adj Prep Int V Art Adj Conj Prep Pron N V Art Adj V Adj Adj 
+Adj Prep Int V Art V Conj Prep Pron N V Art Adj V Adj Adj 
 N V Adv Adv Adj 
 Prep Art Adj V Adv Adv Adv V Prep 
 Art Num V Pron Adj Conj Adv Misc V Adv Adj Adj Misc 
 Pron N V Adv Adj Conj Pron Prep Art N Prep Art Adj V 
-N Int Misc 
+N Misc Misc 
 N V Art Adj V Prep Art N N 
-Art Adj Prep V V Conj Pron Adj Adv Conj Pron Prep Pron Adv V V 
+Art Adj Prep V V Conj Pron Pron Adv Conj Pron Prep N Adv V V 
 Art Adj N V Adv Adv Prep Art Num N V V 
 Art N V V Conj N Prep Prep V 
 Adj V Art Adj N Prep N 
-Adj Adv Misc Art Adj Prep Misc Misc Pron Pron Adj 
+Adj Adv Misc Art Adj Prep N V Pron Pron Adj 
 Conj Art N V Pron Adj 
 Adv V N Adv Prep Pron Adj V Art N Prep Conj Art Adj Pron Pron Adv Adv V 
 Art V V Adv Adv Num N Adv V 
 Adv Num N V Misc Prep Misc 
 Art N Prep N V Adv Adv Art N Prep Art Adj V Pron Adv 
-Conj Adv Adv Art Adj Adj Misc 
+Conj Adv Adv Art Adj Adj Adj 
 Adv V N Adv Conj Pron Adv V V 
 Adv V N Art Adj 
 Conj Adv V Art Adv Conj Adv Adv Prep Pron Pron V 
 Num N Conj N Prep N V Pron Prep Adj 
 Pron Prep Adj Pron N 
-Pron V Pron Prep Pron V Adv Prep N Misc 
+Pron V Pron Prep N V Pron Prep N Num 
 Adv V Art Adj N V V Adv Adj V 
-Adv Conj Pron Adj Conj Num N Misc Misc Pron Pron Adv 
+Adv Conj Pron Adj Conj Num N V Adj Pron Pron Adv 
 Adv V Art Pron N V Pron Conj Pron 
-Art Adj N Conj N Prep Art Adj Misc V N Num 
+Art Adj N Conj N Prep Art Adj V V N Num 
 Pron V Art Adj V Prep Art Adj N Conj N V Pron Pron Pron V Prep Art N 
 Art Adj N V Pron Art N Prep Adj Conj 
 Conj Pron Pron V Adv Adv Prep Pron Adv Prep Art N V 
@@ -292,33 +292,33 @@ N V V Prep Pron N V
 N 
 Adj N V Pron Art N Misc V N Prep Art Adj Adj N Misc 
 Pron V Pron Adv Adj Conj Adv V Pron Adj Prep 
-Pron V Adj Art N Misc Num V Conj Pron Pron Adj Pron Int V Conj Art Prep Num N 
+Pron V Adj Art N Misc Num V Conj Pron Pron Adj Pron V V N Art Prep Num N 
 Pron V Pron N Adv Adv Conj Prep Art Adj N Prep V 
 Adv Pron V Adv Adv Adj 
 Pron N V Pron Adv Adv Conj V Conj Pron Adj V Prep N 
 Adv Pron V Prep Num N V Conj V 
-Adv V N Adv Adv Adj Prep Adj V 
-Pron V Adj N Prep Art N Prep N Misc Misc Prep Misc N Conj V Adv Prep Adj N 
-Adj Int Int V Art Adj Prep N 
-Conj V Misc Pron V Pron N Prep N Conj N 
+Adv V N Adv Adv Prep Prep Adj V 
+Pron V Adj N Prep Art N Prep N N Adj Prep N N Conj V Adv Prep Adj N 
+Adj Int Num V Art Adj Prep N 
+Conj V Prep Pron V Pron N Prep N Conj N 
 Adj Int V V Prep Art N 
-Prep Art N Misc Conj Adj Prep V 
+Prep Art N V Conj Adj Prep V 
 Adv V Pron V V 
-Pron V Art Adj Misc Art Pron Conj Int Pron V Art Adj 
+Pron V Art Adj Prep Art N Conj Int Pron V Art Adj 
 Conj Art Adj V Prep Art N Prep N V Adv Adv Adj 
 Adv V Art Adj N Adv Art N Prep 
 Art N Prep Adj Adj V Conj Adj Adj N 
 Pron N V Pron Art N N Misc 
 Adj Num N V Art Adj N 
-Prep V Prep Misc Prep Misc Prep Misc Pron Conj Pron V Prep Pron V 
-Prep Num Num N Conj Pron V Adv V Pron Pron Num N Prep N Prep Art N 
+Prep V Prep N Prep N Prep Adv Pron Conj Pron V Prep Pron V 
+Prep Num Num N Conj Pron V V V Pron Pron Num N Prep N Prep Art N 
 Conj Adv V Adv Adv Adj Num Prep 
 Adv Conj V V Pron Prep N 
 Adv V Pron Art N 
 Art N V V 
 Pron V V Adv Conj V Adv Adj Art Adj N Misc Misc 
 Pron V Art Adj N Prep N 
-Conj Pron Pron N Adv Misc V Conj Pron Num N V V 
+Conj Pron Pron N Adv V V Conj Pron Num N V V 
 Art Adj N V Art Adj V Prep Num N V 
 Num N Adv V Art N Conj Art Adj N Adj V 
 Pron V Art Adj Prep Conj V Conj Adj Num N 
@@ -326,11 +326,11 @@ N V Pron
 Adj N Adv N N Prep Art N V Art Adj N Conj N Adv V Conj Adv V 
 Prep Num V Pron Adv N V V Prep Adj N 
 Pron V Pron Prep Prep Prep V Conj Pron Adv Adv V 
-Adv V N Prep Prep Art Adj Misc Conj Pron Adv V Adj Adv Prep V 
+Adv V N Prep Prep Art Adj N Conj Pron Adv V Adj Adv Prep V 
 Conj Adv Pron N Prep V 
 Adv V N Conj Pron N Adv Num N Prep V 
 Prep N Prep N V Art N Prep Art N V 
-Int Int Int V Adv Art Adj N 
+Adv Adv Int V Adv Art Adj N 
 Art N Prep N Conj Pron Num N V Pron Adv Adv Adj 
 Pron V Adv Adj Conj V Art Adj N Adv Prep V 
 N Adj V Prep Art N Art Adj Adj Misc 
@@ -338,21 +338,21 @@ Art N V N Prep Pron Art Adj Prep N
 Conj Adv Adv Adj 
 Art Adj N V V 
 Adj V Pron Adj N Adj Pron N 
-Conj Pron N V Art N N N Misc Num Num N 
+Conj Pron N V Art N N N V Adv V N 
 Art N V Prep N Prep V Conj Art N V Art N Adv Prep 
 Pron V Prep Pron Adv Prep V Conj Adj Pron Adv Adv Adv Prep Prep N V Art Adj Adj Prep Adv 
 Num Adj Num V V Prep Art N Conj V Adv Adj Prep Art N Prep Art N 
 Pron V Adv Adj V V Prep Adj N Prep Art V N 
 Conj Adj V Art Adj Adv Adj 
-Conj Art Adj Misc V Pron Prep Art N N Adv Adv Art Adj 
-Adv V Pron Adv Prep Art N Misc Adv Pron V 
-Adv V V N Conj Adj Prep Pron N N Misc Misc 
+Conj Art Adj V V Pron Prep Art N N Adv Adv Art Adj 
+Adv V Pron Adv Prep Art N V Adv Pron V 
+Adv V V N Conj Adj Prep Pron N N Adv Pron 
 Adj N Prep Num N Pron Prep Art N Prep Adv V 
 Pron V Adv Prep N 
 Prep Art Adj Prep Art Adj N Prep Adj Art N Adv 
-N N Misc Misc N Pron Adv Prep 
+N N Num Adj N Pron Adv Prep 
 Pron V Adj Prep Art N Prep Art Adj N Misc 
-N Prep Adv V N Art Adj Adj Misc V Art N Prep Art N Adv Adj 
+N Prep Adv V N Art Adj Adj N V Art N Prep Art N Adv Adj 
 Art N V Prep Pron N Adv Adv 
 Art N V Adj 
 Art V Adv Pron Conj Adv Pron N Adv Prep Num V Art N Prep Art N 
@@ -362,7 +362,7 @@ Art N Prep N V Prep Art Adj N
 Prep N N V Adj Art Num N Art V N V 
 Prep Art V N V Adv Pron N V 
 Conj Adv Adj V Conj Art Adv Adj V Conj Adv N Prep Prep V 
-Conj Num Prep Art N Pron Adv Adv Adj Int V V Conj N Prep Prep V Pron Adj V V 
+Conj Num Prep Art N Pron Adv Adv Adj V V V Conj N Prep Prep V Pron Adj V V 
 Prep V Conj Adv Pron Adv Adj V V 
 Adv V Adj N Prep Adj V 
 Art N V Adv Adv Adv Adj Prep V V 
@@ -376,23 +376,23 @@ Conj Num V V V
 Pron Pron Adv Art N Prep Pron V Prep Art V 
 Punc Pron V N Prep Art Adj N Prep Art N Adj N Prep Prep Pron V 
 Pron V Adv Art Adj N 
-Int V Conj Adv Adv V 
+N V Conj Adv Adv V 
 Art N V Adj Prep N Conj Pron V Adj Prep Art Adj N 
-Conj Conj Pron Prep N Conj Prep Pron N Misc V Art N Adv Adv 
+Conj Conj Pron Prep N Conj Prep Pron N V V Art N Adv Adv 
 Adj 
-Adv V Art Adj N Art N Misc Art Adj 
+Adv V Art Adj N Art N Prep Art N 
 Num N V Pron Art Adj N V Conj Pron Prep Art N V 
-Pron V Adv Int Conj Art N Adv Adj Adj Adv Prep Pron N V 
-Art N V Adv Adv Adj Prep Art Adj Adv Art N V V Adv Art Adj Adv 
+Pron V Adv V Conj Art N Adv Adj Adj Adv Prep Pron N V 
+Art N V Adv Adv Adj Prep Art N Adv Art N V V Adv Art Adj Adv 
 Art Num V V Adv Prep Art N Conj V Art Adv Conj Adj V Prep V 
-Adj V V Adv V Prep Art Adj Conj Pron Adv Pron Pron N V 
+Adj V V Adv V Prep Art N Conj Pron Adv Pron Pron N V 
 Adv V Adv Adv Adv Num N V 
 V Pron Adv Art Adj Prep Pron N V V 
 
-Art V Art N Adv Adj N Prep Misc Conj N Adj V Adj 
+Art V Art N Adv Adj N Prep N Conj N Adj V Adj 
 Adv V Pron N Adj Conj N Adj N V 
 
 Prep N V N V Prep Art Adj Adj N 
 Pron V Prep Art N Prep Pron Num N Adj N N 
 Art N V V Prep Adj Pron 
-Art Adj N Adj V Art Num Prep Pron Prep Art Adj Misc Prep Pron N Misc Pron N N Conj Pron N N V Pron N V V 
+Art Adj N Adj V Art Num Prep Pron Prep Art Adj N Prep Pron N N Pron N N Conj Pron N N V Pron N V V 

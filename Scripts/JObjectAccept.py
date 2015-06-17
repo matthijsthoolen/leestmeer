@@ -4,6 +4,7 @@ from collections import Counter
 import sys, getopt, argparse, re, math, json
 import AVIscoreMod2 as AVIscoreMod
 import CITOMod2 as CITOMod
+import POStagger_text
 
 
 # def main(f):
@@ -24,6 +25,9 @@ def main(obj):
 			text = prepareText(body).decode('latin-1')
 			(aviScore,totWords,totSentences,aviAge) = AVIscoreMod.mainAVI(body)
 			(CLIB, CILT) = CITOMod.mainCITO(body)
+			#makeNGrams(makePosTags(text))
+			
+
 			item['aviScore'] = aviScore
 			item['aviAge'] = aviAge
 			item['clibScore'] = CLIB
