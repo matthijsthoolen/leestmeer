@@ -59,7 +59,7 @@ def main(obj):
 def prepareText(body):
 	text = ""
 	bod = re.split('\.[\s|\n]+|\!+[\s|\n]+|\?+[\s|\n]+',body)
-	bod.replace("&nbsp;"," ")
+	# bod.replace("&nbsp;"," ")
 	# bod = re.sub(r':|,|;|-', '',bod)
 	for line in bod:
 		line += '\n'
