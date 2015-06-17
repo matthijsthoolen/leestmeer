@@ -31,11 +31,18 @@
 
   //The Type of the database. You can choose between dirty, postgres, sqlite and mysql
   //You shouldn't use "dirty" for for anything else than testing or development
-  "dbType" : "dirty",
+  "dbType" : "mongodb",
   //the database specific settings
-  "dbSettings" : {
+/*  "dbSettings" : {
                    "filename" : "var/dirty.db"
-                 },
+                 },*/
+    "dbSettings": {
+	"user": "etherpad",
+	"host": "localhost",
+	"port": 27017,
+	"password": "Leestmeer402",
+	"dbname": "etherpad"
+    },
                  
   /* An Example of MySQL Configuration
    "dbType" : "mysql",
@@ -124,27 +131,25 @@
   // Allow Load Testing tools to hit the Etherpad Instance.  Warning this will disable security on the instance.
   "loadTest": false,
   
-  /* The toolbar buttons configuration.
+  /* The toolbar buttons configuration. */
   "toolbar": {
     "left": [
       ["bold", "italic", "underline", "strikethrough"],
       ["orderedlist", "unorderedlist", "indent", "outdent"],
-      ["undo", "redo"],
-      ["clearauthorship"]
+      ["undo", "redo"]
     ],
     "right": [
-      ["importexport", "timeslider", "savedrevision"],
-      ["settings", "embed"],
+      ["importexport", "timeslider"],
+      ["embed"],
       ["showusers"]
     ],
     "timeslider": [
       ["timeslider_export", "timeslider_returnToPad"]
     ]
   },
-  */
 
   /* The log level we are using, can be: DEBUG, INFO, WARN, ERROR */
-  "loglevel": "INFO",
+  "loglevel": "WARN",
   
   //Logging configuration. See log4js documentation for further information
   // https://github.com/nomiddlename/log4js-node
