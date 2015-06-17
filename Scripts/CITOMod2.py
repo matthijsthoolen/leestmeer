@@ -24,8 +24,9 @@ def mainCITO(text):
 				lettersCount = len(word)
 				totLetters += lettersCount
 			totWords += wordCount
-
-	uniqueWords = Counter(words)
+		
+	uniqueWords = Counter(allWords.split())
+	# print(uniqueWords)
 	typeTokenFrequency = len(uniqueWords) / totWords
 	
 	commonFile = open(common)
@@ -34,6 +35,7 @@ def mainCITO(text):
 	totCommonWords = 0
 	
 	for commonWord in commonWords:
+		# print(str(commonWord + ' exists: '+ uniqueWords[commonWord]))
 		totCommonWords += uniqueWords[commonWord]
 		
 	freqCommonWords = totCommonWords / totWords

@@ -4,7 +4,7 @@ from collections import Counter
 import sys, getopt, argparse, re, math, json
 import AVIscoreMod2 as AVIscoreMod
 import CITOMod2 as CITOMod
-import POStagger_text.py
+import POStagger_text as tagger
 
 # def main(f):
 # 	obj = json.loads(f)
@@ -26,7 +26,7 @@ def main(obj):
 			text = prepareText(body).decode('latin-1')
 			(aviScore,totWords,totSentences,aviAge) = AVIscoreMod.mainAVI(body)
 			(CLIB, CILT) = CITOMod.mainCITO(body)
-			POStags = POStagger_text.getPOStags(text)
+			POStags = tagger.getPOStags(text)
 			
 			
 			item['aviScore'] = aviScore
@@ -63,6 +63,7 @@ def prepareText(body):
 	text = ""
 	bod = re.split('\.[\s|\n]+|\!+[\s|\n]+|\?+[\s|\n]+',body)
 	bod.replace("&nbsp;"," ")
+	# bod = re.sub(r':|,|;|-', '',bod)
 	for line in bod:
 		line += '\n'
 		text += line
