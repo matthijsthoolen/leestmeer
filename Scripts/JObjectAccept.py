@@ -22,12 +22,14 @@ def main(obj):
 		index += 1
 		body = item['paragraph']
 		if body:
+
+			
 			text = prepareText(body).decode('latin-1')
 			(aviScore,totWords,totSentences,aviAge) = AVIscoreMod.mainAVI(body)
 			(CLIB, CILT) = CITOMod.mainCITO(body)
-			#makeNGrams(makePosTags(text))
+			makeNGrams(makePosTags(text))
 			
-
+			
 			item['aviScore'] = aviScore
 			item['aviAge'] = aviAge
 			item['clibScore'] = CLIB
