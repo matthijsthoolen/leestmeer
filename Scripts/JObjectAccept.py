@@ -20,8 +20,7 @@ def main(obj):
 	parObj = obj['text']
 	for item in parObj:
 		index += 1
-		body = item['paragraph']
-		
+		body = item['paragraph']		
 		if body:
 			print("print die paragraph")
 			text = prepareText(body).decode('latin-1')
