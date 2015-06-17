@@ -11,6 +11,7 @@ def mainCITO(text):
 	avgWords = 0
 	totWords = 0
 	avgLetters = 0
+	allWords = ""
 	sentences = text.splitlines()
 	for sentence in sentences:
 		if sentence:
@@ -23,6 +24,7 @@ def mainCITO(text):
 			for word in words:
 				lettersCount = len(word)
 				totLetters += lettersCount
+				allWords += word + ' '
 			totWords += wordCount
 		
 	uniqueWords = Counter(allWords.split())

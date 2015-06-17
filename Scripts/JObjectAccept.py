@@ -5,6 +5,7 @@ import sys, getopt, argparse, re, math, json
 import AVIscoreMod2 as AVIscoreMod
 import CITOMod2 as CITOMod
 import POStagger_text as tagger
+import ngramProfiler 
 
 # def main(f):
 # 	obj = json.loads(f)
@@ -24,11 +25,22 @@ def main(obj):
 		if body:
 			print("print die paragraph")
 			text = prepareText(body).decode('latin-1')
+											
+			# Calculate metrics of current text
 			(aviScore,totWords,totSentences,aviAge) = AVIscoreMod.mainAVI(body)
 			(CLIB, CILT) = CITOMod.mainCITO(body)
+											
+			# Do a POStag analysis on the text, and calculate ngrams of those
 			POStags = tagger.getPOStags(text)
+			nGrams = ngramProfiler.main(POStags,3)
 			
+			print("POS tag analyse van paragraaf")
+			print(POStags)
+											
+			print("Ngram analyse van paragraaf")
+			print(nGrams)
 			
+			# Put data in the JSON object
 			item['aviScore'] = aviScore
 			item['aviAge'] = aviAge
 			item['clibScore'] = CLIB
@@ -61,8 +73,8 @@ def main(obj):
 
 def prepareText(body):
 	text = ""
+	body.replace("&nbsp;"," ")
 	bod = re.split('\.[\s|\n]+|\!+[\s|\n]+|\?+[\s|\n]+',body)
-	bod.replace("&nbsp;"," ")
 	# bod = re.sub(r':|,|;|-', '',bod)
 	for line in bod:
 		line += '\n'

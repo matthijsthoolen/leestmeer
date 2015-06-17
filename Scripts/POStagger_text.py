@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-import pickle, argparse, sys
+import pickle, argparse, sys, re
 tagger = pickle.load(open("nltk_data/taggers/conll2002_NaiveBayes_aubt.pickle"))
 
 

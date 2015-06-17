@@ -5,7 +5,7 @@ from itertools import permutations
 
 # Prepares an already tagged corpus and creates N-Gram model
 def main(text, n):
-	words = prepareText(text)
+	words = prepareText(text,n)
 	nGrams = makeNgrams(n, words)
 	if n == 3:
 		del nGrams['</s> <s> <s>']
@@ -13,7 +13,7 @@ def main(text, n):
 	return nGrams
 
 
-def prepareText(corpus):
+def prepareText(corpus,n):
 	lines = corpus.splitlines()
 	words = []
 	for line in lines:
