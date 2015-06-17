@@ -48,8 +48,8 @@ def makeNgrams(n, words):
 if __name__ == "__main__":
 	parser = argparse.ArgumentParser()
 	# parser.add_argument("-corpus", "--corpus", help="File of corpus")
-	parser.add_argument("-text", "--text", help="Text as string")
+	parser.add_argument("-corpus", "--corpus", help="file")
 	parser.add_argument("-n")
 	#Name and location of the text file to be parsed
 	args = parser.parse_args()
-	main(args.text, args.n)
+	main(args.corpus, args.n)

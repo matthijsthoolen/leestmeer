@@ -7,8 +7,7 @@ import CITOMod2 as CITOMod
 <<<<<<< HEAD
 import POStagger_text as tagger
 =======
-import POStagger_text
->>>>>>> origin/master
+>>>>>>> parent of 6a2e1ed... POS tagger verbetering (leestekens weg)
 
 
 # def main(f):
@@ -29,7 +28,6 @@ def main(obj):
 		text = prepareText(body).decode('latin-1')
 		(aviScore,totWords,totSentences,aviAge) = AVIscoreMod.mainAVI(body)
 		(CLIB, CILT) = CITOMod.mainCITO(body)
-		nGrams = 
 		item['aviScore'] = aviScore
 		item['aviAge'] = aviAge
 		item['clibScore'] = CLIB
@@ -45,9 +43,6 @@ def main(obj):
 			text = prepareText(body).decode('latin-1')
 			(aviScore,totWords,totSentences,aviAge) = AVIscoreMod.mainAVI(body)
 			(CLIB, CILT) = CITOMod.mainCITO(body)
-			#makeNGrams(makePosTags(text))
-			
-
 			item['aviScore'] = aviScore
 			item['aviAge'] = aviAge
 			item['clibScore'] = CLIB
@@ -58,7 +53,7 @@ def main(obj):
 			totalText += body
 			totalText += '\n\n'
 			obj['text'][index] = item
->>>>>>> origin/master
+>>>>>>> parent of 6a2e1ed... POS tagger verbetering (leestekens weg)
 	(aviScore,totWords,totSentences,aviAge) = AVIscoreMod.mainAVI(totalText)
 	(CLIB, CILT) = CITOMod.mainCITO(totalText)
 	overall = obj['overall'][0]
