@@ -15,7 +15,7 @@ def main(corpus):
 			text = file.read()
 			file.close
 			P2 = normalize(ngramProfiler.main(text,3))
-			print(P2)
+			# print(P2)
 	except IOError: 
 		print('Cannot open '+corpus)
 	calcDiff(P1, P2)
@@ -29,12 +29,14 @@ def calcDiff(P1, P2):
 		# print(P1[x] - P2[x])
 		part is ((P1[x] - P2[x])/((P1[x] + P2[x])/2))**2
 		D += part
-	# print(D)
+	print(D)
 	return D
 
 def normalize(P):
 	unique = len(P)
+	print(unique)
 	tot = sum(P.values())
+	print(tot)
 	for x in P:
 		P[x] = P[x]/tot
 	return P
