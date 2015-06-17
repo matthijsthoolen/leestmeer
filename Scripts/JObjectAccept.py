@@ -4,6 +4,7 @@ from collections import Counter
 import sys, getopt, argparse, re, math, json
 import AVIscoreMod2 as AVIscoreMod
 import CITOMod2 as CITOMod
+import POStagger_text as tagger
 
 
 # def main(f):
@@ -20,20 +21,20 @@ def main(obj):
 	for item in parObj:
 		index += 1
 		body = item['paragraph']
-		if body:
-			text = prepareText(body).decode('latin-1')
-			(aviScore,totWords,totSentences,aviAge) = AVIscoreMod.mainAVI(body)
-			(CLIB, CILT) = CITOMod.mainCITO(body)
-			item['aviScore'] = aviScore
-			item['aviAge'] = aviAge
-			item['clibScore'] = CLIB
-			item['ciltScore'] = CILT
-			item['analytics']['totalWords'] = totWords
-			avgSentence is totWords/totSentences
-			item['analytics']['avgSentence'] = avgSentence
-			totalText += body
-			totalText += '\n\n'
-			obj['text'][index] = item
+		text = prepareText(body).decode('latin-1')
+		(aviScore,totWords,totSentences,aviAge) = AVIscoreMod.mainAVI(body)
+		(CLIB, CILT) = CITOMod.mainCITO(body)
+		nGrams = 
+		item['aviScore'] = aviScore
+		item['aviAge'] = aviAge
+		item['clibScore'] = CLIB
+		item['ciltScore'] = CILT
+		item['analytics']['totalWords'] = totWords
+		avgSentence is totWords/totSentences
+		item['analytics']['avgSentence'] = avgSentence
+		totalText += body
+		totalText += '\n\n'
+		obj['text'][index] = item
 	(aviScore,totWords,totSentences,aviAge) = AVIscoreMod.mainAVI(totalText)
 	(CLIB, CILT) = CITOMod.mainCITO(totalText)
 	overall = obj['overall'][0]
@@ -57,6 +58,7 @@ def main(obj):
 def prepareText(body):
 	text = ""
 	bod = re.split('\.[\s|\n]+|\!+[\s|\n]+|\?+[\s|\n]+',body)
+	# bod = re.sub(r':|,|;|-', '',bod)
 	for line in bod:
 		line += '\n'
 		text += line

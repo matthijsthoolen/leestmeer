@@ -1,58 +1,48 @@
 from collections import Counter
 from collections import OrderedDict
-import sys, getopt, argparse
+import sys, getopt, argparse, re
 from itertools import permutations
 
-#Main function that prepares the corpus as list, adds start stop to every paragraph and calls functions based on arguments given by the user.
-def main(corpus, n):
-	try:
-		file = open(corpus, 'r', encoding='utf-8', errors='ignore')
-		lines = file.read().splitlines()
-		file.close()
-		words = []
-		prevempty = 1
-		for line in lines:
-			if line and prevempty == 1:
-				prevempty = 0
-				i=0
-				prepend = []
-				while i < n-2:
-					prepend = ['<s>'] + prepend
-					i += 1
-				words.extend(prepend)
-				words.append('<s>')
-				linewords = line.split()
-				words.extend(linewords)
-			elif line and prevempty == 0:
-				linewords = line.split()
-				words.extend(linewords)
-			elif not line and prevempty == 0:
-				prevempty = 1
-				words.append('</s>')
-
-	except IOError: 
-		print('Cannot open '+corpus)
+# Prepares an already tagged corpus and creates N-Gram model
+def main(text, n):
+	words = prepareText(text)
 	nGrams = makeNgrams(n, words)
-	del nGrams['</s> <s> <s>']
-	# for key,item in nGrams.items():
-	# 	if item > 0:
-	# 		print(str(key) + ': ' + str(nGrams[key]))
-	# print(nGrams)
-	file = open(corpus + '_nGrams', 'w')
-	# for key,item in nGrams.items():
-	file.write(str(nGrams))
-	file.close()		
+	if n == 3:
+		del nGrams['</s> <s> <s>']
+	c = Counter(nGrams)
+	return nGrams
 
 
+def prepareText(corpus):
+	lines = corpus.splitlines()
+	words = []
+	for line in lines:
+		if line:
+			wordline = re.split(' ', line)
+			i=0
+			prepend = []
+			while i < n-2:
+				words.append('<s>')
+				i += 1
+			words.append('<s>')
+			for x in wordline:
+				if x:
+					words.append(x)
+			words.append('</s>')
+	return words
 
 #Function that makes n-grams out of 'words'.
 def makeNgrams(n, words):
 	nGrams = Counter([' '.join(words[i:i+n]) for i in range(len(words)-n+1)])
 	return nGrams
 
+# This function states the commandline arguments that are needed
+# for the program to run.
 if __name__ == "__main__":
 	parser = argparse.ArgumentParser()
-	parser.add_argument("-n", type=int, help="Specify n for ngram")
-	parser.add_argument("-corpus", dest="corpus", help="corpus name")
+	# parser.add_argument("-corpus", "--corpus", help="File of corpus")
+	parser.add_argument("-text", "--text", help="Text as string")
+	parser.add_argument("-n")
+	#Name and location of the text file to be parsed
 	args = parser.parse_args()
-	main(args.corpus, args.n)
+	main(args.text, args.n)
