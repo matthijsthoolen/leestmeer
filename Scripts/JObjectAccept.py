@@ -6,7 +6,6 @@ import AVIscoreMod2 as AVIscoreMod
 import CITOMod2 as CITOMod
 import POStagger_text as tagger
 
-
 # def main(f):
 # 	obj = json.loads(f)
 # 	print('hello')
@@ -20,15 +19,13 @@ def main(obj):
 	parObj = obj['text']
 	for item in parObj:
 		index += 1
-		body = item['paragraph']
-
+		body = item['paragraph']		
 		if body:
-
-			
+			print("print die paragraph")
 			text = prepareText(body).decode('latin-1')
 			(aviScore,totWords,totSentences,aviAge) = AVIscoreMod.mainAVI(body)
 			(CLIB, CILT) = CITOMod.mainCITO(body)
-
+			POStags = tagger.getPOStags(text)
 			item['aviScore'] = aviScore
 			item['aviAge'] = aviAge
 			item['clibScore'] = CLIB
@@ -62,6 +59,7 @@ def main(obj):
 def prepareText(body):
 	text = ""
 	bod = re.split('\.[\s|\n]+|\!+[\s|\n]+|\?+[\s|\n]+',body)
+	bod.replace("&nbsp;"," ")
 	# bod = re.sub(r':|,|;|-', '',bod)
 	for line in bod:
 		line += '\n'

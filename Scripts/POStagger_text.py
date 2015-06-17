@@ -18,6 +18,10 @@ def getPOStags(text):
 	for line in lines:
 		# IF line not empty, tag the line with POS tags and write to file
 		if line:
+			# Delete punctuation marks
+			line = line.decode('latin-1')
+			line = re.sub(r'[#|&|>|=|(|)|"|:|,|;|-|\+]','',line)
+			
 			newLine = ""
 			#transform = tagger.tag(line.decode('latin-1').split())
 			transform = tagger.tag(line.split())
@@ -32,4 +36,3 @@ if __name__ == "__main__":
 	parser.add_argument("-text")
 	args = parser.parse_args()
 	main(args.text)
-
