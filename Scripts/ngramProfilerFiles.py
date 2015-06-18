@@ -17,6 +17,17 @@ def main(corpus, n):
 	file = open(corpus+'_nGrams', 'wb')
 	pickle.dump(c,file)
 	file.close()
+
+	# print(len(c))
+	# print(sum(c.values()))
+
+
+	# file = open(corpus+'_nGrams', 'rb')
+	# b = pickle.load(file)
+	# file.close()
+
+	# print(len(b))
+	# print(sum(b.values()))
 	# return nGrams
 
 

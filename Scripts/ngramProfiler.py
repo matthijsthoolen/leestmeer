@@ -7,13 +7,13 @@ from itertools import permutations
 def main(text, n):
 	words = prepareText(text,n)
 	nGrams = makeNgrams(n, words)
-	if n == 3:
-		del nGrams['</s> <s> <s>']
+	# if n == 3:
+	# 	del nGrams['</s> <s> <s>']
 	c = Counter(nGrams)
-	return nGrams
+	return c
 
 
-def prepareText(corpus,n):
+def prepareText(corpus, n):
 	lines = corpus.splitlines()
 	words = []
 	for line in lines:
