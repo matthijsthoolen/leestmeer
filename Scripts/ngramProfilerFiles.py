@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 from collections import Counter
 from collections import OrderedDict
 import sys, getopt, argparse, re, pickle
@@ -8,15 +10,28 @@ def main(corpus, n):
 	file = open(corpus, 'r')
 	text = file.read()
 	file.close()
-	words = prepareText(text, 3)
-	nGrams = makeNgrams(3, words)
+	words = prepareText(text, int(n))
+	nGrams = makeNgrams(int(n), words)
 	if n == 3:
 		del nGrams['</s> <s> <s>']
+	if n == 4:
+		del nGrams['</s> <s> <s> <s>']
 	c = Counter(nGrams)
 	# print(c)
 	file = open(corpus+'_nGrams', 'wb')
 	pickle.dump(c,file)
 	file.close()
+
+	# print(len(c))
+	# print(sum(c.values()))
+
+
+	# file = open(corpus+'_nGrams', 'rb')
+	# b = pickle.load(file)
+	# file.close()
+
+	# print(len(b))
+	# print(sum(b.values()))
 	# return nGrams
 
 
