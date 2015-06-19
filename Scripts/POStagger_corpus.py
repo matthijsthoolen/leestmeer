@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-import pickle, argparse, sys
+import pickle, argparse, sys, re
 tagger = pickle.load(open("nltk_data/taggers/conll2002_NaiveBayes_aubt.pickle"))
 
 
@@ -8,8 +8,8 @@ tagger = pickle.load(open("nltk_data/taggers/conll2002_NaiveBayes_aubt.pickle"))
 # The POS tagger is trained using nltk-trainer on the dutch part of the cnll2002 corpus
 # All output is then written to a specified output file
 def main(corpus,outputFile):
-	print('Corpus name is: ' + corpus)
-	print('Output file name is: ' + outputFile)
+	#print('Corpus name is: ' + corpus)
+	#print('Output file name is: ' + outputFile)
 	try:
 		inputFile = open(corpus)
 		text = inputFile.read()
@@ -23,12 +23,17 @@ def main(corpus,outputFile):
 def getPOStags(text,outputFileName):
 	try:
 		outputFile = open(outputFileName,'w')
-		lines = text.splitlines();
+		lines = text.splitlines()
+		counter = 0
 		for line in lines:
 			# IF line not empty, tag the line with POS tags and write to file
-			if line:
+			if (line) and (counter < 1000):
 				newLine = ""
-				transform = tagger.tag(line.decode('latin-1').split())
+				counter += 1
+				line = line.decode('latin-1')
+				line = line.replace(u"\u0092",'')
+				line = re.sub(r'[,|.|\']','',line)
+				transform = tagger.tag(line.split())
 				for (word, tag) in transform:
 					newLine += tag + ' ' 
 

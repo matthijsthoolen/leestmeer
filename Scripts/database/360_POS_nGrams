@@ -1,0 +1,3214 @@
+ccollections
+Counter
+p0
+((dp1
+S'Art V V'
+p2
+I9
+sS'Pron Pron Adv'
+p3
+I12
+sS'N Conj Num'
+p4
+I10
+sS'N Misc V'
+p5
+I15
+sS'Num Num N'
+p6
+I10
+sS'N Adj Pron'
+p7
+I1
+sS'Adv V Adj'
+p8
+I6
+sS'Int V Adv'
+p9
+I1
+sS'Adv Prep Prep'
+p10
+I3
+sS'Conj Prep Num'
+p11
+I5
+sS'Int V Adj'
+p12
+I3
+sS'Conj N Conj'
+p13
+I16
+sS'Adv V Adv'
+p14
+I16
+sS'Art V N'
+p15
+I9
+sS'V N Prep'
+p16
+I23
+sS'N Misc N'
+p17
+I3
+sS'Misc Num Misc'
+p18
+I1
+sS'Num Num V'
+p19
+I3
+sS'<s> Art Adv'
+p20
+I1
+sS'Num N Misc'
+p21
+I7
+sS'Adj Prep Misc'
+p22
+I7
+sS'V V Conj'
+p23
+I47
+sS'Art V Num'
+p24
+I7
+sS'Art Pron Pron'
+p25
+I1
+sS'Pron N </s>'
+p26
+I31
+sS'Art Adv </s>'
+p27
+I1
+sS'Art </s> <s>'
+p28
+I5
+sS'<s> Art Adj'
+p29
+I50
+sS'Adj N Pron'
+p30
+I10
+sS'Prep Conj Conj'
+p31
+I1
+sS'<s> Conj Art'
+p32
+I9
+sS'Misc Prep Num'
+p33
+I6
+sS'<s> Adj Pron'
+p34
+I2
+sS'<s> N Num'
+p35
+I2
+sS'Int Conj Prep'
+p36
+I1
+sS'Pron Adv V'
+p37
+I23
+sS'Int Num Misc'
+p38
+I1
+sS'Pron Adv N'
+p39
+I2
+sS'Prep Adj Conj'
+p40
+I10
+sS'Adv Conj Prep'
+p41
+I2
+sS'V Adv Conj'
+p42
+I16
+sS'<s> Pron Adj'
+p43
+I7
+sS'N Adv Conj'
+p44
+I5
+sS'Prep N Conj'
+p45
+I56
+sS'<s> Pron Adv'
+p46
+I3
+sS'Misc V </s>'
+p47
+I1
+sS'V V </s>'
+p48
+I73
+sS'N N Conj'
+p49
+I23
+sS'Conj V V'
+p50
+I16
+sS'N V </s>'
+p51
+I86
+sS'Pron Pron Adj'
+p52
+I6
+sS'Int Misc Num'
+p53
+I1
+sS'<s> N Misc'
+p54
+I4
+sS'Conj V N'
+p55
+I1
+sS'N Pron Pron'
+p56
+I11
+sS'V Misc </s>'
+p57
+I4
+sS'Num V V'
+p58
+I16
+sS'N Art Num'
+p59
+I1
+sS'Num N Conj'
+p60
+I17
+sS'Prep Adv N'
+p61
+I2
+sS'Adv Conj V'
+p62
+I1
+sS'Adj Conj Int'
+p63
+I2
+sS'Adj Prep </s>'
+p64
+I2
+sS'Prep Adv V'
+p65
+I6
+sS'Adv Conj N'
+p66
+I7
+sS'Art Adj Adj'
+p67
+I27
+sS'Num V N'
+p68
+I1
+sS'Prep N Adj'
+p69
+I18
+sS'Adj Misc Art'
+p70
+I1
+sS'Conj Adj Prep'
+p71
+I7
+sS'V N Misc'
+p72
+I5
+sS'N N Pron'
+p73
+I1
+sS'Adj Pron Adv'
+p74
+I2
+sS'Adj Pron Adj'
+p75
+I1
+sS'Num Conj N'
+p76
+I6
+sS'Prep Int Int'
+p77
+I1
+sS'Conj Adv </s>'
+p78
+I5
+sS'N V Num'
+p79
+I17
+sS'N N </s>'
+p80
+I35
+sS'<s> Conj V'
+p81
+I6
+sS'Pron V Pron'
+p82
+I21
+sS'<s> V Prep'
+p83
+I1
+sS'N Misc </s>'
+p84
+I47
+sS'Adj Misc Adv'
+p85
+I1
+sS'<s> Conj N'
+p86
+I6
+sS'Adv N Num'
+p87
+I3
+sS'<s> Pron </s>'
+p88
+I1
+sS'Misc Pron Num'
+p89
+I1
+sS'Pron Num V'
+p90
+I3
+sS'Pron N Punc'
+p91
+I1
+sS'Num Int Art'
+p92
+I1
+sS'Pron Num N'
+p93
+I14
+sS'<s> N Art'
+p94
+I22
+sS'Art V Art'
+p95
+I1
+sS'<s> Adv Art'
+p96
+I2
+sS'Adj Adv Adj'
+p97
+I4
+sS'N Prep Prep'
+p98
+I18
+sS'V Conj Int'
+p99
+I1
+sS'V Adj N'
+p100
+I18
+sS'Conj V Prep'
+p101
+I17
+sS'V Art Adv'
+p102
+I7
+sS'N Prep Conj'
+p103
+I7
+sS'Prep N Num'
+p104
+I8
+sS'V Adj V'
+p105
+I14
+sS'Art V </s>'
+p106
+I3
+sS'V Art Adj'
+p107
+I73
+sS'N Misc Prep'
+p108
+I13
+sS'Adj Adv Adv'
+p109
+I8
+sS'N Punc Misc'
+p110
+I1
+sS'Int Adv Prep'
+p111
+I3
+sS'Conj Adj Adj'
+p112
+I5
+sS'N Adj Num'
+p113
+I1
+sS'<s> N N'
+p114
+I21
+sS'Adj Prep Adv'
+p115
+I3
+sS'Art Num V'
+p116
+I3
+sS'Prep V Adv'
+p117
+I9
+sS'V Conj Num'
+p118
+I4
+sS'<s> N Conj'
+p119
+I4
+sS'Int N N'
+p120
+I3
+sS'Conj Adj Adv'
+p121
+I1
+sS'<s> <s> Punc'
+p122
+I8
+sS'Prep Adv Num'
+p123
+I3
+sS'Adj N Art'
+p124
+I11
+sS'Int V </s>'
+p125
+I3
+sS'Prep Adj N'
+p126
+I45
+sS'Misc Adv Num'
+p127
+I1
+sS'Prep Pron </s>'
+p128
+I6
+sS'Pron N Misc'
+p129
+I5
+sS'Misc V Misc'
+p130
+I1
+sS'Num Adv V'
+p131
+I1
+sS'Conj Num Conj'
+p132
+I1
+sS'Conj V Pron'
+p133
+I15
+sS'Int Int Art'
+p134
+I3
+sS'Adv Conj Adv'
+p135
+I6
+sS'Num Int </s>'
+p136
+I1
+sS'Adv Pron </s>'
+p137
+I2
+sS'Misc Misc Pron'
+p138
+I5
+sS'Prep Pron Prep'
+p139
+I11
+sS'Misc N Adv'
+p140
+I1
+sS'Adj Art Adj'
+p141
+I9
+sS'V Art Prep'
+p142
+I4
+sS'Art N Adv'
+p143
+I43
+sS'Num Punc </s>'
+p144
+I3
+sS'V Art Pron'
+p145
+I4
+sS'Adv Adj Pron'
+p146
+I4
+sS'Adj N V'
+p147
+I110
+sS'Art Prep Adv'
+p148
+I2
+sS'Prep Pron Num'
+p149
+I5
+sS'Adj Art Adv'
+p150
+I1
+sS'N Adj </s>'
+p151
+I3
+sS'Prep Conj V'
+p152
+I1
+sS'V Adv N'
+p153
+I12
+sS'Pron Prep Int'
+p154
+I1
+sS'N V Conj'
+p155
+I57
+sS'Pron V Num'
+p156
+I4
+sS'Pron N Adv'
+p157
+I10
+sS'Prep Art Prep'
+p158
+I10
+sS'Prep Conj N'
+p159
+I3
+sS'V Adv V'
+p160
+I27
+sS'Prep V Pron'
+p161
+I6
+sS'Prep V Num'
+p162
+I2
+sS'Misc V N'
+p163
+I4
+sS'Prep Misc Adv'
+p164
+I2
+sS'Adj N Adj'
+p165
+I15
+sS'Misc V V'
+p166
+I3
+sS'Conj Num Num'
+p167
+I1
+sS'Adj N Adv'
+p168
+I22
+sS'Num Adj Prep'
+p169
+I3
+sS'V Art N'
+p170
+I93
+sS'N Num V'
+p171
+I8
+sS'Pron Pron Art'
+p172
+I2
+sS'Adj Int </s>'
+p173
+I1
+sS'Num Num Punc'
+p174
+I2
+sS'Pron N N'
+p175
+I2
+sS'Int V Conj'
+p176
+I1
+sS'Num Num Prep'
+p177
+I1
+sS'Pron Art Num'
+p178
+I1
+sS'V Art V'
+p179
+I5
+sS'N Num N'
+p180
+I17
+sS'V Pron Pron'
+p181
+I14
+sS'Adj </s> <s>'
+p182
+I63
+sS'Int Int Int'
+p183
+I13
+sS'<s> Adj Misc'
+p184
+I1
+sS'Pron Pron N'
+p185
+I17
+sS'Pron Adj Prep'
+p186
+I6
+sS'Adv Adj </s>'
+p187
+I6
+sS'Pron Pron V'
+p188
+I20
+sS'Punc Num N'
+p189
+I1
+sS'<s> <s> Num'
+p190
+I23
+sS'Misc Conj Int'
+p191
+I1
+sS'N N Prep'
+p192
+I40
+sS'Adj Prep N'
+p193
+I31
+sS'N Pron V'
+p194
+I18
+sS'Adj V Prep'
+p195
+I40
+sS'N Pron N'
+p196
+I7
+sS'Num Prep Pron'
+p197
+I4
+sS'Adj Prep V'
+p198
+I22
+sS'Adj Conj N'
+p199
+I12
+sS'Prep Conj Prep'
+p200
+I2
+sS'V Num Prep'
+p201
+I3
+sS'Pron N Art'
+p202
+I2
+sS'Adj Conj V'
+p203
+I11
+sS'Conj N Pron'
+p204
+I7
+sS'N V Punc'
+p205
+I1
+sS'Prep N Misc'
+p206
+I42
+sS'Adv Adv </s>'
+p207
+I11
+sS'<s> Adj Prep'
+p208
+I7
+sS'Int Conj Pron'
+p209
+I1
+sS'<s> Adv </s>'
+p210
+I1
+sS'Adj N Prep'
+p211
+I108
+sS'Art Num N'
+p212
+I19
+sS'Adj N Misc'
+p213
+I21
+sS'Conj Pron Adv'
+p214
+I15
+sS'Conj Num Adj'
+p215
+I1
+sS'<s> Int N'
+p216
+I9
+sS'Conj Adj Misc'
+p217
+I1
+sS'Misc V Prep'
+p218
+I5
+sS'Conj N Art'
+p219
+I6
+sS'Prep Adv Prep'
+p220
+I8
+sS'Adv Prep Art'
+p221
+I35
+sS'Prep Prep Adj'
+p222
+I5
+sS'N Int </s>'
+p223
+I6
+sS'Pron N V'
+p224
+I66
+sS'<s> Int V'
+p225
+I8
+sS'Conj Num Adv'
+p226
+I1
+sS'Pron Misc Art'
+p227
+I1
+sS'N Adv Adv'
+p228
+I14
+sS'V Num Adj'
+p229
+I8
+sS'Adv Pron Art'
+p230
+I1
+sS'<s> <s> Int'
+p231
+I112
+sS'N Adv Adj'
+p232
+I17
+sS'Art Pron </s>'
+p233
+I1
+sS'<s> Adj Conj'
+p234
+I4
+sS'V Conj N'
+p235
+I16
+sS'Num Art N'
+p236
+I1
+sS'Adj Num Adj'
+p237
+I1
+sS'Adv Adj Adv'
+p238
+I4
+sS'Num Prep V'
+p239
+I2
+sS'V Punc Conj'
+p240
+I1
+sS'Adv Adj Adj'
+p241
+I3
+sS'Num Prep N'
+p242
+I7
+sS'Adj Prep Pron'
+p243
+I11
+sS'Adj V </s>'
+p244
+I43
+sS'V Conj V'
+p245
+I34
+sS'<s> Adj Art'
+p246
+I1
+sS'Art Pron Conj'
+p247
+I1
+sS'<s> Adv Adj'
+p248
+I2
+sS'N Conj Int'
+p249
+I7
+sS'<s> Adv Adv'
+p250
+I3
+sS'Adj Adj Misc'
+p251
+I6
+sS'<s> Art Prep'
+p252
+I3
+sS'V Pron Prep'
+p253
+I20
+sS'Misc Adj N'
+p254
+I1
+sS'N Conj V'
+p255
+I28
+sS'Num Adj </s>'
+p256
+I4
+sS'N Prep Adj'
+p257
+I52
+sS'N Prep Adv'
+p258
+I11
+sS'Conj N Num'
+p259
+I3
+sS'N Conj N'
+p260
+I59
+sS'V Adv Adj'
+p261
+I31
+sS'Int Prep Pron'
+p262
+I3
+sS'<s> <s> Misc'
+p263
+I15
+sS'V Adv Adv'
+p264
+I55
+sS'Pron N Conj'
+p265
+I21
+sS'N Prep Pron'
+p266
+I65
+sS'Pron V Misc'
+p267
+I2
+sS'<s> Conj Pron'
+p268
+I16
+sS'Art Adv Adj'
+p269
+I3
+sS'Int Int Prep'
+p270
+I4
+sS'Art Adv Adv'
+p271
+I1
+sS'Num Misc </s>'
+p272
+I2
+sS'Pron V Art'
+p273
+I18
+sS'Prep V N'
+p274
+I6
+sS'V Conj Art'
+p275
+I35
+sS'Prep V V'
+p276
+I28
+sS'Art Num Adj'
+p277
+I6
+sS'Int V Pron'
+p278
+I1
+sS'<s> Adj </s>'
+p279
+I1
+sS'Num </s> <s>'
+p280
+I23
+sS'Pron Misc Misc'
+p281
+I1
+sS'Misc Prep Prep'
+p282
+I1
+sS'Punc Conj Pron'
+p283
+I1
+sS'Num N Prep'
+p284
+I66
+sS'Adv Num Adj'
+p285
+I2
+sS'Adj Adj Pron'
+p286
+I1
+sS'V Pron </s>'
+p287
+I8
+sS'Num N Num'
+p288
+I11
+sS'V Conj Pron'
+p289
+I55
+sS'Num Conj Adj'
+p290
+I1
+sS'Misc Conj Adj'
+p291
+I3
+sS'Prep V </s>'
+p292
+I62
+sS'V N Adj'
+p293
+I7
+sS'Pron Adj </s>'
+p294
+I2
+sS'Art Adv V'
+p295
+I3
+sS'<s> Art V'
+p296
+I18
+sS'Misc Conj Adv'
+p297
+I1
+sS'<s> Pron Num'
+p298
+I2
+sS'Adj Adj V'
+p299
+I13
+sS'Misc Misc Adv'
+p300
+I6
+sS'Num V Num'
+p301
+I3
+sS'Num Conj Art'
+p302
+I2
+sS'<s> N </s>'
+p303
+I5
+sS'Adj Adj N'
+p304
+I12
+sS'V Prep N'
+p305
+I86
+sS'N N V'
+p306
+I39
+sS'Prep N Int'
+p307
+I1
+sS'Pron Pron Conj'
+p308
+I1
+sS'N Conj Adj'
+p309
+I18
+sS'N Conj Adv'
+p310
+I24
+sS'V Prep V'
+p311
+I21
+sS'N N N'
+p312
+I36
+sS'Adv Prep N'
+p313
+I31
+sS'Adv Prep Misc'
+p314
+I1
+sS'Adv Int V'
+p315
+I2
+sS'Adv Adv Art'
+p316
+I7
+sS'Prep Adj Adj'
+p317
+I7
+sS'Prep Conj Art'
+p318
+I1
+sS'Adv Prep V'
+p319
+I23
+sS'Prep Adj Adv'
+p320
+I2
+sS'N Adj Misc'
+p321
+I6
+sS'Conj Pron N'
+p322
+I24
+sS'Conj Int Art'
+p323
+I1
+sS'Conj Adj Num'
+p324
+I1
+sS'Pron Num Adj'
+p325
+I3
+sS'Int N Conj'
+p326
+I1
+sS'Conj Pron V'
+p327
+I34
+sS'Prep Art Num'
+p328
+I15
+sS'Pron Int </s>'
+p329
+I1
+sS'Art Adj Pron'
+p330
+I4
+sS'<s> V Adv'
+p331
+I3
+sS'Adj Prep Adj'
+p332
+I15
+sS'Adv Adv V'
+p333
+I27
+sS'V Num Int'
+p334
+I1
+sS'Prep Prep Pron'
+p335
+I1
+sS'Punc Art N'
+p336
+I1
+sS'Adj Conj Prep'
+p337
+I9
+sS'Art Pron V'
+p338
+I3
+sS'N Punc Art'
+p339
+I1
+sS'<s> V V'
+p340
+I3
+sS'<s> V N'
+p341
+I3
+sS'Misc N </s>'
+p342
+I1
+sS'Int N Misc'
+p343
+I3
+sS'Art Pron N'
+p344
+I4
+sS'N Adv Int'
+p345
+I1
+sS'Art Prep V'
+p346
+I2
+sS'Num V Pron'
+p347
+I3
+sS'Adv Num N'
+p348
+I23
+sS'Prep Art V'
+p349
+I24
+sS'<s> Adv V'
+p350
+I47
+sS'N N Misc'
+p351
+I16
+sS'N Prep Misc'
+p352
+I27
+sS'Adv Num V'
+p353
+I1
+sS'Prep Art N'
+p354
+I354
+sS'<s> Adv N'
+p355
+I3
+sS'Art Prep N'
+p356
+I3
+sS'Num Prep Prep'
+p357
+I1
+sS'Adv Adv Pron'
+p358
+I10
+sS'Misc Art N'
+p359
+I6
+sS'Pron Misc N'
+p360
+I1
+sS'Num N N'
+p361
+I7
+sS'N Adv </s>'
+p362
+I9
+sS'Art Prep Prep'
+p363
+I2
+sS'Conj N Prep'
+p364
+I22
+sS'Art Conj V'
+p365
+I1
+sS'Adj Pron </s>'
+p366
+I1
+sS'Misc Art V'
+p367
+I1
+sS'<s> Adj Int'
+p368
+I3
+sS'Num N V'
+p369
+I51
+sS'N Prep Num'
+p370
+I41
+sS'Num Conj V'
+p371
+I2
+sS'Art V Pron'
+p372
+I1
+sS'N Num Prep'
+p373
+I8
+sS'Adj V Conj'
+p374
+I30
+sS'Prep Adv </s>'
+p375
+I3
+sS'Prep Misc Misc'
+p376
+I15
+sS'<s> Punc N'
+p377
+I2
+sS'Conj Int Prep'
+p378
+I1
+sS'Prep Pron Adv'
+p379
+I3
+sS'N Adv Art'
+p380
+I15
+sS'<s> Int Num'
+p381
+I4
+sS'V Num Art'
+p382
+I1
+sS'Prep Pron Adj'
+p383
+I22
+sS'Misc V Pron'
+p384
+I5
+sS'<s> Int Art'
+p385
+I1
+sS'Art Adv Prep'
+p386
+I1
+sS'Conj Prep Art'
+p387
+I11
+sS'Num Pron Prep'
+p388
+I1
+sS'Prep Num Adj'
+p389
+I11
+sS'V Int Adv'
+p390
+I1
+sS'V Misc V'
+p391
+I1
+sS'Art Pron Misc'
+p392
+I1
+sS'Num Adj Conj'
+p393
+I3
+sS'V Misc N'
+p394
+I2
+sS'Pron Misc V'
+p395
+I3
+sS'Adv Conj Art'
+p396
+I11
+sS'<s> Misc Misc'
+p397
+I11
+sS'Adv V Pron'
+p398
+I19
+sS'Adj Adv Pron'
+p399
+I2
+sS'Adj Prep Prep'
+p400
+I6
+sS'Prep Num Punc'
+p401
+I1
+sS'Adv Num Prep'
+p402
+I1
+sS'Num Prep Adj'
+p403
+I2
+sS'Adv Pron Conj'
+p404
+I2
+sS'Num V </s>'
+p405
+I1
+sS'Prep N Adv'
+p406
+I12
+sS'V Adv Art'
+p407
+I18
+sS'Misc Misc N'
+p408
+I1
+sS'V N Art'
+p409
+I2
+sS'<s> Pron Pron'
+p410
+I5
+sS'Art N Pron'
+p411
+I29
+sS'Misc Misc V'
+p412
+I11
+sS'<s> Int Int'
+p413
+I35
+sS'<s> Int Conj'
+p414
+I2
+sS'N Art N'
+p415
+I33
+sS'<s> Conj Prep'
+p416
+I4
+sS'Prep Misc V'
+p417
+I1
+sS'Adj Adv Num'
+p418
+I1
+sS'Pron Adv Pron'
+p419
+I3
+sS'N Art V'
+p420
+I4
+sS'Prep Misc N'
+p421
+I6
+sS'Prep Adj </s>'
+p422
+I10
+sS'Adv Misc </s>'
+p423
+I6
+sS'Adj V Art'
+p424
+I6
+sS'Misc </s> <s>'
+p425
+I154
+sS'Num Pron N'
+p426
+I1
+sS'Pron Misc Pron'
+p427
+I1
+sS'V V Pron'
+p428
+I24
+sS'Conj Adv Adj'
+p429
+I12
+sS'Misc Pron Adj'
+p430
+I2
+sS'Num Pron V'
+p431
+I2
+sS'Conj Adv Adv'
+p432
+I10
+sS'Misc Pron Adv'
+p433
+I1
+sS'N Conj Pron'
+p434
+I33
+sS'V Adv Prep'
+p435
+I26
+sS'N Conj Conj'
+p436
+I6
+sS'<s> Prep Pron'
+p437
+I18
+sS'Prep Prep Conj'
+p438
+I1
+sS'Num Conj Pron'
+p439
+I2
+sS'Misc Conj Art'
+p440
+I3
+sS'Num N Pron'
+p441
+I9
+sS'N Pron Adj'
+p442
+I10
+sS'Adv Pron N'
+p443
+I15
+sS'Art Pron Prep'
+p444
+I3
+sS'Adv Pron V'
+p445
+I20
+sS'V Conj Prep'
+p446
+I12
+sS'Adv N Conj'
+p447
+I3
+sS'N Misc Art'
+p448
+I2
+sS'V Prep Prep'
+p449
+I1
+sS'V Prep Adv'
+p450
+I13
+sS'<s> Punc Punc'
+p451
+I4
+sS'Int Adj N'
+p452
+I3
+sS'Art Misc </s>'
+p453
+I3
+sS'N Num Adj'
+p454
+I4
+sS'<s> Conj Conj'
+p455
+I1
+sS'V V Punc'
+p456
+I1
+sS'Adv Adv Adv'
+p457
+I14
+sS'<s> <s> Conj'
+p458
+I55
+sS'Adv Adv Adj'
+p459
+I13
+sS'Prep Adj Art'
+p460
+I1
+sS'<s> Num Prep'
+p461
+I3
+sS'Prep N N'
+p462
+I50
+sS'Adj Conj </s>'
+p463
+I1
+sS'<s> <s> V'
+p464
+I23
+sS'N Adv N'
+p465
+I8
+sS'Misc Conj Pron'
+p466
+I5
+sS'Adv N Art'
+p467
+I1
+sS'<s> <s> N'
+p468
+I211
+sS'Art Adj Misc'
+p469
+I3
+sS'Prep N V'
+p470
+I87
+sS'Art Adj Art'
+p471
+I6
+sS'<s> Conj Adv'
+p472
+I8
+sS'Adv Conj Num'
+p473
+I6
+sS'Pron Conj Num'
+p474
+I1
+sS'<s> Adj N'
+p475
+I19
+sS'Conj Adv Num'
+p476
+I1
+sS'V Punc N'
+p477
+I1
+sS'Punc Punc </s>'
+p478
+I4
+sS'<s> Conj Adj'
+p479
+I3
+sS'Adj Adj Conj'
+p480
+I8
+sS'N Conj </s>'
+p481
+I1
+sS'Pron Int Pron'
+p482
+I1
+sS'Pron Prep Adv'
+p483
+I6
+sS'Int Pron Misc'
+p484
+I1
+sS'Conj Prep V'
+p485
+I10
+sS'Misc V Conj'
+p486
+I2
+sS'Adv Num Punc'
+p487
+I1
+sS'Int V Int'
+p488
+I1
+sS'<s> Misc N'
+p489
+I4
+sS'Adv Misc Prep'
+p490
+I3
+sS'Prep N Pron'
+p491
+I11
+sS'Conj Prep N'
+p492
+I5
+sS'Pron Prep Adj'
+p493
+I3
+sS'V V V'
+p494
+I60
+sS'Pron V N'
+p495
+I10
+sS'V N </s>'
+p496
+I6
+sS'Pron Pron Prep'
+p497
+I11
+sS'Prep V Punc'
+p498
+I1
+sS'Adj Pron Art'
+p499
+I1
+sS'Prep </s> <s>'
+p500
+I22
+sS'V V N'
+p501
+I6
+sS'Pron V V'
+p502
+I39
+sS'V Pron Conj'
+p503
+I6
+sS'Art Adj Prep'
+p504
+I51
+sS'Pron </s> <s>'
+p505
+I23
+sS'Art Adj Num'
+p506
+I1
+sS'N Art Adj'
+p507
+I29
+sS'V V Art'
+p508
+I37
+sS'Adj Conj Art'
+p509
+I14
+sS'Pron Prep Num'
+p510
+I5
+sS'Adj Art </s>'
+p511
+I1
+sS'V Int Int'
+p512
+I2
+sS'<s> N Adj'
+p513
+I2
+sS'Conj V Adj'
+p514
+I9
+sS'Conj V Adv'
+p515
+I6
+sS'N </s> <s>'
+p516
+I277
+sS'<s> N Adv'
+p517
+I9
+sS'Prep Num Art'
+p518
+I1
+sS'N Misc Pron'
+p519
+I1
+sS'Conj Int </s>'
+p520
+I1
+sS'N Misc Conj'
+p521
+I5
+sS'N V Art'
+p522
+I74
+sS'Prep Int Art'
+p523
+I1
+sS'Adv Num Num'
+p524
+I1
+sS'Misc Num </s>'
+p525
+I2
+sS'Num N Adv'
+p526
+I14
+sS'Adj Num N'
+p527
+I6
+sS'Adv Adj Art'
+p528
+I3
+sS'Prep V Art'
+p529
+I1
+sS'Art V Prep'
+p530
+I22
+sS'V Misc Pron'
+p531
+I1
+sS'V V Num'
+p532
+I7
+sS'Adv Adj V'
+p533
+I25
+sS'V Adj Num'
+p534
+I4
+sS'Art N </s>'
+p535
+I56
+sS'Adv Adj N'
+p536
+I15
+sS'Conj Num V'
+p537
+I1
+sS'Adv Conj Pron'
+p538
+I8
+sS'<s> <s> Pron'
+p539
+I126
+sS'Prep Adj Misc'
+p540
+I4
+sS'V Art Art'
+p541
+I1
+sS'N Prep </s>'
+p542
+I11
+sS'<s> Prep Prep'
+p543
+I2
+sS'Conj Adv Pron'
+p544
+I6
+sS'<s> Punc Conj'
+p545
+I1
+sS'V Punc Prep'
+p546
+I1
+sS'Pron Adj Misc'
+p547
+I4
+sS'Prep Pron Pron'
+p548
+I8
+sS'Prep Pron Conj'
+p549
+I7
+sS'<s> N V'
+p550
+I50
+sS'N Adv Misc'
+p551
+I4
+sS'Adv Pron Adj'
+p552
+I8
+sS'Adv Pron Adv'
+p553
+I6
+sS'Art Adj Adv'
+p554
+I4
+sS'Misc Prep N'
+p555
+I10
+sS'V Prep Art'
+p556
+I130
+sS'Int Adv Pron'
+p557
+I1
+sS'V N Adv'
+p558
+I2
+sS'Adv Conj Adj'
+p559
+I5
+sS'N Adv Num'
+p560
+I3
+sS'Adj Conj Conj'
+p561
+I1
+sS'Art Prep Art'
+p562
+I10
+sS'Adv Int Adv'
+p563
+I1
+sS'Misc Art Prep'
+p564
+I1
+sS'N Adj Prep'
+p565
+I12
+sS'Int Int Conj'
+p566
+I1
+sS'<s> Prep Num'
+p567
+I15
+sS'Adv Adv Conj'
+p568
+I6
+sS'N Num Pron'
+p569
+I2
+sS'Adv V Prep'
+p570
+I21
+sS'V V Misc'
+p571
+I2
+sS'V Conj Conj'
+p572
+I6
+sS'Adv Adv Int'
+p573
+I1
+sS'Int Adj Int'
+p574
+I1
+sS'N Num Int'
+p575
+I1
+sS'Adv Prep </s>'
+p576
+I2
+sS'Conj N Misc'
+p577
+I5
+sS'N Num Conj'
+p578
+I3
+sS'Num Misc Pron'
+p579
+I1
+sS'Conj Pron Prep'
+p580
+I15
+sS'Num Prep Num'
+p581
+I6
+sS'N V Pron'
+p582
+I40
+sS'N Num </s>'
+p583
+I5
+sS'Pron Adj Art'
+p584
+I3
+sS'Adj Conj Adj'
+p585
+I15
+sS'V V Adj'
+p586
+I11
+sS'Prep Misc Prep'
+p587
+I2
+sS'V V Adv'
+p588
+I46
+sS'Adj Conj Adv'
+p589
+I9
+sS'Conj Int Adv'
+p590
+I1
+sS'N Conj Misc'
+p591
+I7
+sS'N Pron Num'
+p592
+I4
+sS'Adv Adj Conj'
+p593
+I18
+sS'Pron Adj Pron'
+p594
+I3
+sS'Conj Art Adj'
+p595
+I28
+sS'Pron V </s>'
+p596
+I24
+sS'V V Prep'
+p597
+I69
+sS'N V N'
+p598
+I18
+sS'Adv V Num'
+p599
+I8
+sS'Art Prep Num'
+p600
+I1
+sS'N Adj Adv'
+p601
+I5
+sS'Adv Pron Pron'
+p602
+I9
+sS'Punc Misc V'
+p603
+I1
+sS'N Adj Adj'
+p604
+I5
+sS'N V V'
+p605
+I112
+sS'Int Misc Misc'
+p606
+I28
+sS'Prep Adj Punc'
+p607
+I6
+sS'Num N Art'
+p608
+I5
+sS'V Num Pron'
+p609
+I1
+sS'V Num Conj'
+p610
+I3
+sS'N Pron Adv'
+p611
+I5
+sS'V Conj </s>'
+p612
+I1
+sS'Adv Art Adj'
+p613
+I17
+sS'Prep Adj Num'
+p614
+I1
+sS'Misc V Num'
+p615
+I2
+sS'Int Adj Prep'
+p616
+I1
+sS'<s> Art N'
+p617
+I75
+sS'Prep Art Misc'
+p618
+I3
+sS'Int Misc Prep'
+p619
+I1
+sS'Adj Adj Adj'
+p620
+I6
+sS'Adj Adj Adv'
+p621
+I3
+sS'Misc Adv Prep'
+p622
+I1
+sS'<s> Art Num'
+p623
+I6
+sS'Adj V Int'
+p624
+I1
+sS'<s> Punc Num'
+p625
+I1
+sS'Prep Prep Misc'
+p626
+I2
+sS'Adv Adj Prep'
+p627
+I15
+sS'Pron Adj Adj'
+p628
+I6
+sS'Pron Adj Conj'
+p629
+I8
+sS'Pron Adj Adv'
+p630
+I3
+sS'Num Adj Art'
+p631
+I1
+sS'Conj Conj Art'
+p632
+I4
+sS'Pron Prep Art'
+p633
+I32
+sS'Art Art N'
+p634
+I1
+sS'Adv N V'
+p635
+I12
+sS'V Misc Conj'
+p636
+I1
+sS'Prep Adj Prep'
+p637
+I8
+sS'Adv N N'
+p638
+I3
+sS'Int Art Adj'
+p639
+I3
+sS'Art V Adv'
+p640
+I6
+sS'Prep Pron V'
+p641
+I28
+sS'Prep Pron N'
+p642
+I86
+sS'Conj </s> <s>'
+p643
+I3
+sS'V N Pron'
+p644
+I1
+sS'Adj Adv Art'
+p645
+I2
+sS'Num N </s>'
+p646
+I18
+sS'Adv Prep Pron'
+p647
+I15
+sS'Art Misc V'
+p648
+I2
+sS'Int V Art'
+p649
+I7
+sS'N Pron Art'
+p650
+I13
+sS'Adv V Art'
+p651
+I19
+sS'Int Pron V'
+p652
+I2
+sS'N Adv V'
+p653
+I21
+sS'Prep Adv Misc'
+p654
+I1
+sS'N Adj Conj'
+p655
+I14
+sS'Pron Pron Pron'
+p656
+I4
+sS'Adv Num Conj'
+p657
+I2
+sS'V Adj Prep'
+p658
+I18
+sS'Adj Punc </s>'
+p659
+I6
+sS'Conj Prep Pron'
+p660
+I7
+sS'Int Pron Adv'
+p661
+I1
+sS'Misc Pron V'
+p662
+I3
+sS'Conj Adv V'
+p663
+I10
+sS'N V Adv'
+p664
+I79
+sS'<s> Pron Art'
+p665
+I1
+sS'N V Adj'
+p666
+I30
+sS'Conj Adv N'
+p667
+I3
+sS'Art V Adj'
+p668
+I2
+sS'Adj N Conj'
+p669
+I44
+sS'Adj Misc Prep'
+p670
+I4
+sS'<s> Adj Adj'
+p671
+I6
+sS'N Int V'
+p672
+I1
+sS'V </s> <s>'
+p673
+I333
+sS'<s> Adj Adv'
+p674
+I1
+sS'Adj Num Num'
+p675
+I3
+sS'Prep N Prep'
+p676
+I57
+sS'Misc Adv Adv'
+p677
+I2
+sS'Adj Misc V'
+p678
+I8
+sS'V Prep </s>'
+p679
+I5
+sS'Adv V </s>'
+p680
+I21
+sS'Conj Adv Conj'
+p681
+I3
+sS'Adj Adv </s>'
+p682
+I2
+sS'V N N'
+p683
+I5
+sS'Int Conj Adv'
+p684
+I1
+sS'Adv Misc Misc'
+p685
+I6
+sS'N Pron Prep'
+p686
+I10
+sS'Int Adj Adj'
+p687
+I2
+sS'<s> <s> Adv'
+p688
+I74
+sS'<s> <s> Adj'
+p689
+I66
+sS'Adj Pron Conj'
+p690
+I2
+sS'Int V Prep'
+p691
+I6
+sS'Prep Misc Pron'
+p692
+I1
+sS'V N V'
+p693
+I16
+sS'V Num Num'
+p694
+I2
+sS'V Prep Adj'
+p695
+I23
+sS'Prep Prep Num'
+p696
+I2
+sS'Misc Num V'
+p697
+I1
+sS'Pron Adv Adj'
+p698
+I12
+sS'Conj Int V'
+p699
+I4
+sS'Art Misc Conj'
+p700
+I1
+sS'Prep Adv Pron'
+p701
+I8
+sS'<s> N Int'
+p702
+I9
+sS'Int Adv Misc'
+p703
+I2
+sS'Conj Pron Num'
+p704
+I2
+sS'Pron Adv Adv'
+p705
+I15
+sS'Misc Num N'
+p706
+I1
+sS'Conj Adv Misc'
+p707
+I3
+sS'Misc Prep V'
+p708
+I2
+sS'Num Adj Adj'
+p709
+I1
+sS'Pron V Adj'
+p710
+I11
+sS'Pron Prep N'
+p711
+I16
+sS'<s> Adv Int'
+p712
+I3
+sS'Pron Prep V'
+p713
+I8
+sS'Adv N Prep'
+p714
+I5
+sS'N Pron Misc'
+p715
+I1
+sS'Pron V Adv'
+p716
+I46
+sS'Int Adj Num'
+p717
+I1
+sS'Conj Pron Misc'
+p718
+I1
+sS'Adv Prep Adj'
+p719
+I6
+sS'Misc Pron Prep'
+p720
+I2
+sS'Misc Misc Art'
+p721
+I5
+sS'Conj Adv Prep'
+p722
+I16
+sS'Conj Conj N'
+p723
+I7
+sS'Num Conj Adv'
+p724
+I1
+sS'<s> V Pron'
+p725
+I7
+sS'Pron V Prep'
+p726
+I37
+sS'Prep Prep Art'
+p727
+I9
+sS'Conj Conj Adj'
+p728
+I2
+sS'Adv Prep Adv'
+p729
+I4
+sS'V Adj Pron'
+p730
+I3
+sS'Pron Art Adj'
+p731
+I11
+sS'Adj Adv Conj'
+p732
+I2
+sS'Misc Adv N'
+p733
+I1
+sS'Num Art Adj'
+p734
+I2
+sS'V Prep Num'
+p735
+I19
+sS'Art Adj V'
+p736
+I50
+sS'Adv Pron Num'
+p737
+I2
+sS'Adv Adv Num'
+p738
+I7
+sS'N Conj Art'
+p739
+I58
+sS'Art Adj N'
+p740
+I188
+sS'Misc Art Adj'
+p741
+I2
+sS'V Adv Int'
+p742
+I1
+sS'N Adv Pron'
+p743
+I14
+sS'Misc Adv V'
+p744
+I4
+sS'Adv Int Pron'
+p745
+I2
+sS'Art N Adj'
+p746
+I24
+sS'Pron Prep Prep'
+p747
+I4
+sS'N Prep Art'
+p748
+I238
+sS'Misc Prep Misc'
+p749
+I11
+sS'<s> <s> Art'
+p750
+I154
+sS'Prep Int V'
+p751
+I2
+sS'Adv V Conj'
+p752
+I14
+sS'Conj V Conj'
+p753
+I3
+sS'N N Num'
+p754
+I5
+sS'Pron Conj Art'
+p755
+I3
+sS'<s> Pron Int'
+p756
+I1
+sS'Conj Num Prep'
+p757
+I3
+sS'Adj Prep Art'
+p758
+I37
+sS'V Pron Adj'
+p759
+I19
+sS'V Pron Adv'
+p760
+I37
+sS'N Art Misc'
+p761
+I3
+sS'Conj Misc Misc'
+p762
+I4
+sS'Prep Misc Num'
+p763
+I2
+sS'Misc Misc Num'
+p764
+I3
+sS'Pron Misc </s>'
+p765
+I5
+sS'Conj Pron Art'
+p766
+I7
+sS'Art N Conj'
+p767
+I75
+sS'N Pron </s>'
+p768
+I2
+sS'Art V Conj'
+p769
+I2
+sS'Int Int V'
+p770
+I4
+sS'Adj Conj Pron'
+p771
+I13
+sS'<s> Adj Num'
+p772
+I1
+sS'V Misc Num'
+p773
+I1
+sS'V Pron Num'
+p774
+I4
+sS'Conj Adj </s>'
+p775
+I3
+sS'Art Num Prep'
+p776
+I1
+sS'Adj Adj Prep'
+p777
+I13
+sS'Misc Adj Adv'
+p778
+I1
+sS'Adj N N'
+p779
+I10
+sS'Adv Adj Num'
+p780
+I2
+sS'Adv Pron Prep'
+p781
+I13
+sS'Int N </s>'
+p782
+I2
+sS'Conj Pron Adj'
+p783
+I26
+sS'Num Adj N'
+p784
+I16
+sS'Conj Conj Pron'
+p785
+I2
+sS'V Adj </s>'
+p786
+I7
+sS'Prep Num </s>'
+p787
+I8
+sS'Adv Int Int'
+p788
+I1
+sS'V Adj Adj'
+p789
+I7
+sS'V Adj Adv'
+p790
+I5
+sS'Conj Art Pron'
+p791
+I3
+sS'Num Adj V'
+p792
+I10
+sS'Conj Art Num'
+p793
+I4
+sS'Adv Adv Prep'
+p794
+I25
+sS'<s> Conj Int'
+p795
+I1
+sS'Pron Conj Adj'
+p796
+I3
+sS'Adj Art V'
+p797
+I1
+sS'Pron Conj Adv'
+p798
+I3
+sS'Adj Prep Num'
+p799
+I7
+sS'Pron Adv Art'
+p800
+I4
+sS'V Misc Art'
+p801
+I1
+sS'Adv Art N'
+p802
+I34
+sS'N Int Prep'
+p803
+I1
+sS'<s> Int Pron'
+p804
+I1
+sS'Adv V V'
+p805
+I34
+sS'V Pron Art'
+p806
+I7
+sS'Adv Art V'
+p807
+I2
+sS'N Adj N'
+p808
+I13
+sS'Conj Num N'
+p809
+I22
+sS'V Adj Art'
+p810
+I1
+sS'Prep Adj V'
+p811
+I24
+sS'Conj N Adv'
+p812
+I9
+sS'N Adj V'
+p813
+I32
+sS'<s> Num Conj'
+p814
+I1
+sS'<s> Int Misc'
+p815
+I37
+sS'<s> Art Pron'
+p816
+I1
+sS'<s> Adv Pron'
+p817
+I5
+sS'Adj Conj Num'
+p818
+I2
+sS'N Misc Misc'
+p819
+I39
+sS'Prep Pron Art'
+p820
+I4
+sS'Adv Art Prep'
+p821
+I1
+sS'Conj Pron </s>'
+p822
+I2
+sS'Adj V Pron'
+p823
+I11
+sS'Misc Misc Conj'
+p824
+I19
+sS'Adj Adv Prep'
+p825
+I8
+sS'Adv Adj Int'
+p826
+I1
+sS'<s> Prep Int'
+p827
+I3
+sS'V Misc Misc'
+p828
+I10
+sS'<s> N Pron'
+p829
+I5
+sS'Prep Conj Pron'
+p830
+I1
+sS'Pron N Adj'
+p831
+I10
+sS'Prep Art Pron'
+p832
+I7
+sS'Pron Num Art'
+p833
+I1
+sS'V N Num'
+p834
+I3
+sS'<s> Pron N'
+p835
+I20
+sS'N Num Misc'
+p836
+I2
+sS'Conj N N'
+p837
+I9
+sS'Adj Pron V'
+p838
+I1
+sS'Conj Prep Adj'
+p839
+I8
+sS'Adv </s> <s>'
+p840
+I41
+sS'Int Art N'
+p841
+I5
+sS'<s> Pron V'
+p842
+I82
+sS'Conj V </s>'
+p843
+I16
+sS'N Misc Num'
+p844
+I1
+sS'Conj N V'
+p845
+I24
+sS'Adj V N'
+p846
+I7
+sS'Prep Num Prep'
+p847
+I6
+sS'Prep Adv Art'
+p848
+I3
+sS'Prep Pron Misc'
+p849
+I11
+sS'V Conj Adv'
+p850
+I21
+sS'Adj Conj Misc'
+p851
+I2
+sS'V Conj Adj'
+p852
+I13
+sS'Adj V V'
+p853
+I64
+sS'Pron Conj Pron'
+p854
+I6
+sS'Punc N Pron'
+p855
+I3
+sS'Adj Pron N'
+p856
+I5
+sS'V Int </s>'
+p857
+I1
+sS'N Conj Prep'
+p858
+I15
+sS'<s> Num V'
+p859
+I3
+sS'Prep Prep V'
+p860
+I13
+sS'<s> Num N'
+p861
+I13
+sS'Conj N Adj'
+p862
+I7
+sS'Prep Prep N'
+p863
+I5
+sS'Adv V N'
+p864
+I10
+sS'Num V Adj'
+p865
+I2
+sS'Prep Misc Conj'
+p866
+I2
+sS'V Art Num'
+p867
+I5
+sS'Misc V Adv'
+p868
+I7
+sS'Adj Misc </s>'
+p869
+I6
+sS'Adv Adv N'
+p870
+I4
+sS'Num V Adv'
+p871
+I4
+sS'N Int Misc'
+p872
+I2
+sS'V Pron Int'
+p873
+I1
+sS'V N Conj'
+p874
+I5
+sS'Adj Int V'
+p875
+I2
+sS'<s> Conj Num'
+p876
+I1
+sS'Adj Num Prep'
+p877
+I2
+sS'N Num Num'
+p878
+I3
+sS'Art N V'
+p879
+I166
+sS'N Prep N'
+p880
+I169
+sS'Adj Num Conj'
+p881
+I1
+sS'Conj Misc </s>'
+p882
+I8
+sS'Art N N'
+p883
+I49
+sS'N Prep V'
+p884
+I53
+sS'Num Prep </s>'
+p885
+I1
+sS'<s> V Conj'
+p886
+I1
+sS'V Prep Conj'
+p887
+I1
+sS'V Prep Pron'
+p888
+I43
+sS'<s> Int Adj'
+p889
+I7
+sS'Misc V Adj'
+p890
+I1
+sS'Adj Misc Misc'
+p891
+I8
+sS'Int V V'
+p892
+I2
+sS'V Pron N'
+p893
+I17
+sS'V Pron V'
+p894
+I20
+sS'N V Prep'
+p895
+I94
+sS'<s> Int Adv'
+p896
+I6
+sS'Int </s> <s>'
+p897
+I35
+sS'Prep Art Conj'
+p898
+I1
+sS'Misc Adv Conj'
+p899
+I2
+sS'Int Adv V'
+p900
+I1
+sS'V Adv Num'
+p901
+I11
+sS'Adv N </s>'
+p902
+I3
+sS'Adv N Adj'
+p903
+I3
+sS'Num Num </s>'
+p904
+I5
+sS'Adv V Misc'
+p905
+I2
+sS'N Adv Prep'
+p906
+I18
+sS'Pron Pron Num'
+p907
+I1
+sS'Art N Prep'
+p908
+I254
+sS'Pron Prep Pron'
+p909
+I18
+sS'Prep Adv Adj'
+p910
+I5
+sS'<s> Pron Prep'
+p911
+I4
+sS'Int Misc N'
+p912
+I12
+sS'Prep Adv Adv'
+p913
+I1
+sS'Prep Conj Num'
+p914
+I1
+sS'Int Adv Art'
+p915
+I1
+sS'Num Prep Art'
+p916
+I5
+sS'Punc Conj Art'
+p917
+I1
+sS'Adj N Num'
+p918
+I3
+sS'N N Art'
+p919
+I5
+sS'Prep Num Conj'
+p920
+I8
+sS'Conj Num Pron'
+p921
+I2
+sS'Num Punc Prep'
+p922
+I1
+sS'Prep N </s>'
+p923
+I57
+sS'Art Prep </s>'
+p924
+I1
+sS'Misc N Prep'
+p925
+I3
+sS'Int Num N'
+p926
+I3
+sS'Misc N Conj'
+p927
+I1
+sS'Misc Prep Pron'
+p928
+I3
+sS'Adj V Misc'
+p929
+I1
+sS'Misc N V'
+p930
+I3
+sS'Misc N N'
+p931
+I13
+sS'N Adj Art'
+p932
+I4
+sS'V V Int'
+p933
+I3
+sS'V Adj Conj'
+p934
+I7
+sS'Adj Int Adv'
+p935
+I1
+sS'<s> Adv Conj'
+p936
+I3
+sS'Misc Num Num'
+p937
+I3
+sS'Conj Misc Adj'
+p938
+I1
+sS'Num Misc Misc'
+p939
+I1
+sS'Punc </s> <s>'
+p940
+I13
+sS'Prep Adv Conj'
+p941
+I2
+sS'Art N Art'
+p942
+I13
+sS'Conj Misc Adv'
+p943
+I1
+sS'Adv Art Num'
+p944
+I3
+sS'Adj Int Adj'
+p945
+I1
+sS'Art Adv Conj'
+p946
+I2
+sS'Misc V Art'
+p947
+I12
+sS'Num V Art'
+p948
+I4
+sS'Misc Conj Misc'
+p949
+I7
+sS'Conj Art Prep'
+p950
+I5
+sS'Misc Conj V'
+p951
+I3
+sS'<s> Num </s>'
+p952
+I3
+sS'N V Misc'
+p953
+I13
+sS'Misc Conj N'
+p954
+I6
+sS'Art N Num'
+p955
+I10
+sS'N Pron Conj'
+p956
+I3
+sS'Int Int Misc'
+p957
+I7
+sS'<s> <s> Prep'
+p958
+I126
+sS'Conj Art V'
+p959
+I7
+sS'Pron Adv </s>'
+p960
+I2
+sS'Num Num Adj'
+p961
+I2
+sS'Conj Art N'
+p962
+I94
+sS'Int Prep Misc'
+p963
+I1
+sS'Misc Misc Prep'
+p964
+I24
+sS'Adv Prep Num'
+p965
+I6
+sS'Pron Adj Num'
+p966
+I1
+sS'Prep Art Adv'
+p967
+I2
+sS'<s> V Art'
+p968
+I5
+sS'Prep Art Adj'
+p969
+I143
+sS'Art Num Conj'
+p970
+I2
+sS'<s> Int </s>'
+p971
+I2
+sS'Adj V Adv'
+p972
+I14
+sS'Adj V Adj'
+p973
+I9
+sS'Art Adj Conj'
+p974
+I16
+sS'<s> Adv Prep'
+p975
+I5
+sS'Misc Misc Misc'
+p976
+I143
+sS'Adv Prep Conj'
+p977
+I1
+sS'Prep Num N'
+p978
+I55
+sS'Pron Adj N'
+p979
+I39
+sS'Adv Adj Misc'
+p980
+I3
+sS'Prep Num V'
+p981
+I17
+sS'Conj N </s>'
+p982
+I16
+sS'Num V Prep'
+p983
+I6
+sS'Pron Adj V'
+p984
+I29
+sS'Int Adv Adv'
+p985
+I2
+sS'Adj Pron Prep'
+p986
+I3
+sS'Num V Conj'
+p987
+I3
+sS'Prep N Art'
+p988
+I5
+sS'Conj Adj Conj'
+p989
+I3
+sS'Pron V Conj'
+p990
+I21
+sS'Pron N Pron'
+p991
+I8
+sS'Art Prep Pron'
+p992
+I3
+sS'Pron Art N'
+p993
+I24
+sS'Conj Int Pron'
+p994
+I1
+sS'Prep Art </s>'
+p995
+I4
+sS'<s> N Prep'
+p996
+I78
+sS'Conj V Art'
+p997
+I8
+sS'Pron Adv Num'
+p998
+I4
+sS'Pron Misc Adj'
+p999
+I1
+sS'<s> Prep V'
+p1000
+I2
+sS'Misc Prep Adj'
+p1001
+I1
+sS'Conj Int N'
+p1002
+I1
+sS'Art Pron Adv'
+p1003
+I1
+sS'Pron Misc Conj'
+p1004
+I1
+sS'Pron Art Pron'
+p1005
+I1
+sS'Num N Adj'
+p1006
+I7
+sS'<s> Prep N'
+p1007
+I41
+sS'Misc Prep Adv'
+p1008
+I1
+sS'Conj Misc V'
+p1009
+I1
+sS'Num Pron Pron'
+p1010
+I1
+sS'Art Adj </s>'
+p1011
+I17
+sS'V Adv </s>'
+p1012
+I6
+sS'Misc N Misc'
+p1013
+I7
+sS'Pron N Num'
+p1014
+I5
+sS'V Prep Misc'
+p1015
+I2
+sS'Int Pron Pron'
+p1016
+I1
+sS'Num Conj Num'
+p1017
+I7
+sS'<s> Prep Adv'
+p1018
+I2
+sS'Misc Misc </s>'
+p1019
+I49
+sS'Int N Prep'
+p1020
+I1
+sS'Adj Adj </s>'
+p1021
+I10
+sS'Pron Conj N'
+p1022
+I2
+sS'Adj N </s>'
+p1023
+I47
+sS'V Int Art'
+p1024
+I1
+sS'V Adv Misc'
+p1025
+I5
+sS'Conj Misc Conj'
+p1026
+I1
+sS'<s> Adj V'
+p1027
+I20
+sS'Misc Prep Art'
+p1028
+I13
+sS'N V Int'
+p1029
+I3
+sS'Prep Misc </s>'
+p1030
+I20
+sS'Pron Conj V'
+p1031
+I4
+sS'Int Misc </s>'
+p1032
+I5
+sS'N Art Pron'
+p1033
+I2
+sS'Conj Adj V'
+p1034
+I9
+sS'Art N Misc'
+p1035
+I13
+sS'Punc Prep Art'
+p1036
+I2
+sS'Misc Conj Prep'
+p1037
+I1
+sS'Adj Adj Art'
+p1038
+I3
+sS'<s> Prep Art'
+p1039
+I39
+sS'Conj Adj N'
+p1040
+I33
+sS'Prep V Prep'
+p1041
+I26
+sS'V Int Misc'
+p1042
+I1
+sS'Prep V Conj'
+p1043
+I17
+sS'Pron Misc Prep'
+p1044
+I1
+sS'Misc Pron Art'
+p1045
+I1
+sS'Int Int </s>'
+p1046
+I22
+sS'Adj Art N'
+p1047
+I11
+sS'N N Adj'
+p1048
+I3
+sS'V Int V'
+p1049
+I2
+sS'Art Pron Adj'
+p1050
+I3
+sS'Prep Adj Pron'
+p1051
+I1
+sS'Pron Adv Prep'
+p1052
+I16
+sS'N N Adv'
+p1053
+I5
+sS'Int Prep Art'
+p1054
+I2
+sS'Adv N Adv'
+p1055
+I2
+sS'Pron Adv Conj'
+p1056
+I5
+sS'Conj Int Int'
+p1057
+I2
+sS'Pron N Prep'
+p1058
+I35
+sS'N Misc Adv'
+p1059
+I2
+sS'V Adv Pron'
+p1060
+I29
+sS'Misc Adv </s>'
+p1061
+I1
+sS'Conj Pron Pron'
+p1062
+I17
+sS'V Num V'
+p1063
+I3
+sS'Adj N Punc'
+p1064
+I1
+sS'Conj Adv Art'
+p1065
+I5
+sS'V Num N'
+p1066
+I28
+sS'Prep Num Num'
+p1067
+I6
+sS'Adj Pron Pron'
+p1068
+I3
+sS'Art Num Num'
+p1069
+I4
+sS'<s> Prep Adj'
+p1070
+I4
+stp1071
+Rp1072
+.

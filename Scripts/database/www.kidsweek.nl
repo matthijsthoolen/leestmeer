@@ -18,7 +18,7 @@ Jesse deed dat ook, maar dan op zijn longboard
 En daarmee was hij de eerste ooit
 
 
-Energie over‘Na de eerste beklimming had ik nog wat energie over dus ik besloot het maar voor de tweede keer te proberen.’ En dat is hem gelukt
+Energie over Na de eerste beklimming had ik nog wat energie over dus ik besloot het maar voor de tweede keer te proberen.’ En dat is hem gelukt
 
 ‘Het was wel heel zwaar, maar de sfeer was onbeschrijflijk goed.' Eer stonden veel supporters met spandoeken langs de kant van de weg
 

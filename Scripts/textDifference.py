@@ -9,16 +9,16 @@ def main(corpus):
 	try:
 		with open(corpus, 'rb') as f:
 			P1 = normalize(pickle.load(f))
-			# print(P1)
+			print(P1)
 			# P1 = ast.literal_eval(s)
-			file = open('database\\politie_POStags', 'r')
+			file = open('database\\test_POStags', 'r')
 			text = file.read()
 			file.close
 			P2 = normalize(ngramProfiler.main(text,3))
 			print(P2)
+			calcDiff(P1, P2)
 	except IOError: 
 		print('Cannot open '+corpus)
-	calcDiff(P1, P2)
 
 
 def calcDiff(P1, P2):
