@@ -5,14 +5,14 @@ import sys, argparse, re, pickle, math
 import ngramProfiler
 import ast
 
-def main(corpus, paragraph):
+def main(corpus):
 	try:
 		with open(corpus, 'rb') as f:
 
 			# get corpus, is a list of tupples
 			P1 = pickle.load(f)
 
-			#testCorpus = 'database/tests/3fm_POS'
+			paragraph = 'database/tests/3fm_POS'
 			print 'Score of ', corpus, ' for ',paragraph
 			# analyze current text, returns counter
 			file = open(paragraph, 'r')

@@ -20,6 +20,20 @@ def main(obj):
 	corpus = obj['info']['corpusSet']
 	corpus = 'database/' + corpus
 	print 'corpus path:',corpus
+
+	# Get corpus statistics
+	corpusText = obj['corpus'][0]
+	corpusSet = pickle.load(open(corpus + '_averages', 'rb'))
+	#corpusSet = pickle.load(open('database\\' + corpus, 'rb'))
+	corpusText['avgLetters'] = corpusSet['avgLetters']
+	corpusText['freqCommonWords'] = corpusSet['freqCommonWords']
+	corpusText['typeTokenFrequency'] = corpusSet['typeTokenFrequency']
+	corpusText['avgWords'] = corpusSet['avgWords']
+	corpusText['CILT'] = corpusSet['CILT']
+    	corpusText['CLIB'] = corpusSet['CLIB']
+	obj['corpus'][0] = corpusText
+
+	# Analyze each paragraph
 	for item in parObj:
 		index += 1
 		body = item['paragraph']		
@@ -34,8 +48,8 @@ def main(obj):
 			# Do a POStag analysis on the text, and calculate ngrams of those
 			POStags = tagger.getPOStags(text)
 			nGrams = ngramProfiler.main(POStags,3)
-			resemblance = textDifferenceMod.main(corpus + '_POS_nGrams',text)
-			print 'alinea resemblance:',resemblance
+			resemblance = textDifferenceMod.main(corpus + '_POS_nGrams',POStags)
+			print 'paragraph resemblance:',resemblance
 			
 			# Put data in the JSON object
 			item['aviScore'] = aviScore
@@ -51,6 +65,10 @@ def main(obj):
 			totalText += body
 			totalText += '\n\n'
 			obj['text'][index] = item
+
+			
+
+
 
 	overall = obj['overall'][0]
 	(aviScore,totWords,totSentences,aviAge) = AVIscoreMod.mainAVI(totalText)
@@ -70,15 +88,6 @@ def main(obj):
 	overall['clibScore'] = CLIB
 	obj['overall'][0] = overall
 
-	corpusText = obj['corpus'][0]
-
-	corpusSet = pickle.load(open(corpus + '_averages', 'rb'))
-	#corpusSet = pickle.load(open('database\\' + corpus, 'rb'))
-	corpusText['avgLetters'] = corpusSet['avgLetters']
-	corpusText['freqCommonWords'] = corpusSet['freqCommonWords']
-	corpusText['typeTokenFrequency'] = corpusSet['typeTokenFrequency']
-	corpusText['avgWords'] = corpusSet['avgWords']
-	obj['corpus'][0] = corpusText
 	return obj
 
 # prepare text by putting each sentence on a new line

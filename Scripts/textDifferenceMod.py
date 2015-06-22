@@ -13,7 +13,8 @@ def main(corpus,text):
 			P1 = pickle.load(f)
 
 			#testCorpus = 'database/tests/3fm_POS'
-			print 'Score of ', corpus, ' for ', text
+			print 'Score of ', corpus
+			print 'For ', text
 			# analyze current text, returns counter
 			P2 = ngramProfiler.main(text,3)
 
@@ -67,7 +68,7 @@ def calcDiffUw(P1, P2):
 if __name__ == "__main__":
 	parser = argparse.ArgumentParser()
 	parser.add_argument("-corpus", "--corpus", help="File of corpus")
-	# parser.add_argument("-text", "--text", help="Text as string")
+	parser.add_argument("-text", "--text", help="Text as string")
 	#Name and location of the text file to be parsed
 	args = parser.parse_args()
-	main(args.corpus)
+	main(args.corpus,args.text)
