@@ -1,2353 +1,2402 @@
-ccollections
-Counter
-p0
-((dp1
-S'Pron Pron Adv'
-p2
-I3
-sS'<s> Int </s>'
+(lp0
+(S'V </s> <s>'
+p1
+I80
+tp2
+a(S'Art Adj N'
 p3
-I1
-sS'N Conj Num'
-p4
-I2
-sS'V Art Art'
+I64
+tp4
+a(S'Prep Art Adj'
 p5
-I1
-sS'N Misc V'
-p6
-I3
-sS'N Prep </s>'
+I63
+tp6
+a(S'Prep Art N'
 p7
-I2
-sS'Num Num N'
-p8
-I2
-sS'<s> Prep Prep'
+I61
+tp8
+a(S'N </s> <s>'
 p9
-I1
-sS'Conj Adv Pron'
-p10
-I1
-sS'V Punc Prep'
+I60
+tp10
+a(S'N Prep Art'
 p11
-I1
-sS'Conj N Conj'
-p12
-I1
-sS'Adv V Adv'
+I54
+tp12
+a(S'Art N Prep'
 p13
-I6
-sS'Art V N'
-p14
-I3
-sS'V N Prep'
+I54
+tp14
+a(S'<s> <s> Art'
 p15
-I5
-sS'Pron Adj Misc'
-p16
-I1
-sS'N Misc N'
+I51
+tp16
+a(S'<s> <s> Pron'
 p17
-I1
-sS'<s> Art Adv'
-p18
-I1
-sS'Prep Pron Pron'
+I39
+tp18
+a(S'Art N V'
 p19
-I4
-sS'Art Adj Adj'
-p20
-I18
-sS'Adj Prep Misc'
+I37
+tp20
+a(S'<s> <s> Adv'
 p21
-I3
-sS'V V Conj'
-p22
-I11
-sS'V Adv Punc'
+I35
+tp22
+a(S'N V V'
 p23
-I1
-sS'Art V Num'
-p24
-I2
-sS'Punc Prep Adj'
+I32
+tp24
+a(S'Prep Pron N'
 p25
-I1
-sS'Adv Pron Adj'
-p26
-I4
-sS'Pron N </s>'
+I30
+tp26
+a(S'Adj </s> <s>'
 p27
-I9
-sS'Adv Pron Adv'
-p28
-I3
-sS'<s> Adj </s>'
+I30
+tp28
+a(S'V Prep Art'
 p29
-I2
-sS'Art Adj Adv'
-p30
-I3
-sS'Art </s> <s>'
-p31
-I2
-sS'<s> Art Adj'
-p32
-I22
-sS'V Prep Art'
-p33
 I29
-sS'Adj N Pron'
-p34
-I1
-sS'<s> Conj Conj'
+tp30
+a(S'Adj N Prep'
+p31
+I28
+tp32
+a(S'<s> <s> N'
+p33
+I28
+tp34
+a(S'<s> Pron V'
 p35
-I1
-sS'Pron V Prep'
-p36
-I14
-sS'<s> Conj Art'
+I25
+tp36
+a(S'V Art N'
 p37
-I2
-sS'Conj Adj Adj'
-p38
-I1
-sS'N Misc Misc'
+I24
+tp38
+a(S'Adj N V'
 p39
-I5
-sS'V N Adj'
-p40
-I1
-sS'V V Punc'
+I24
+tp40
+a(S'Pron N V'
 p41
-I1
-sS'Art Prep Art'
-p42
-I3
-sS'<s> Adj Pron'
+I23
+tp42
+a(S'Prep V </s>'
 p43
-I1
-sS'Pron Prep N'
-p44
-I2
-sS'Adv Conj Int'
+I23
+tp44
+a(S'<s> Art Adj'
 p45
-I2
-sS'Conj Conj Adj'
-p46
-I1
-sS'Adv Prep Prep'
+I22
+tp46
+a(S'N Prep Pron'
 p47
-I1
-sS'N Adv N'
-p48
-I1
-sS'<s> Prep Num'
+I22
+tp48
+a(S'<s> Art N'
 p49
-I3
-sS'Pron Adv V'
-p50
-I4
-sS'Adv V Prep'
+I22
+tp50
+a(S'V Prep N'
 p51
-I6
-sS'V V Misc'
-p52
-I1
-sS'Misc Conj Prep'
+I22
+tp52
+a(S'Adv Art Adj'
 p53
-I1
-sS'V Conj Conj'
-p54
-I4
-sS'Prep Adj Conj'
+I21
+tp54
+a(S'Art Adj Prep'
 p55
-I5
-sS'Conj Art Art'
-p56
-I1
-sS'Adv Prep </s>'
+I21
+tp56
+a(S'<s> Adv V'
 p57
-I5
-sS'V Adv Conj'
-p58
-I2
-sS'<s> Pron Adj'
+I20
+tp58
+a(S'N V Prep'
 p59
-I4
-sS'N Adv Conj'
-p60
-I2
-sS'Conj Pron Prep'
+I20
+tp60
+a(S'Art Adj V'
 p61
-I7
-sS'Prep N Conj'
-p62
-I9
-sS'Num Prep Num'
+I19
+tp62
+a(S'<s> <s> Prep'
 p63
-I2
-sS'Prep N Pron'
-p64
-I1
-sS'Misc V </s>'
+I19
+tp64
+a(S'Conj Art N'
 p65
-I1
-sS'Punc Conj Num'
-p66
-I1
-sS'V V </s>'
+I19
+tp66
+a(S'Art Adj Adj'
 p67
-I17
-sS'Pron Adj Art'
-p68
-I5
-sS'Adj Conj Adj'
+I18
+tp68
+a(S'V Art Adj'
 p69
-I3
-sS'Conj V V'
-p70
-I5
-sS'V V Adj'
+I18
+tp70
+a(S'N V Art'
 p71
-I1
-sS'Pron Pron Adj'
-p72
-I5
-sS'<s> Int Prep'
+I18
+tp72
+a(S'V V </s>'
 p73
-I2
-sS'V V Adv'
-p74
-I9
-sS'Adj Conj Adv'
+I17
+tp74
+a(S'Adj N Conj'
 p75
-I2
-sS'<s> N </s>'
-p76
-I2
-sS'Conj V N'
+I17
+tp76
+a(S'Art N Conj'
 p77
-I1
-sS'N Pron Pron'
-p78
-I6
-sS'V Misc </s>'
+I17
+tp78
+a(S'N Prep N'
 p79
-I1
-sS'Conj Art Adv'
-p80
-I2
-sS'Num V V'
+I17
+tp80
+a(S'<s> <s> Conj'
 p81
-I2
-sS'N Art Num'
-p82
-I1
-sS'Prep Adv N'
+I16
+tp82
+a(S'Prep N V'
 p83
-I2
-sS'Adv Conj V'
-p84
-I1
-sS'Pron Adj Pron'
+I16
+tp84
+a(S'Conj Art Adj'
 p85
-I1
-sS'Punc N Conj'
-p86
-I1
-sS'Conj Adj Art'
+I15
+tp86
+a(S'N V Conj'
 p87
-I1
-sS'<s> N V'
-p88
-I11
-sS'Conj Art Adj'
+I15
+tp88
+a(S'Prep N Prep'
 p89
 I15
-sS'Pron V </s>'
-p90
-I6
-sS'Misc Adj Pron'
+tp90
+a(S'<s> <s> Adj'
 p91
-I1
-sS'Adj Misc Conj'
-p92
-I1
-sS'V V Prep'
+I15
+tp92
+a(S'<s> <s> Int'
 p93
-I14
-sS'Num Conj V'
-p94
-I2
-sS'N V N'
+I15
+tp94
+a(S'Num </s> <s>'
 p95
-I4
-sS'Punc V Prep'
-p96
-I1
-sS'Conj Adj Prep'
+I15
+tp96
+a(S'Adv </s> <s>'
 p97
-I1
-sS'V N Misc'
-p98
-I1
-sS'Int Int Adv'
+I15
+tp98
+a(S'Adj V </s>'
 p99
-I1
-sS'N Adj Adv'
-p100
-I2
-sS'N N Pron'
+I15
+tp100
+a(S'Prep Pron Adj'
 p101
-I2
-sS'Adj Pron Adv'
-p102
-I1
-sS'Adv Conj Art'
+I15
+tp102
+a(S'V V V'
 p103
-I6
-sS'N Adj Adj'
-p104
-I3
-sS'N V V'
+I15
+tp104
+a(S'Pron V Prep'
 p105
-I32
-sS'Prep N Adv'
-p106
-I5
-sS'N V Num'
+I14
+tp106
+a(S'V V Prep'
 p107
-I3
-sS'N N </s>'
-p108
-I3
-sS'Pron Prep Conj'
+I14
+tp108
+a(S'Adj V Prep'
 p109
-I1
-sS'<s> Conj V'
-p110
-I1
-sS'N Pron Adv'
+I14
+tp110
+a(S'Art N Adj'
 p111
-I3
-sS'Pron V Pron'
-p112
-I6
-sS'Num Int Misc'
+I14
+tp112
+a(S'V Adv Adv'
 p113
-I1
-sS'Adv Art Adj'
-p114
-I21
-sS'N Pron Adj'
+I14
+tp114
+a(S'Adv V V'
 p115
-I2
-sS'N Misc </s>'
-p116
-I2
-sS'Pron Adj </s>'
+I14
+tp116
+a(S'Adj Prep Pron'
 p117
-I2
-sS'<s> Conj N'
-p118
-I2
-sS'Adj Adj Adj'
+I13
+tp118
+a(S'V Conj Art'
 p119
-I4
-sS'<s> Int Pron'
-p120
-I1
-sS'Int Conj Int'
+I13
+tp120
+a(S'V Conj Adv'
 p121
-I1
-sS'Art Adv V'
-p122
-I1
-sS'Pron Num N'
+I13
+tp122
+a(S'Prep Num N'
 p123
-I3
-sS'<s> N Art'
-p124
-I1
-sS'<s> Adv Art'
+I13
+tp124
+a(S'Adv Art N'
 p125
-I1
-sS'Prep Adv Num'
-p126
-I3
-sS'Adj Adv Adj'
+I13
+tp126
+a(S'Adj N </s>'
 p127
-I5
-sS'Adv Adj Prep'
-p128
-I6
-sS'N Prep Prep'
+I13
+tp128
+a(S'N V </s>'
 p129
-I8
-sS'Int Conj Pron'
-p130
-I1
-sS'Pron Adj Adj'
+I12
+tp130
+a(S'V Pron Adv'
 p131
-I3
-sS'Conj V Prep'
-p132
-I6
-sS'V Art Adv'
+I12
+tp132
+a(S'Adv Adv Prep'
 p133
-I6
-sS'N Prep Conj'
-p134
-I1
-sS'Prep N Num'
+I12
+tp134
+a(S'N Prep V'
 p135
-I1
-sS'V Adj V'
-p136
-I3
-sS'Pron Adj Conj'
+I12
+tp136
+a(S'V Prep Pron'
 p137
-I1
-sS'Pron Adj Adv'
-p138
-I4
-sS'V Art Adj'
+I12
+tp138
+a(S'V V Conj'
 p139
-I18
-sS'N Misc Prep'
-p140
-I2
-sS'Adj Adv Adv'
+I11
+tp140
+a(S'<s> N V'
 p141
-I3
-sS'Conj Conj Art'
-p142
-I2
-sS'Pron Prep Art'
+I11
+tp142
+a(S'Prep Adj N'
 p143
-I6
-sS'Misc Prep N'
-p144
-I4
-sS'Prep V Adj'
+I11
+tp144
+a(S'N V Adv'
 p145
-I1
-sS'Art Art N'
-p146
-I3
-sS'Adv N V'
+I11
+tp146
+a(S'Pron V Adv'
 p147
-I1
-sS'Adj Prep Adv'
-p148
-I3
-sS'Art Num V'
+I11
+tp148
+a(S'Adj Prep Art'
 p149
-I2
-sS'Prep Adj Prep'
-p150
-I3
-sS'Adv N N'
+I11
+tp150
+a(S'V Adv Adj'
 p151
-I2
-sS'Prep V Adv'
-p152
-I2
-sS'V Conj Num'
+I11
+tp152
+a(S'Adv Adv Art'
 p153
-I2
-sS'<s> N Conj'
-p154
-I3
-sS'Int Art Adj'
+I11
+tp154
+a(S'Adv Adj V'
 p155
-I4
-sS'Conj Adj Adv'
-p156
-I1
-sS'<s> <s> Punc'
+I11
+tp156
+a(S'Prep Adj V'
 p157
-I3
-sS'Art V Adv'
-p158
-I4
-sS'Prep Pron V'
+I10
+tp158
+a(S'Conj Adv V'
 p159
-I6
-sS'<s> N Prep'
-p160
-I3
-sS'Prep Adj V'
+I10
+tp160
+a(S'V Prep Adj'
 p161
 I10
-sS'Adj N Art'
-p162
-I4
-sS'Adv Misc Int'
+tp162
+a(S'Prep Prep Art'
 p163
-I1
-sS'Prep Adj N'
-p164
-I11
-sS'Num N </s>'
+I10
+tp164
+a(S'N Conj Art'
 p165
-I6
-sS'Art V Adj'
-p166
-I2
-sS'Int Pron N'
+I10
+tp166
+a(S'Adv Prep Art'
 p167
-I2
-sS'V N Pron'
-p168
-I3
-sS'Adj Adv Art'
+I10
+tp168
+a(S'Num N Prep'
 p169
-I4
-sS'Prep Pron </s>'
-p170
-I2
-sS'<s> Adv Num'
+I10
+tp170
+a(S'Adj Adj V'
 p171
-I1
-sS'Adv Prep Pron'
-p172
-I7
-sS'N Pron Art'
+I10
+tp172
+a(S'N Art N'
 p173
-I3
-sS'Num Adv V'
-p174
-I1
-sS'Adv V Art'
+I10
+tp174
+a(S'Pron Adj N'
 p175
-I9
-sS'V Num </s>'
-p176
-I5
-sS'Conj Num Conj'
+I10
+tp176
+a(S'Pron Art N'
 p177
-I1
-sS'Prep Pron N'
-p178
-I30
-sS'N Adj Conj'
+I10
+tp178
+a(S'Pron N Prep'
 p179
-I1
-sS'Conj V Pron'
-p180
-I3
-sS'V Adj Prep'
+I10
+tp180
+a(S'Pron N </s>'
 p181
-I5
-sS'Adv Conj Adv'
-p182
-I2
-sS'Conj Prep Pron'
+I9
+tp182
+a(S'Prep N Conj'
 p183
-I3
-sS'Misc Misc Pron'
-p184
-I1
-sS'Prep Pron Prep'
+I9
+tp184
+a(S'V V Adv'
 p185
-I4
-sS'Adj Art Adj'
-p186
-I5
-sS'Misc Prep Num'
+I9
+tp186
+a(S'Adv V Art'
 p187
-I1
-sS'Adv V Conj'
-p188
-I4
-sS'Misc Pron V'
+I9
+tp188
+a(S'Art N Art'
 p189
-I2
-sS'Conj Adv V'
-p190
-I10
-sS'N V Adv'
+I9
+tp190
+a(S'Pron Pron N'
 p191
-I11
-sS'<s> Pron Art'
-p192
-I1
-sS'N V Adj'
+I9
+tp192
+a(S'Art N Adv'
 p193
-I8
-sS'Prep Pron Num'
-p194
-I2
-sS'N Adj </s>'
+I9
+tp194
+a(S'Adv Prep V'
 p195
-I2
-sS'Adj N Conj'
-p196
-I17
-sS'Prep Conj V'
+I9
+tp196
+a(S'N Conj N'
 p197
-I1
-sS'V Adv N'
-p198
-I2
-sS'Adj Misc Prep'
+I9
+tp198
+a(S'Prep N </s>'
 p199
-I2
-sS'<s> Adj Adj'
-p200
-I2
-sS'Num Adv N'
+I9
+tp200
+a(S'Adv V Pron'
 p201
-I1
-sS'V </s> <s>'
-p202
-I80
-sS'Pron N Adj'
+I9
+tp202
+a(S'Adj V Art'
 p203
-I2
-sS'Pron V Num'
-p204
-I1
-sS'Pron N Adv'
+I9
+tp204
+a(S'Misc </s> <s>'
 p205
-I6
-sS'<s> Adj Adv'
-p206
-I1
-sS'Prep Art Prep'
+I9
+tp206
+a(S'N Conj Pron'
 p207
-I1
-sS'Prep Conj N'
-p208
-I2
-sS'Adj V Num'
+I9
+tp208
+a(S'Art Adj Conj'
 p209
-I4
-sS'Prep N Prep'
-p210
-I15
-sS'V Adv V'
+I9
+tp210
+a(S'N V Pron'
 p211
-I5
-sS'Prep V Pron'
-p212
-I1
-sS'Adj Misc V'
+I9
+tp212
+a(S'N Art Adj'
 p213
-I1
-sS'N Art Prep'
-p214
-I1
-sS'Prep Misc Adv'
+I9
+tp214
+a(S'Prep V Conj'
 p215
-I1
-sS'Misc V V'
-p216
-I2
-sS'Adj N Adv'
+I9
+tp216
+a(S'N Prep Prep'
 p217
-I4
-sS'Prep Prep Prep'
-p218
-I1
-sS'Adv V </s>'
+I8
+tp218
+a(S'N V Adj'
 p219
-I4
-sS'Num Adj Prep'
-p220
-I4
-sS'Adj Misc N'
+I8
+tp220
+a(S'Adj Prep N'
 p221
-I1
-sS'V Art N'
-p222
-I24
-sS'N Num V'
+I8
+tp222
+a(S'Adj Prep V'
 p223
-I1
-sS'Pron Pron Art'
-p224
-I2
-sS'N Pron Prep'
+I8
+tp224
+a(S'N Conj V'
 p225
-I4
-sS'Int Adj Adj'
-p226
-I1
-sS'<s> <s> Adv'
+I8
+tp226
+a(S'N Prep Adj'
 p227
-I35
-sS'<s> <s> Adj'
-p228
-I15
-sS'Art N Art'
+I8
+tp228
+a(S'Conj Pron V'
 p229
-I9
-sS'Int V Prep'
-p230
-I1
-sS'Conj Int Num'
+I8
+tp230
+a(S'Num N V'
 p231
-I1
-sS'V Art V'
-p232
-I3
-sS'V N V'
+I8
+tp232
+a(S'N Prep Num'
 p233
-I2
-sS'V Prep Adj'
-p234
-I10
-sS'Int Int Int'
+I8
+tp234
+a(S'V V Pron'
 p235
-I1
-sS'Pron Adv Adj'
-p236
-I1
-sS'Pron Pron N'
+I8
+tp236
+a(S'Pron Adj V'
 p237
-I9
-sS'Pron Adj Prep'
-p238
-I3
-sS'Adv Adj </s>'
+I8
+tp238
+a(S'<s> <s> V'
 p239
-I4
-sS'<s> N Num'
-p240
-I1
-sS'Prep Adv Pron'
+I8
+tp240
+a(S'Prep </s> <s>'
 p241
-I2
-sS'Conj N </s>'
-p242
-I7
-sS'Pron N Pron'
+I8
+tp242
+a(S'Pron V V'
 p243
-I6
-sS'Pron Adv Adv'
-p244
-I7
-sS'Adv Adv Conj'
+I8
+tp244
+a(S'Pron </s> <s>'
 p245
-I3
-sS'V Prep Adv'
-p246
-I5
-sS'Art Adv Pron'
+I8
+tp246
+a(S'Art N </s>'
 p247
-I1
-sS'N N Prep'
-p248
-I5
-sS'Num Adj Adj'
+I8
+tp248
+a(S'Conj Pron Prep'
 p249
-I1
-sS'Adj Prep N'
-p250
-I8
-sS'Pron V Adj'
+I7
+tp250
+a(S'Adv Prep Pron'
 p251
-I2
-sS'Misc Art Num'
-p252
-I1
-sS'Int Conj Art'
+I7
+tp252
+a(S'Conj N </s>'
 p253
-I1
-sS'N Pron V'
-p254
-I1
-sS'Adj V Prep'
+I7
+tp254
+a(S'Pron Adv Adv'
 p255
-I14
-sS'<s> Conj Adj'
-p256
-I2
-sS'Pron Prep V'
+I7
+tp256
+a(S'Adj N Misc'
 p257
-I4
-sS'Adv N Prep'
-p258
-I2
-sS'N Pron N'
+I7
+tp258
+a(S'V Pron Adj'
 p259
-I4
-sS'N Pron Misc'
-p260
-I1
-sS'Pron V Adv'
+I7
+tp260
+a(S'V Pron Prep'
 p261
-I11
-sS'Adj Prep V'
-p262
-I8
-sS'Adj Conj N'
+I7
+tp262
+a(S'Adj V Pron'
 p263
-I2
-sS'Conj Conj Adv'
-p264
-I1
-sS'Adv Prep Adj'
+I7
+tp264
+a(S'N N V'
 p265
-I2
-sS'Conj Adv Prep'
-p266
-I6
-sS'Num N Misc'
+I7
+tp266
+a(S'Prep Art V'
 p267
-I2
-sS'Int Int Art'
-p268
-I1
-sS'<s> V Pron'
+I7
+tp268
+a(S'<s> Prep Art'
 p269
-I3
-sS'Prep Conj Conj'
-p270
-I1
-sS'Prep Prep Art'
+I7
+tp270
+a(S'V Adv Art'
 p271
-I10
-sS'V Num Prep'
-p272
-I2
-sS'Pron N Art'
+I7
+tp272
+a(S'Art N Pron'
 p273
-I4
-sS'Adj Conj V'
-p274
-I4
-sS'Conj N Pron'
+I7
+tp274
+a(S'V Adv Prep'
 p275
-I1
-sS'N V Punc'
-p276
-I1
-sS'Pron Prep Adv'
+I7
+tp276
+a(S'Prep N N'
 p277
-I2
-sS'<s> Pron Conj'
-p278
-I1
-sS'Pron Art Adj'
+I7
+tp278
+a(S'Art Adj </s>'
 p279
-I5
-sS'N N Conj'
-p280
-I3
-sS'Prep N Misc'
+I7
+tp280
+a(S'N Adj V'
 p281
-I2
-sS'Adv Adv </s>'
-p282
-I3
-sS'V Prep Num'
+I7
+tp282
+a(S'Pron Adv Prep'
 p283
-I6
-sS'Adv Int Conj'
-p284
-I1
-sS'Art Adj V'
+I7
+tp284
+a(S'Adv V Adv'
 p285
-I19
-sS'Adv Adv Num'
-p286
-I1
-sS'N Conj Art'
-p287
-I10
-sS'Art Adj N'
-p288
-I64
-sS'<s> Adj Prep'
-p289
-I4
-sS'N Adv Pron'
-p290
 I6
-sS'V Adj Int'
+tp286
+a(S'Adv V Prep'
+p287
+I6
+tp288
+a(S'N Pron Pron'
+p289
+I6
+tp290
+a(S'Pron V </s>'
 p291
-I1
-sS'Conj Pron Adj'
-p292
-I1
-sS'Art N Adj'
+I6
+tp292
+a(S'Adv Conj Art'
 p293
-I14
-sS'Adj N Prep'
-p294
-I28
-sS'Pron Prep Prep'
+I6
+tp294
+a(S'Pron V Pron'
 p295
-I2
-sS'Num Adj Misc'
-p296
-I1
-sS'Art Num N'
+I6
+tp296
+a(S'Adv Adj Prep'
 p297
 I6
-sS'Adj N Misc'
-p298
-I7
-sS'N Prep Art'
+tp298
+a(S'Conj V Prep'
 p299
-I54
-sS'Misc Prep Misc'
-p300
-I1
-sS'<s> <s> Art'
+I6
+tp300
+a(S'V Art Adv'
 p301
-I51
-sS'Conj Int Art'
-p302
-I1
-sS'Art N Adv'
+I6
+tp302
+a(S'Pron Prep Art'
 p303
-I9
-sS'Conj Pron Adv'
-p304
-I1
-sS'Conj Art V'
+I6
+tp304
+a(S'Prep Pron V'
 p305
-I2
-sS'Conj Num Adj'
-p306
-I2
-sS'Art Misc Misc'
+I6
+tp306
+a(S'Num N </s>'
 p307
-I1
-sS'<s> Int N'
-p308
-I1
-sS'N N Num'
+I6
+tp308
+a(S'Art Adj Misc'
 p309
-I1
-sS'Misc V Prep'
-p310
-I3
-sS'Pron N N'
+I6
+tp310
+a(S'Pron N Adv'
 p311
-I4
-sS'Prep Adv Prep'
-p312
-I1
-sS'Adv Prep Art'
+I6
+tp312
+a(S'Pron N Pron'
 p313
-I10
-sS'Prep Prep Adj'
-p314
-I1
-sS'Pron N V'
+I6
+tp314
+a(S'Conj Adv Prep'
 p315
-I23
-sS'<s> Int V'
-p316
-I2
-sS'Conj Num Adv'
+I6
+tp316
+a(S'V Prep Num'
 p317
-I1
-sS'Conj Num Prep'
-p318
-I1
-sS'N Adv Adv'
+I6
+tp318
+a(S'N Adv Pron'
 p319
-I2
-sS'Adj Adj Int'
-p320
-I1
-sS'Adv Pron Art'
+I6
+tp320
+a(S'Art Num N'
 p321
-I2
-sS'V Pron Adj'
-p322
-I7
-sS'V Pron Adv'
+I6
+tp322
+a(S'Adj Conj Pron'
 p323
-I12
-sS'<s> <s> Int'
-p324
-I15
-sS'N Adv Adj'
+I6
+tp324
+a(S'Pron V Art'
 p325
-I3
-sS'Misc Misc Num'
-p326
-I2
-sS'Adv Adj Pron'
+I6
+tp326
+a(S'Misc Misc Prep'
 p327
-I1
-sS'Conj Pron Art'
-p328
-I2
-sS'V Conj N'
+I6
+tp328
+a(S'N Conj Adv'
 p329
-I3
-sS'Art N Conj'
-p330
-I17
-sS'Adj Num Adj'
+I6
+tp330
+a(S'Adv Prep N'
 p331
-I3
-sS'Adv Adj Adv'
-p332
-I4
-sS'Num Prep V'
+I6
+tp332
+a(S'Adj V V'
 p333
-I1
-sS'Art V Conj'
-p334
-I2
-sS'Num Art V'
+I6
+tp334
+a(S'N Conj Prep'
 p335
-I1
-sS'Conj Adv </s>'
-p336
-I3
-sS'Num Prep N'
+I6
+tp336
+a(S'Art Adj Pron'
 p337
-I3
-sS'Adj Num Adv'
-p338
-I1
-sS'Adj Prep Pron'
+I6
+tp338
+a(S'Adv Num N'
 p339
-I13
-sS'Adj Conj Pron'
-p340
 I6
-sS'V Conj V'
+tp340
+a(S'V Pron V'
 p341
-I4
-sS'V Punc Art'
-p342
-I1
-sS'V Pron Num'
+I6
+tp342
+a(S'N Adv Art'
 p343
-I2
-sS'Conj Adj </s>'
-p344
-I3
-sS'Adj Adj Prep'
+I6
+tp344
+a(S'Adj V Adv'
 p345
-I3
-sS'Adj N N'
-p346
-I3
-sS'Conj Prep </s>'
+I6
+tp346
+a(S'V Conj Prep'
 p347
-I1
-sS'Adv Adj Num'
-p348
-I2
-sS'Adv Pron Prep'
+I6
+tp348
+a(S'Adj V Adj'
 p349
-I2
-sS'Adj Adj Misc'
-p350
-I2
-sS'V Pron Prep'
+I6
+tp350
+a(S'N Adv V'
 p351
-I7
-sS'Num Adj N'
-p352
-I3
-sS'Conj Conj Pron'
+I6
+tp352
+a(S'Art Adj Num'
 p353
-I4
-sS'V Adj </s>'
-p354
-I2
-sS'N Conj V'
+I6
+tp354
+a(S'V V Art'
 p355
-I8
-sS'Num Adj </s>'
-p356
-I3
-sS'N Prep Adj'
+I6
+tp356
+a(S'Prep V Prep'
 p357
-I8
-sS'Prep Adv </s>'
-p358
-I1
-sS'Adv Prep V'
+I6
+tp358
+a(S'Conj Pron Pron'
 p359
-I9
-sS'V Adj Adv'
-p360
-I5
-sS'N Prep Adv'
+I6
+tp360
+a(S'V N Prep'
 p361
-I3
-sS'Num Adj V'
-p362
-I1
-sS'Conj Art Num'
+I5
+tp362
+a(S'N Misc Misc'
 p363
-I1
-sS'Adv Adv Prep'
-p364
-I12
-sS'N Conj N'
+I5
+tp364
+a(S'Prep Adj Conj'
 p365
-I9
-sS'Adj N V'
-p366
-I24
-sS'V Adv Adj'
+I5
+tp366
+a(S'Adv Prep </s>'
 p367
-I11
-sS'Pron Conj Adj'
-p368
-I1
-sS'Num Adv Adj'
+I5
+tp368
+a(S'Pron Adj Art'
 p369
-I1
-sS'V N Adv'
-p370
-I3
-sS'Num Adv Adv'
+I5
+tp370
+a(S'Conj V V'
 p371
-I1
-sS'Pron Conj Adv'
-p372
-I1
-sS'Adj Prep Num'
+I5
+tp372
+a(S'Pron Pron Adj'
 p373
-I3
-sS'Pron Adv Art'
-p374
-I4
-sS'V Adv Adv'
+I5
+tp374
+a(S'Prep N Adv'
 p375
-I14
-sS'Pron N Conj'
-p376
-I2
-sS'N Num </s>'
+I5
+tp376
+a(S'Adj Adv Adj'
 p377
-I4
-sS'N Prep Pron'
-p378
-I22
-sS'V Art Pron'
+I5
+tp378
+a(S'V Num </s>'
 p379
-I1
-sS'<s> Conj Pron'
-p380
-I4
-sS'Art Adv Adj'
+I5
+tp380
+a(S'V Adj Prep'
 p381
-I2
-sS'Art Adv Adv'
-p382
-I3
-sS'Adv V V'
+I5
+tp382
+a(S'Adj Art Adj'
 p383
-I14
-sS'V Pron Art'
-p384
-I4
-sS'V Punc Conj'
+I5
+tp384
+a(S'V Adv V'
 p385
-I1
-sS'Adv Art V'
-p386
-I1
-sS'N Adj N'
+I5
+tp386
+a(S'V Prep Adv'
 p387
-I3
-sS'Pron V Art'
-p388
-I6
-sS'Pron Num Adv'
+I5
+tp388
+a(S'N N Prep'
 p389
-I1
-sS'Prep V N'
-p390
-I1
-sS'V Conj Art'
+I5
+tp390
+a(S'Art N Num'
 p391
-I13
-sS'N V </s>'
-p392
-I12
-sS'Art Num Adj'
+I5
+tp392
+a(S'Pron Art Adj'
 p393
-I3
-sS'Int V Pron'
-p394
-I2
-sS'Conj Num </s>'
+I5
+tp394
+a(S'V Adj Adv'
 p395
-I1
-sS'Adv Adj Art'
-p396
-I2
-sS'Num </s> <s>'
+I5
+tp396
+a(S'<s> Pron N'
 p397
-I15
-sS'<s> Int Misc'
-p398
-I1
-sS'Pron Misc Misc'
+I5
+tp398
+a(S'N Adj Prep'
 p399
-I1
-sS'<s> Adv Pron'
-p400
-I1
-sS'Adv Misc Art'
+I5
+tp400
+a(S'V Pron Pron'
 p401
-I1
-sS'Num N Prep'
-p402
-I10
-sS'Prep Pron Art'
+I5
+tp402
+a(S'Num N N'
 p403
-I3
-sS'Adj Adj Pron'
-p404
-I2
-sS'V Pron </s>'
+I5
+tp404
+a(S'Adj Misc Misc'
 p405
-I3
-sS'Adv Num Adv'
-p406
-I1
-sS'V Conj Pron'
+I5
+tp406
+a(S'Adj Adv V'
 p407
-I4
-sS'Conj Pron </s>'
-p408
-I2
-sS'Prep V </s>'
+I5
+tp408
+a(S'Prep Num Adj'
 p409
-I23
-sS'Adj V Pron'
-p410
-I7
-sS'<s> Art N'
+I5
+tp410
+a(S'V Adj Conj'
 p411
-I22
-sS'Misc Misc Conj'
-p412
-I1
-sS'Adj Adv Prep'
+I5
+tp412
+a(S'Pron Pron V'
 p413
-I3
-sS'<s> Art Num'
-p414
-I2
-sS'<s> Art V'
+I5
+tp414
+a(S'<s> Adj V'
 p415
-I4
-sS'Adj Adj V'
-p416
-I10
-sS'<s> N Pron'
+I5
+tp416
+a(S'Art V Prep'
 p417
-I3
-sS'Misc Misc Adv'
-p418
-I1
-sS'Num V Num'
+I5
+tp418
+a(S'Conj Prep Adj'
 p419
-I1
-sS'Num Conj Art'
-p420
-I2
-sS'Misc Misc Prep'
+I5
+tp420
+a(S'Prep Pron Pron'
 p421
-I6
-sS'Pron Num Art'
-p422
-I1
-sS'Adj Adj N'
+I4
+tp422
+a(S'Adv Pron Adj'
 p423
 I4
-sS'<s> Pron N'
-p424
-I5
-sS'V Prep N'
+tp424
+a(S'Pron Adv V'
 p425
-I22
-sS'N N V'
-p426
-I7
-sS'Conj N N'
+I4
+tp426
+a(S'V Conj Conj'
 p427
-I1
-sS'Adj Pron V'
-p428
-I2
-sS'N Conj Adj'
+I4
+tp428
+a(S'<s> Pron Adj'
 p429
 I4
-sS'Adv </s> <s>'
-p430
-I15
-sS'N Conj Adv'
+tp430
+a(S'N V N'
 p431
-I6
-sS'Art Adj Misc'
-p432
-I6
-sS'<s> Pron V'
+I4
+tp432
+a(S'Adj Adj Adj'
 p433
-I25
-sS'V Prep V'
-p434
 I4
-sS'N N N'
+tp434
+a(S'Pron Adj Adv'
 p435
-I3
-sS'Conj N V'
-p436
 I4
-sS'Adj V N'
+tp436
+a(S'Misc Prep N'
 p437
 I4
-sS'Prep Num Prep'
-p438
-I2
-sS'Adv Adv Art'
+tp438
+a(S'Int Art Adj'
 p439
-I11
-sS'Adj V </s>'
-p440
-I15
-sS'V Conj Adv'
+I4
+tp440
+a(S'Art V Adv'
 p441
-I13
-sS'Adj Pron Art'
-p442
-I1
-sS'Adj Conj Misc'
+I4
+tp442
+a(S'Adj N Art'
 p443
-I1
-sS'Conj Misc Prep'
-p444
-I2
-sS'Adj V V'
+I4
+tp444
+a(S'Adj Adv Art'
 p445
-I6
-sS'Pron Conj Pron'
-p446
-I1
-sS'N Adj Prep'
+I4
+tp446
+a(S'Prep Pron Prep'
 p447
-I5
-sS'Adj Pron N'
-p448
-I3
-sS'Conj Pron N'
+I4
+tp448
+a(S'Adv V Conj'
 p449
 I4
-sS'Int N Num'
-p450
-I1
-sS'V Int </s>'
+tp450
+a(S'Adj V Num'
 p451
-I1
-sS'N Conj Prep'
-p452
-I6
-sS'Adv Conj Conj'
-p453
-I1
-sS'Prep Prep V'
-p454
 I4
-sS'N Art Adv'
+tp452
+a(S'Adj N Adv'
+p453
+I4
+tp454
+a(S'Adv V </s>'
 p455
-I1
-sS'<s> Num N'
-p456
-I1
-sS'Conj N Adj'
+I4
+tp456
+a(S'Adj Adj N'
 p457
-I1
-sS'Prep Prep N'
-p458
-I2
-sS'Prep Art Pron'
+I4
+tp458
+a(S'Num Adj Prep'
 p459
-I1
-sS'Adv V N'
-p460
-I3
-sS'Conj Pron V'
+I4
+tp460
+a(S'N Pron Prep'
 p461
-I8
-sS'Prep Adv Art'
-p462
-I2
-sS'Prep Art Num'
+I4
+tp462
+a(S'Adv Adj </s>'
 p463
 I4
-sS'V Art Num'
-p464
-I3
-sS'Adj Pron Misc'
+tp464
+a(S'Pron Prep V'
 p465
-I2
-sS'Misc V Adv'
-p466
-I1
-sS'Art Adj Pron'
+I4
+tp466
+a(S'N Pron N'
 p467
-I6
-sS'Adj Misc </s>'
-p468
-I1
-sS'Adv Adv N'
+I4
+tp468
+a(S'Pron N Art'
 p469
-I1
-sS'<s> Adv Adv'
-p470
-I3
-sS'Adj Prep Adj'
+I4
+tp470
+a(S'Adj Conj V'
 p471
-I3
-sS'Adv Adv V'
-p472
-I3
-sS'V Num Int'
+I4
+tp472
+a(S'<s> Adj Prep'
 p473
-I1
-sS'Prep Prep Pron'
-p474
-I3
-sS'<s> Punc Prep'
+I4
+tp474
+a(S'Adj V N'
 p475
-I1
-sS'Punc N Prep'
-p476
-I1
-sS'Adj Conj Prep'
+I4
+tp476
+a(S'Pron N N'
 p477
 I4
-sS'V Punc </s>'
-p478
-I1
-sS'Art Pron V'
+tp478
+a(S'Adv Adj Adv'
 p479
-I2
-sS'Adj Prep Art'
-p480
-I11
-sS'V N Conj'
+I4
+tp480
+a(S'V Conj V'
 p481
-I1
-sS'<s> V Adj'
-p482
-I1
-sS'Misc N </s>'
+I4
+tp482
+a(S'Conj Conj Pron'
 p483
-I1
-sS'Num Adv Prep'
-p484
-I1
-sS'Int Num Int'
+I4
+tp484
+a(S'Pron Adv Art'
 p485
-I1
-sS'Art Pron N'
-p486
-I2
-sS'<s> Conj Num'
+I4
+tp486
+a(S'N Num </s>'
 p487
-I1
-sS'N Adv Int'
-p488
-I1
-sS'Art Prep V'
+I4
+tp488
+a(S'<s> Conj Pron'
 p489
-I1
-sS'V Pron V'
-p490
-I6
-sS'Art V V'
+I4
+tp490
+a(S'V Pron Art'
 p491
-I2
-sS'N Num Num'
-p492
-I1
-sS'Art N V'
+I4
+tp492
+a(S'V Conj Pron'
 p493
-I37
-sS'N Prep N'
-p494
-I17
-sS'Adj Num Conj'
+I4
+tp494
+a(S'<s> Art V'
 p495
-I2
-sS'Adv Num N'
-p496
-I6
-sS'Prep Art V'
+I4
+tp496
+a(S'N Conj Adj'
 p497
-I7
-sS'<s> Adv V'
-p498
-I20
-sS'Art N N'
+I4
+tp498
+a(S'V Prep V'
 p499
 I4
-sS'N Prep V'
-p500
-I12
-sS'N Prep Misc'
+tp500
+a(S'Conj N V'
 p501
-I3
-sS'Prep Art N'
-p502
-I61
-sS'<s> Adv N'
+I4
+tp502
+a(S'Conj Pron N'
 p503
-I3
-sS'Prep Art Art'
-p504
-I1
-sS'V Prep Pron'
+I4
+tp504
+a(S'Prep Prep V'
 p505
-I12
-sS'Num Prep Prep'
-p506
-I1
-sS'<s> Int Adj'
+I4
+tp506
+a(S'Prep Art Num'
 p507
-I2
-sS'Adv Adv Pron'
-p508
-I1
-sS'Punc Art N'
+I4
+tp508
+a(S'Adj Conj Prep'
 p509
-I1
-sS'Prep Num </s>'
-p510
-I2
-sS'Num N N'
+I4
+tp510
+a(S'Art N N'
 p511
-I5
-sS'Art Adv Misc'
-p512
-I1
-sS'Num V Adv'
+I4
+tp512
+a(S'N Adv </s>'
 p513
-I2
-sS'Adj Misc Misc'
-p514
-I5
-sS'<s> Num Adv'
+I4
+tp514
+a(S'Conj N Prep'
 p515
-I1
-sS'V Pron N'
-p516
-I2
-sS'Conj N Prep'
+I4
+tp516
+a(S'Adj V Conj'
 p517
 I4
-sS'Misc Conj N'
-p518
-I1
-sS'Adj Pron </s>'
+tp518
+a(S'N Adv Prep'
 p519
-I1
-sS'N V Prep'
-p520
-I20
-sS'Adj Adv V'
+I4
+tp520
+a(S'Pron Prep Pron'
 p521
-I5
-sS'<s> Int Adv'
-p522
-I1
-sS'Num N V'
+I4
+tp522
+a(S'Conj Prep Art'
 p523
-I8
-sS'N Prep Num'
-p524
-I8
-sS'Int </s> <s>'
+I4
+tp524
+a(S'<s> V Art'
 p525
-I2
-sS'Prep N Adj'
-p526
-I2
-sS'V Pron Misc'
+I4
+tp526
+a(S'Adv Pron N'
 p527
-I1
-sS'Adv N Adv'
-p528
-I2
-sS'V Adv Num'
+I4
+tp528
+a(S'Adv Adv Adv'
 p529
-I1
-sS'N Num Prep'
-p530
-I2
-sS'Adv N Adj'
+I4
+tp530
+a(S'Adv Adv Adj'
 p531
-I1
-sS'Num Num </s>'
-p532
-I3
-sS'Adj V Conj'
+I4
+tp532
+a(S'<s> Prep N'
 p533
 I4
-sS'N Adv Prep'
-p534
-I4
-sS'Prep Misc Misc'
+tp534
+a(S'Adj Adj Conj'
 p535
-I2
-sS'Art N Prep'
-p536
-I54
-sS'<s> Punc N'
+I4
+tp536
+a(S'Misc Prep Art'
 p537
-I1
-sS'Prep Pron Adv'
-p538
-I2
-sS'Pron Prep Pron'
+I4
+tp538
+a(S'Adj Conj Art'
 p539
 I4
-sS'N Adv Art'
-p540
-I6
-sS'Prep Adv Adj'
+tp540
+a(S'N Misc Conj'
 p541
-I3
-sS'Num Adv Conj'
-p542
-I1
-sS'<s> Pron Prep'
-p543
-I1
-sS'Prep Adv Adv'
-p544
-I2
-sS'Prep Pron Adj'
-p545
-I15
-sS'Num Prep Art'
-p546
-I1
-sS'Misc V Pron'
-p547
-I1
-sS'Adv Misc V'
-p548
-I1
-sS'<s> Int Art'
-p549
-I2
-sS'<s> Prep Art'
-p550
-I7
-sS'N N Art'
-p551
-I1
-sS'Num Adv </s>'
-p552
-I2
-sS'Art Adv Prep'
-p553
-I1
-sS'Num Int Int'
-p554
-I1
-sS'Adj Adv Misc'
-p555
-I1
-sS'Conj Prep Art'
-p556
 I4
-sS'Prep Num Conj'
+tp542
+a(S'Pron Pron Adv'
+p543
+I3
+tp544
+a(S'N Misc V'
+p545
+I3
+tp546
+a(S'Art V N'
+p547
+I3
+tp548
+a(S'Adj Prep Misc'
+p549
+I3
+tp550
+a(S'Adv Pron Adv'
+p551
+I3
+tp552
+a(S'Art Adj Adv'
+p553
+I3
+tp554
+a(S'Art Prep Art'
+p555
+I3
+tp556
+a(S'<s> Prep Num'
 p557
-I1
-sS'Prep Num Adj'
-p558
-I5
-sS'Conj Num Pron'
+I3
+tp558
+a(S'Adj Conj Adj'
 p559
-I1
-sS'Prep N </s>'
-p560
-I9
-sS'V Art </s>'
+I3
+tp560
+a(S'N Adj Adj'
 p561
-I1
-sS'Prep N Punc'
-p562
-I1
-sS'Misc N Prep'
+I3
+tp562
+a(S'N V Num'
 p563
-I1
-sS'Pron Misc V'
-p564
-I1
-sS'Adv Pron Pron'
+I3
+tp564
+a(S'N N </s>'
 p565
-I1
-sS'N V Conj'
-p566
-I15
-sS'Misc Prep Pron'
+I3
+tp566
+a(S'N Pron Adv'
 p567
-I2
-sS'<s> Punc Adj'
-p568
-I1
-sS'V Num Adv'
+I3
+tp568
+a(S'Pron Num N'
 p569
-I2
-sS'Misc N V'
-p570
-I1
-sS'Adv V Pron'
+I3
+tp570
+a(S'Prep Adv Num'
 p571
-I9
-sS'V V Pron'
-p572
-I8
-sS'Misc N N'
+I3
+tp572
+a(S'Pron Adj Adj'
 p573
-I1
-sS'N Adj Art'
-p574
-I1
-sS'Adj Prep Prep'
+I3
+tp574
+a(S'V Adj V'
 p575
 I3
-sS'Adv Num Prep'
-p576
-I1
-sS'V Adj Conj'
+tp576
+a(S'Adj Adv Adv'
 p577
-I5
-sS'<s> Adv Conj'
-p578
 I3
-sS'Misc Num Num'
+tp578
+a(S'Art Art N'
 p579
-I2
-sS'Conj Misc Adj'
-p580
-I1
-sS'Int Adv Num'
+I3
+tp580
+a(S'Prep Adj Prep'
 p581
-I1
-sS'Punc </s> <s>'
-p582
-I1
-sS'Adj Pron Conj'
+I3
+tp582
+a(S'<s> N Conj'
 p583
-I1
-sS'Int Misc Misc'
-p584
-I2
-sS'Conj Adj Conj'
+I3
+tp584
+a(S'<s> <s> Punc'
 p585
-I1
-sS'Art Adv Conj'
-p586
 I3
-sS'V Adv Art'
+tp586
+a(S'V N Pron'
 p587
-I7
-sS'Num N Art'
-p588
-I1
-sS'Misc V Art'
+I3
+tp588
+a(S'N Pron Art'
 p589
-I1
-sS'Num Art Pron'
-p590
-I1
-sS'Misc Misc N'
+I3
+tp590
+a(S'Conj V Pron'
 p591
-I1
-sS'V N Art'
-p592
-I1
-sS'Adj Int Conj'
+I3
+tp592
+a(S'V N Adv'
 p593
-I2
-sS'<s> Pron Pron'
-p594
-I2
-sS'Art N Pron'
+I3
+tp594
+a(S'Conj Prep Pron'
 p595
-I7
-sS'Adj Num Prep'
-p596
-I1
-sS'Misc Conj Misc'
+I3
+tp596
+a(S'V Art V'
 p597
-I2
-sS'Misc Misc V'
-p598
-I2
-sS'Conj Art Prep'
+I3
+tp598
+a(S'Pron Adj Prep'
 p599
-I1
-sS'N Num N'
-p600
-I1
-sS'<s> Int Int'
+I3
+tp600
+a(S'Adv Adv Conj'
 p601
-I2
-sS'N Art N'
-p602
-I10
-sS'<s> Conj Prep'
+I3
+tp602
+a(S'<s> V Pron'
 p603
-I2
-sS'Prep Misc V'
-p604
-I1
-sS'Misc Conj V'
+I3
+tp604
+a(S'N N Conj'
 p605
-I2
-sS'Pron Adv Pron'
-p606
-I1
-sS'N Art V'
+I3
+tp606
+a(S'Adv Adv </s>'
 p607
-I1
-sS'N V Misc'
-p608
-I1
-sS'Prep Misc N'
+I3
+tp608
+a(S'Misc V Prep'
 p609
-I1
-sS'Prep Adj </s>'
-p610
 I3
-sS'<s> Adv Misc'
+tp610
+a(S'N Adv Adj'
 p611
-I1
-sS'Adv Num </s>'
-p612
-I1
-sS'Art N Num'
-p613
-I5
-sS'Int Int Misc'
-p614
-I1
-sS'<s> <s> Prep'
-p615
-I19
-sS'Adj V Art'
-p616
-I9
-sS'Misc </s> <s>'
-p617
-I9
-sS'Conj V Adj'
-p618
 I3
-sS'Num Pron N'
+tp612
+a(S'V Conj N'
+p613
+I3
+tp614
+a(S'Adj Num Adj'
+p615
+I3
+tp616
+a(S'Conj Adv </s>'
+p617
+I3
+tp618
+a(S'Num Prep N'
 p619
-I1
-sS'Adj </s> <s>'
-p620
-I30
-sS'Conj Adv Adj'
+I3
+tp620
+a(S'Conj Adj </s>'
 p621
 I3
-sS'Num Pron V'
-p622
-I1
-sS'Conj Adv Adv'
+tp622
+a(S'Adj Adj Prep'
 p623
 I3
-sS'Misc Pron Adv'
-p624
-I1
-sS'Conj Art N'
+tp624
+a(S'Adj N N'
 p625
-I19
-sS'N Conj Pron'
-p626
-I9
-sS'<s> Prep Pron'
-p627
-I2
-sS'Prep Num Adv'
-p628
-I1
-sS'N Conj Conj'
-p629
-I1
-sS'Adv Prep Num'
-p630
 I3
-sS'N N Misc'
+tp626
+a(S'Num Adj N'
+p627
+I3
+tp628
+a(S'Num Adj </s>'
+p629
+I3
+tp630
+a(S'N Prep Adv'
 p631
 I3
-sS'V Adv Prep'
-p632
-I7
-sS'Prep Art Adv'
+tp632
+a(S'Adj Prep Num'
 p633
-I2
-sS'<s> V Art'
-p634
-I4
-sS'Prep Art Adj'
-p635
-I63
-sS'<s> <s> Conj'
-p636
-I16
-sS'Misc Int V'
-p637
-I1
-sS'Misc Conj Art'
-p638
-I1
-sS'Art Num Conj'
-p639
-I1
-sS'Prep Adj Num'
-p640
-I1
-sS'Adv Pron N'
-p641
-I4
-sS'V Pron Pron'
-p642
-I5
-sS'Prep Num Pron'
-p643
-I1
-sS'V Conj Prep'
-p644
-I6
-sS'Adv N Conj'
-p645
-I1
-sS'Adj V Adj'
-p646
-I6
-sS'Misc Adv Misc'
-p647
-I1
-sS'V Prep Prep'
-p648
-I2
-sS'Art Adj Conj'
-p649
-I9
-sS'<s> Adv Prep'
-p650
-I2
-sS'Misc Misc Misc'
-p651
-I5
-sS'Adv Prep Conj'
-p652
-I1
-sS'Prep Num N'
-p653
-I13
-sS'Adv Prep N'
-p654
-I6
-sS'Adv Art N'
-p655
-I13
-sS'Pron Adj N'
-p656
-I10
-sS'Prep Num V'
-p657
-I1
-sS'Int Adj V'
-p658
-I1
-sS'Pron Adj V'
-p659
-I8
-sS'Int Adv Adv'
-p660
-I1
-sS'Num V Conj'
-p661
-I1
-sS'Prep N Art'
-p662
-I2
-sS'Adv Adv Adv'
-p663
-I4
-sS'Adj V Adv'
-p664
-I6
-sS'N V Pron'
-p665
-I9
-sS'Pron V Conj'
-p666
 I3
-sS'Pron Art V'
+tp634
+a(S'Art Adv Adv'
+p635
+I3
+tp636
+a(S'N Adj N'
+p637
+I3
+tp638
+a(S'Art Num Adj'
+p639
+I3
+tp640
+a(S'Prep Pron Art'
+p641
+I3
+tp642
+a(S'V Pron </s>'
+p643
+I3
+tp644
+a(S'Adj Adv Prep'
+p645
+I3
+tp646
+a(S'<s> N Pron'
+p647
+I3
+tp648
+a(S'N N N'
+p649
+I3
+tp650
+a(S'Adj Pron N'
+p651
+I3
+tp652
+a(S'Adv V N'
+p653
+I3
+tp654
+a(S'V Art Num'
+p655
+I3
+tp656
+a(S'Adj Prep Adv'
+p657
+I3
+tp658
+a(S'<s> Adv Adv'
+p659
+I3
+tp660
+a(S'Adj Prep Adj'
+p661
+I3
+tp662
+a(S'Adv Adv V'
+p663
+I3
+tp664
+a(S'Prep Prep Pron'
+p665
+I3
+tp666
+a(S'<s> Adv N'
 p667
 I3
-sS'<s> <s> Num'
-p668
-I2
-sS'Pron Pron V'
+tp668
+a(S'N Prep Misc'
 p669
-I5
-sS'Pron Art N'
-p670
-I10
-sS'V Adj Misc'
+I3
+tp670
+a(S'Num Num </s>'
 p671
-I1
-sS'Adv Adv Adj'
-p672
-I4
-sS'Prep N N'
+I3
+tp672
+a(S'Prep Adv Adj'
 p673
-I7
-sS'Conj Int Pron'
-p674
-I1
-sS'Prep Art </s>'
+I3
+tp674
+a(S'Adj Prep Prep'
 p675
-I1
-sS'<s> <s> V'
-p676
-I8
-sS'N Punc N'
+I3
+tp676
+a(S'<s> Adv Conj'
 p677
-I1
-sS'Adj Art Pron'
-p678
-I1
-sS'<s> <s> N'
+I3
+tp678
+a(S'Art Adv Conj'
 p679
-I28
-sS'N Adv V'
-p680
-I6
-sS'Conj V Art'
+I3
+tp680
+a(S'Prep Adj </s>'
 p681
 I3
-sS'Pron Adv Num'
-p682
-I2
-sS'N Adv </s>'
+tp682
+a(S'Conj V Adj'
 p683
-I4
-sS'Prep N V'
-p684
-I16
-sS'Art Adj Art'
+I3
+tp684
+a(S'Conj Adv Adj'
 p685
 I3
-sS'<s> Prep V'
-p686
-I1
-sS'<s> Conj Adv'
+tp686
+a(S'Conj Adv Adv'
 p687
-I1
-sS'Pron Misc Conj'
-p688
-I1
-sS'Num N Adj'
+I3
+tp688
+a(S'Adv Prep Num'
 p689
-I1
-sS'Punc Adj N'
-p690
-I1
-sS'<s> Prep N'
+I3
+tp690
+a(S'N N Misc'
 p691
-I4
-sS'Adj Adj Conj'
-p692
-I4
-sS'Pron Pron Conj'
+I3
+tp692
+a(S'Pron V Conj'
 p693
-I1
-sS'Misc Prep Adv'
-p694
-I2
-sS'V Adj Pron'
+I3
+tp694
+a(S'Pron Art V'
 p695
-I2
-sS'Adj Adj Adv'
-p696
-I1
-sS'Conj Prep V'
+I3
+tp696
+a(S'<s> N Prep'
 p697
 I3
-sS'Art Adj </s>'
-p698
-I7
-sS'V Adv </s>'
+tp698
+a(S'Conj V Art'
 p699
-I2
-sS'Adv Misc Prep'
-p700
-I1
-sS'Conj Prep Prep'
+I3
+tp700
+a(S'Art Adj Art'
 p701
-I2
-sS'Conj Prep N'
-p702
-I2
-sS'Pron Prep Adj'
+I3
+tp702
+a(S'Conj Prep V'
 p703
 I3
-sS'Int Prep Adj'
-p704
-I1
-sS'V V V'
+tp704
+a(S'Pron Prep Adj'
 p705
-I15
-sS'Pron V N'
-p706
-I1
-sS'V N </s>'
+I3
+tp706
+a(S'Pron Prep Num'
 p707
-I2
-sS'Pron Pron Prep'
-p708
-I2
-sS'Prep V Punc'
+I3
+tp708
+a(S'Adv Adj N'
 p709
-I2
-sS'Adj V Int'
-p710
-I1
-sS'Num Conj Num'
+I3
+tp710
+a(S'Adj Art N'
 p711
-I1
-sS'Prep </s> <s>'
-p712
-I8
-sS'Misc Misc </s>'
+I3
+tp712
+a(S'N N Adv'
 p713
-I2
-sS'V V Num'
-p714
-I2
-sS'V V N'
+I3
+tp714
+a(S'V Num N'
 p715
-I2
-sS'Adj Adj </s>'
-p716
-I2
-sS'Pron V V'
+I3
+tp716
+a(S'Adj Pron Pron'
 p717
-I8
-sS'V Pron Conj'
-p718
-I1
-sS'Adv Punc V'
+I3
+tp718
+a(S'N Conj Num'
 p719
-I1
-sS'Adj N </s>'
-p720
-I13
-sS'Pron </s> <s>'
+I2
+tp720
+a(S'N Prep </s>'
 p721
-I8
-sS'<s> N N'
-p722
 I2
-sS'Art Adj Num'
+tp722
+a(S'Num Num N'
 p723
-I6
-sS'Pron Conj Prep'
-p724
-I1
-sS'N Art Adj'
+I2
+tp724
+a(S'Art V Num'
 p725
-I9
-sS'V V Art'
-p726
-I6
-sS'<s> Adj V'
+I2
+tp726
+a(S'Art </s> <s>'
 p727
-I5
-sS'Misc Prep Art'
-p728
-I4
-sS'Adj Conj Art'
+I2
+tp728
+a(S'<s> Conj Art'
 p729
-I4
-sS'Prep Misc </s>'
-p730
 I2
-sS'Int Misc </s>'
+tp730
+a(S'Adv Conj Int'
 p731
-I1
-sS'Pron Prep Num'
-p732
-I3
-sS'Conj Adj V'
+I2
+tp732
+a(S'V Adv Conj'
 p733
-I1
-sS'Num Prep Conj'
-p734
-I1
-sS'Misc Adv Pron'
+I2
+tp734
+a(S'N Adv Conj'
 p735
-I1
-sS'<s> N Adj'
-p736
-I1
-sS'V Misc Pron'
+I2
+tp736
+a(S'Num Prep Num'
 p737
-I1
-sS'Art N Misc'
-p738
 I2
-sS'Punc Prep Art'
+tp738
+a(S'<s> Int Prep'
 p739
-I1
-sS'Conj V Adv'
-p740
 I2
-sS'N </s> <s>'
+tp740
+a(S'Adv Conj Adv'
 p741
-I60
-sS'<s> N Adv'
-p742
-I1
-sS'Prep Num Art'
+I2
+tp742
+a(S'Adj Conj Adv'
 p743
-I1
-sS'Conj Adj N'
-p744
 I2
-sS'Adv N Misc'
+tp744
+a(S'<s> N </s>'
 p745
-I1
-sS'Prep V Prep'
-p746
-I6
-sS'N Misc Pron'
-p747
-I1
-sS'Prep V V'
-p748
-I1
-sS'N V Art'
-p749
-I18
-sS'Prep V Conj'
-p750
-I9
-sS'Adv Adj N'
-p751
-I3
-sS'N Misc Conj'
-p752
-I4
-sS'Adj Art Misc'
-p753
-I1
-sS'Art Adj Prep'
-p754
-I21
-sS'Adj Art N'
-p755
-I3
-sS'Num N Adv'
-p756
 I2
-sS'N N Adj'
+tp746
+a(S'Conj Art Adv'
+p747
+I2
+tp748
+a(S'Num V V'
+p749
+I2
+tp750
+a(S'Prep Adv N'
+p751
+I2
+tp752
+a(S'Num Conj V'
+p753
+I2
+tp754
+a(S'N Adj Adv'
+p755
+I2
+tp756
+a(S'N N Pron'
 p757
-I1
-sS'Prep Adj Pron'
-p758
-I1
-sS'Adj Num V'
+I2
+tp758
+a(S'N Pron Adj'
 p759
 I2
-sS'N Adj V'
-p760
-I7
-sS'Pron Adv Prep'
+tp760
+a(S'N Misc </s>'
 p761
-I7
-sS'N N Adv'
-p762
-I3
-sS'Prep V Art'
+I2
+tp762
+a(S'Pron Adj </s>'
 p763
-I1
-sS'Int Prep Art'
-p764
-I1
-sS'Art V Prep'
+I2
+tp764
+a(S'<s> Conj N'
 p765
-I5
-sS'Adj Art V'
-p766
-I1
-sS'Adj Pron Num'
+I2
+tp766
+a(S'N Misc Prep'
 p767
-I1
-sS'Pron N Prep'
-p768
-I10
-sS'Art V Pron'
+I2
+tp768
+a(S'Conj Conj Art'
 p769
-I1
-sS'<s> Prep Adv'
-p770
-I1
-sS'V Adv Pron'
+I2
+tp770
+a(S'Art Num V'
 p771
 I2
-sS'Adj Art Prep'
-p772
-I1
-sS'Conj Pron Pron'
+tp772
+a(S'Adv N N'
 p773
-I6
-sS'Adv Adj V'
-p774
-I11
-sS'Art N </s>'
+I2
+tp774
+a(S'Prep V Adv'
 p775
-I8
-sS'Conj Prep Adj'
-p776
-I5
-sS'Pron Misc Prep'
+I2
+tp776
+a(S'V Conj Num'
 p777
-I1
-sS'V Num N'
-p778
-I3
-sS'Prep Num Num'
+I2
+tp778
+a(S'Art V Adj'
 p779
 I2
-sS'Adj Pron Pron'
-p780
-I3
-sS'Adv Conj Pron'
+tp780
+a(S'Int Pron N'
 p781
 I2
-sS'<s> <s> Pron'
-p782
-I39
-sS'Art V </s>'
+tp782
+a(S'Prep Pron </s>'
 p783
 I2
-stp784
-Rp785
-.
+tp784
+a(S'Pron N Adj'
+p785
+I2
+tp786
+a(S'Misc Pron V'
+p787
+I2
+tp788
+a(S'Prep Pron Num'
+p789
+I2
+tp790
+a(S'N Adj </s>'
+p791
+I2
+tp792
+a(S'V Adv N'
+p793
+I2
+tp794
+a(S'Conj Num Adj'
+p795
+I2
+tp796
+a(S'<s> Adj Adj'
+p797
+I2
+tp798
+a(S'Prep Conj N'
+p799
+I2
+tp800
+a(S'Misc V V'
+p801
+I2
+tp802
+a(S'Pron Pron Art'
+p803
+I2
+tp804
+a(S'V N V'
+p805
+I2
+tp806
+a(S'Adv Pron Art'
+p807
+I2
+tp808
+a(S'Prep Adv Pron'
+p809
+I2
+tp810
+a(S'Pron V Adj'
+p811
+I2
+tp812
+a(S'Pron Prep N'
+p813
+I2
+tp814
+a(S'<s> Conj Adj'
+p815
+I2
+tp816
+a(S'Adv N Prep'
+p817
+I2
+tp818
+a(S'Adv Prep Adj'
+p819
+I2
+tp820
+a(S'Num N Misc'
+p821
+I2
+tp822
+a(S'V Num Prep'
+p823
+I2
+tp824
+a(S'Pron Prep Adv'
+p825
+I2
+tp826
+a(S'Prep N Misc'
+p827
+I2
+tp828
+a(S'Pron Prep Prep'
+p829
+I2
+tp830
+a(S'Conj Art V'
+p831
+I2
+tp832
+a(S'<s> Int V'
+p833
+I2
+tp834
+a(S'N Adv Adv'
+p835
+I2
+tp836
+a(S'Adv Adj Art'
+p837
+I2
+tp838
+a(S'Misc Misc Num'
+p839
+I2
+tp840
+a(S'Conj Pron Art'
+p841
+I2
+tp842
+a(S'Art V Conj'
+p843
+I2
+tp844
+a(S'V Pron Num'
+p845
+I2
+tp846
+a(S'Adv Adj Num'
+p847
+I2
+tp848
+a(S'Adv Pron Prep'
+p849
+I2
+tp850
+a(S'Adj Adj Misc'
+p851
+I2
+tp852
+a(S'V Adj </s>'
+p853
+I2
+tp854
+a(S'Pron N Conj'
+p855
+I2
+tp856
+a(S'Art Adv Adj'
+p857
+I2
+tp858
+a(S'Int V Pron'
+p859
+I2
+tp860
+a(S'<s> Adj </s>'
+p861
+I2
+tp862
+a(S'Adj Adj Pron'
+p863
+I2
+tp864
+a(S'Conj Pron </s>'
+p865
+I2
+tp866
+a(S'Adj Misc Prep'
+p867
+I2
+tp868
+a(S'<s> Art Num'
+p869
+I2
+tp870
+a(S'Num Conj Art'
+p871
+I2
+tp872
+a(S'Adj Pron V'
+p873
+I2
+tp874
+a(S'Prep Num Prep'
+p875
+I2
+tp876
+a(S'Conj Misc Prep'
+p877
+I2
+tp878
+a(S'Prep Prep N'
+p879
+I2
+tp880
+a(S'Prep Adv Art'
+p881
+I2
+tp882
+a(S'Adj Pron Misc'
+p883
+I2
+tp884
+a(S'Num V Adv'
+p885
+I2
+tp886
+a(S'Art Pron V'
+p887
+I2
+tp888
+a(S'Art Pron N'
+p889
+I2
+tp890
+a(S'Art V V'
+p891
+I2
+tp892
+a(S'Adj Num Conj'
+p893
+I2
+tp894
+a(S'<s> Int Adj'
+p895
+I2
+tp896
+a(S'Prep Num </s>'
+p897
+I2
+tp898
+a(S'V Pron N'
+p899
+I2
+tp900
+a(S'Int </s> <s>'
+p901
+I2
+tp902
+a(S'Prep N Adj'
+p903
+I2
+tp904
+a(S'Adv N Adv'
+p905
+I2
+tp906
+a(S'Prep Misc Misc'
+p907
+I2
+tp908
+a(S'Prep Pron Adv'
+p909
+I2
+tp910
+a(S'Prep Adv Adv'
+p911
+I2
+tp912
+a(S'<s> Int Art'
+p913
+I2
+tp914
+a(S'Num Adv </s>'
+p915
+I2
+tp916
+a(S'Misc Prep Pron'
+p917
+I2
+tp918
+a(S'V Num Adv'
+p919
+I2
+tp920
+a(S'Misc Num Num'
+p921
+I2
+tp922
+a(S'Int Misc Misc'
+p923
+I2
+tp924
+a(S'Adj Int Conj'
+p925
+I2
+tp926
+a(S'<s> Pron Pron'
+p927
+I2
+tp928
+a(S'Misc Conj Misc'
+p929
+I2
+tp930
+a(S'Misc Misc V'
+p931
+I2
+tp932
+a(S'<s> Int Int'
+p933
+I2
+tp934
+a(S'<s> Conj Prep'
+p935
+I2
+tp936
+a(S'<s> Prep Pron'
+p937
+I2
+tp938
+a(S'Prep Art Adv'
+p939
+I2
+tp940
+a(S'V Prep Prep'
+p941
+I2
+tp942
+a(S'<s> Adv Prep'
+p943
+I2
+tp944
+a(S'Prep N Art'
+p945
+I2
+tp946
+a(S'<s> <s> Num'
+p947
+I2
+tp948
+a(S'Pron Adv Num'
+p949
+I2
+tp950
+a(S'Misc Prep Adv'
+p951
+I2
+tp952
+a(S'V Adj Pron'
+p953
+I2
+tp954
+a(S'V Adv </s>'
+p955
+I2
+tp956
+a(S'Conj Prep Prep'
+p957
+I2
+tp958
+a(S'Conj Prep N'
+p959
+I2
+tp960
+a(S'V N </s>'
+p961
+I2
+tp962
+a(S'Pron Pron Prep'
+p963
+I2
+tp964
+a(S'Prep V Punc'
+p965
+I2
+tp966
+a(S'Misc Misc </s>'
+p967
+I2
+tp968
+a(S'V V Num'
+p969
+I2
+tp970
+a(S'V V N'
+p971
+I2
+tp972
+a(S'Adj Adj </s>'
+p973
+I2
+tp974
+a(S'<s> N N'
+p975
+I2
+tp976
+a(S'Prep Misc </s>'
+p977
+I2
+tp978
+a(S'Misc Conj V'
+p979
+I2
+tp980
+a(S'Art N Misc'
+p981
+I2
+tp982
+a(S'Conj V Adv'
+p983
+I2
+tp984
+a(S'Conj Adj N'
+p985
+I2
+tp986
+a(S'Num N Adv'
+p987
+I2
+tp988
+a(S'Adj Num V'
+p989
+I2
+tp990
+a(S'Adj Conj N'
+p991
+I2
+tp992
+a(S'V Adv Pron'
+p993
+I2
+tp994
+a(S'N Num Prep'
+p995
+I2
+tp996
+a(S'Prep Num Num'
+p997
+I2
+tp998
+a(S'Adv Conj Pron'
+p999
+I2
+tp1000
+a(S'Art V </s>'
+p1001
+I2
+tp1002
+a(S'<s> Int </s>'
+p1003
+I1
+tp1004
+a(S'V Art Art'
+p1005
+I1
+tp1006
+a(S'<s> Prep Prep'
+p1007
+I1
+tp1008
+a(S'Conj Adv Pron'
+p1009
+I1
+tp1010
+a(S'V Punc Prep'
+p1011
+I1
+tp1012
+a(S'Conj N Conj'
+p1013
+I1
+tp1014
+a(S'Pron Adj Misc'
+p1015
+I1
+tp1016
+a(S'N Misc N'
+p1017
+I1
+tp1018
+a(S'<s> Art Adv'
+p1019
+I1
+tp1020
+a(S'V Adv Punc'
+p1021
+I1
+tp1022
+a(S'Punc Prep Adj'
+p1023
+I1
+tp1024
+a(S'Adj N Pron'
+p1025
+I1
+tp1026
+a(S'<s> Conj Conj'
+p1027
+I1
+tp1028
+a(S'Conj Adj Adj'
+p1029
+I1
+tp1030
+a(S'V N Adj'
+p1031
+I1
+tp1032
+a(S'V V Punc'
+p1033
+I1
+tp1034
+a(S'<s> Adj Pron'
+p1035
+I1
+tp1036
+a(S'Conj Conj Adj'
+p1037
+I1
+tp1038
+a(S'Adv Prep Prep'
+p1039
+I1
+tp1040
+a(S'N Adv N'
+p1041
+I1
+tp1042
+a(S'V V Misc'
+p1043
+I1
+tp1044
+a(S'Misc Conj Prep'
+p1045
+I1
+tp1046
+a(S'Adv Num Adv'
+p1047
+I1
+tp1048
+a(S'V V Adj'
+p1049
+I1
+tp1050
+a(S'Conj Art Art'
+p1051
+I1
+tp1052
+a(S'Prep N Pron'
+p1053
+I1
+tp1054
+a(S'Misc V </s>'
+p1055
+I1
+tp1056
+a(S'Punc Conj Num'
+p1057
+I1
+tp1058
+a(S'Conj V N'
+p1059
+I1
+tp1060
+a(S'V Misc </s>'
+p1061
+I1
+tp1062
+a(S'N Art Num'
+p1063
+I1
+tp1064
+a(S'Adv Conj V'
+p1065
+I1
+tp1066
+a(S'Pron Adj Pron'
+p1067
+I1
+tp1068
+a(S'Punc N Conj'
+p1069
+I1
+tp1070
+a(S'Conj Adj Art'
+p1071
+I1
+tp1072
+a(S'Misc Adj Pron'
+p1073
+I1
+tp1074
+a(S'Adj Misc Conj'
+p1075
+I1
+tp1076
+a(S'Punc V Prep'
+p1077
+I1
+tp1078
+a(S'Conj Adj Prep'
+p1079
+I1
+tp1080
+a(S'V N Misc'
+p1081
+I1
+tp1082
+a(S'Int Int Adv'
+p1083
+I1
+tp1084
+a(S'Adj Pron Adv'
+p1085
+I1
+tp1086
+a(S'Pron Prep Conj'
+p1087
+I1
+tp1088
+a(S'Adv Misc V'
+p1089
+I1
+tp1090
+a(S'Num Int Misc'
+p1091
+I1
+tp1092
+a(S'<s> Int Pron'
+p1093
+I1
+tp1094
+a(S'Int Conj Int'
+p1095
+I1
+tp1096
+a(S'Art Adv V'
+p1097
+I1
+tp1098
+a(S'<s> N Art'
+p1099
+I1
+tp1100
+a(S'<s> Adv Art'
+p1101
+I1
+tp1102
+a(S'Int Conj Pron'
+p1103
+I1
+tp1104
+a(S'N Prep Conj'
+p1105
+I1
+tp1106
+a(S'Prep N Num'
+p1107
+I1
+tp1108
+a(S'Pron Adj Conj'
+p1109
+I1
+tp1110
+a(S'Prep V Adj'
+p1111
+I1
+tp1112
+a(S'Adv N V'
+p1113
+I1
+tp1114
+a(S'Conj Adj Adv'
+p1115
+I1
+tp1116
+a(S'N Punc N'
+p1117
+I1
+tp1118
+a(S'Adv Misc Int'
+p1119
+I1
+tp1120
+a(S'<s> Adv Num'
+p1121
+I1
+tp1122
+a(S'Num Adv V'
+p1123
+I1
+tp1124
+a(S'N Adj Conj'
+p1125
+I1
+tp1126
+a(S'Misc Art Num'
+p1127
+I1
+tp1128
+a(S'Misc Misc Pron'
+p1129
+I1
+tp1130
+a(S'Misc Prep Num'
+p1131
+I1
+tp1132
+a(S'<s> Pron Art'
+p1133
+I1
+tp1134
+a(S'Prep Conj V'
+p1135
+I1
+tp1136
+a(S'Num Adv N'
+p1137
+I1
+tp1138
+a(S'Pron V Num'
+p1139
+I1
+tp1140
+a(S'<s> Adj Adv'
+p1141
+I1
+tp1142
+a(S'Prep Art Prep'
+p1143
+I1
+tp1144
+a(S'Prep V Pron'
+p1145
+I1
+tp1146
+a(S'Adj Misc V'
+p1147
+I1
+tp1148
+a(S'N Art Prep'
+p1149
+I1
+tp1150
+a(S'Int Adj V'
+p1151
+I1
+tp1152
+a(S'Prep Prep Prep'
+p1153
+I1
+tp1154
+a(S'Adj Misc N'
+p1155
+I1
+tp1156
+a(S'N Num V'
+p1157
+I1
+tp1158
+a(S'Int Adj Adj'
+p1159
+I1
+tp1160
+a(S'Int V Prep'
+p1161
+I1
+tp1162
+a(S'Conj Int Num'
+p1163
+I1
+tp1164
+a(S'Conj Num Conj'
+p1165
+I1
+tp1166
+a(S'Int Int Int'
+p1167
+I1
+tp1168
+a(S'Conj N N'
+p1169
+I1
+tp1170
+a(S'<s> N Num'
+p1171
+I1
+tp1172
+a(S'Art Adv Pron'
+p1173
+I1
+tp1174
+a(S'Num Adj Adj'
+p1175
+I1
+tp1176
+a(S'Int Conj Art'
+p1177
+I1
+tp1178
+a(S'N Pron V'
+p1179
+I1
+tp1180
+a(S'N Pron Misc'
+p1181
+I1
+tp1182
+a(S'Conj Conj Adv'
+p1183
+I1
+tp1184
+a(S'Int Int Art'
+p1185
+I1
+tp1186
+a(S'Prep Conj Conj'
+p1187
+I1
+tp1188
+a(S'Conj N Pron'
+p1189
+I1
+tp1190
+a(S'N V Punc'
+p1191
+I1
+tp1192
+a(S'<s> Pron Conj'
+p1193
+I1
+tp1194
+a(S'Adv Int Conj'
+p1195
+I1
+tp1196
+a(S'Adv Adv Num'
+p1197
+I1
+tp1198
+a(S'V Adj Int'
+p1199
+I1
+tp1200
+a.

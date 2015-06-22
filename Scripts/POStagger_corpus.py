@@ -27,7 +27,7 @@ def getPOStags(text,outputFileName):
 		counter = 0
 		for line in lines:
 			# IF line not empty, tag the line with POS tags and write to file
-			if (line) and (counter < 1000):
+			if line:
 				newLine = ""
 				counter += 1
 				line = line.decode('latin-1')
