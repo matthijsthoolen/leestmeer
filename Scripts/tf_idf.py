@@ -2,7 +2,7 @@
 
 from collections import Counter
 from collections import OrderedDict
-import sys, getopt, re, pickle
+import sys, getopt, re, pickle,math
 from itertools import permutations
 
 def main():
@@ -18,10 +18,12 @@ def main():
 		for (x,m) in source:
 			freq = 0
 			for source,name in List:
-				if source[m] > 0:
-					freq += 1
+				for i in range(0,len(source)):
+					if source[x] > 0:
+						freq += 1
 			source[x] = source[x] * math.log10(7/freq)
-		with open('database//' +name + '_idf', 'rb') as f:
+		with open('database\\' +name + '_idf', 'wb') as f:
+			print(source)
 			pickle.dump(source, f, protocol=2)
 
 
