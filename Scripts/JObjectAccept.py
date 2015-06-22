@@ -68,8 +68,7 @@ def main(obj):
 	obj['overall'][0] = overall
 
 	corpusText = obj['corpus'][0]
-	Set = obj['info'][0]['corpusSet'] 
-	corpusSet = pickle.load(open('database\\' + Set, 'rb'))
+	corpusSet = pickle.load(open('database\\' + corpus, 'rb'))
 	corpusText['avgLetters'] = corpusSet['avgLetters']
 	corpusText['freqCommonWords'] = corpusSet['freqCommonWords']
 	corpusText['typeTokenFrequency'] = corpusSet['typeTokenFrequency']

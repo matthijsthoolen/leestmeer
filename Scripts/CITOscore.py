@@ -21,7 +21,7 @@ def main():
 		standards['typeTokenFrequency'] = typeTokenFrequency
 		standards['avgWords'] = avgWords
 		file = open('database\\' + source + '_averages', 'wb')
-		pickle.dump(standards,file)
+		pickle.dump(standards,file,protocol=2)
 		file.close()
 
 def main2(corpus, output, common):
