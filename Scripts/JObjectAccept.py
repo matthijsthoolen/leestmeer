@@ -6,6 +6,7 @@ import AVIscoreMod2 as AVIscoreMod
 import CITOMod2 as CITOMod
 import POStagger_text as tagger
 import ngramProfiler 
+import textDifferenceMod
 
 
 # accepts a JSON object, unpacks it, analyzes it and sends it back
@@ -31,17 +32,7 @@ def main(obj):
 			# Do a POStag analysis on the text, and calculate ngrams of those
 			POStags = tagger.getPOStags(text)
 			nGrams = ngramProfiler.main(POStags,3)
-			
-			print("POS tag analyse van paragraaf")
-			print(POStags)
-											
-			print("Ngram analyse van paragraaf")
-			print(nGrams)
-
-			# text.getMetrics
-			# corpus.getMetrics
-			# variableList = compare(text.Metrics, corpus.metrics)
-			# item['variables'] = variableList
+			resemblance = textDifferenceMod.main(corpus + '_POS_nGrams',text)
 			
 			# Put data in the JSON object
 			item['aviScore'] = aviScore
@@ -95,7 +86,6 @@ def prepareText(body):
 		text += line
 	print(text)
 	return text
-
 
 # This function states the commandline arguments that are needed
 # for the program to run.
