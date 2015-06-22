@@ -12,7 +12,7 @@ def mainCITO(text):
 	totWords = 0
 	avgLetters = 0
 	allWords = ""
-	sentences = text.splitlines()
+	sentences = re.split('\.[\s|\n]|\!+|\?+',text)
 	for sentence in sentences:
 		if sentence:
 			wordCount = 0

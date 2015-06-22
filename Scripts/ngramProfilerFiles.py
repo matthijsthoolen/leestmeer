@@ -2,7 +2,7 @@
 
 from collections import Counter
 from collections import OrderedDict
-import sys, getopt, argparse, re, pickle
+import sys, getopt, argparse, re, pickle, math
 from itertools import permutations
 
 # Prepares an already tagged corpus and creates N-Gram model
@@ -15,7 +15,7 @@ def main(corpus, n):
 	# Get n-gram, returns Counter with top 600 ngrams
 	nGrams = makeNgrams(int(n), words)
 	file = open(corpus+'_nGrams', 'wb')
-	pickle.dump(nGrams,file)
+	pickle.dump(nGrams,file, protocol=2)
 	file.close()
 
 
@@ -50,7 +50,10 @@ def makeNgrams(n, words):
 	# Define corpus as 600 most common nGrams, (601 with </s> <s> <s>)
 	# E.g. Politie has 367 unique sets, bright 800	
 	nGrams = nGrams.most_common(600)
-	return nGrams
+	nGramsC = Counter()
+	for i in range(0, len(nGrams)):
+		nGramsC[nGrams[i][0]] = nGrams[i][1]
+	return nGramsC
 
 # This function states the commandline arguments that are needed
 # for the program to run.
