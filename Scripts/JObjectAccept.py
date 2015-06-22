@@ -11,13 +11,14 @@ import textDifferenceMod
 
 # accepts a JSON object, unpacks it, analyzes it and sends it back
 def main(obj):
+	print(obj)
 	index = -1
 	avgSentence = 0
 	numSentences = 0
 	totalText = ""
 	parObj = obj['text']
-	corpus = obj['info'][0]['corpusSet']
-	corpus = 'database\\' + corpus
+	corpus = obj['info']['corpusSet']
+	corpus = 'database/' + corpus
 	for item in parObj:
 		index += 1
 		body = item['paragraph']		
@@ -68,8 +69,7 @@ def main(obj):
 	obj['overall'][0] = overall
 
 	corpusText = obj['corpus'][0]
-	Set = obj['info'][0]['corpusSet'] 
-	corpusSet = pickle.load(open('database\\' + Set, 'rb'))
+	corpusSet = pickle.load(open(corpus, 'rb'))
 	corpusText['avgLetters'] = corpusSet['avgLetters']
 	corpusText['freqCommonWords'] = corpusSet['freqCommonWords']
 	corpusText['typeTokenFrequency'] = corpusSet['typeTokenFrequency']

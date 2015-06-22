@@ -17,11 +17,9 @@ def main(corpus,text):
 			# analyze current text, returns counter
 			P2 = ngramProfiler.main(text,3)
 
+			return(calcDiffUw(P1, P2))
 	except IOError: 
 		print('Cannot open '+corpus)
-	return(calcDiffUw(P1, P2))
-
-
 
 
 def calcDiffUw(P1, P2):
