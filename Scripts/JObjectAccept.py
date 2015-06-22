@@ -16,7 +16,7 @@ def main(obj):
 	numSentences = 0
 	totalText = ""
 	parObj = obj['text']
-	corpus =obj['corpus'][0]
+	corpus = obj['info'][0]['corpusSet']
 	corpus = 'database\\' + corpus
 	for item in parObj:
 		index += 1
