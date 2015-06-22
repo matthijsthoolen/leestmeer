@@ -87,7 +87,6 @@ def main(obj):
 	overall['ciltScore'] = CILT
 	overall['clibScore'] = CLIB
 	obj['overall'][0] = overall
-
 	return obj
 
 # prepare text by putting each sentence on a new line
