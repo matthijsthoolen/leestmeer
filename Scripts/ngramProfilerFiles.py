@@ -14,8 +14,6 @@ def main(corpus, n):
 	nGrams = makeNgrams(int(n), words)
 	if n == 3:
 		del nGrams['</s> <s> <s>']
-	if n == 4:
-		del nGrams['</s> <s> <s> <s>']
 	c = Counter(nGrams)
 	# print(c)
 	file = open(corpus+'_nGrams', 'wb')

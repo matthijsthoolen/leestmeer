@@ -28,7 +28,7 @@ def main(obj):
 											
 			# Calculate metrics of current text
 			(aviScore,totWords,totSentences,aviAge) = AVIscoreMod.mainAVI(body)
-			(CLIB, CILT) = CITOMod.mainCITO(body)
+			(CLIB, CILT, avgLetters, freqCommonWords, typeTokenFrequency, avgWords) = CITOMod.mainCITO(body)
 											
 			# Do a POStag analysis on the text, and calculate ngrams of those
 			POStags = tagger.getPOStags(text)
@@ -51,14 +51,17 @@ def main(obj):
 			item['clibScore'] = CLIB
 			item['ciltScore'] = CILT
 			item['analytics']['totalWords'] = totWords
-			avgSentence is totWords/totSentences
-			item['analytics']['avgSentence'] = avgSentence
+			item['analytics']['avgWords'] = avgWords
+			item['analytics']['avgLetters'] = avgLetters
+			item['analytics']['freqCommonWords'] = freqCommonWords
+			item['analytics']['typeTokenFrequency'] = typeTokenFrequency
 			totalText += body
 			totalText += '\n\n'
 			obj['text'][index] = item
+
+	overall = obj['overall'][0]
 	(aviScore,totWords,totSentences,aviAge) = AVIscoreMod.mainAVI(totalText)
 	(CLIB, CILT) = CITOMod.mainCITO(totalText)
-	overall = obj['overall'][0]
 	overall['aviScore'] = aviScore
 	overall['aviAge'] = aviAge
 	index = -1
@@ -73,6 +76,9 @@ def main(obj):
 	overall['ciltScore'] = CILT
 	overall['clibScore'] = CLIB
 	obj['overall'][0] = overall
+
+	obj['corpus'][0] = corpus
+	
 	return obj
 
 # prepare text by putting each sentence on a new line
