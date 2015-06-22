@@ -14,7 +14,6 @@ def main(corpus, n):
 
 	# Get n-gram, returns Counter with top 600 ngrams
 	nGrams = makeNgrams(int(n), words)
-
 	file = open(corpus+'_nGrams', 'wb')
 	pickle.dump(nGrams,file)
 	file.close()
