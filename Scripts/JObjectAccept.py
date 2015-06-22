@@ -1,25 +1,22 @@
 # -*- coding: utf-8 -*-
 
 from collections import Counter
-import sys, getopt, argparse, re, math, json
+import sys, getopt, argparse, re, math, json, pickle
 import AVIscoreMod2 as AVIscoreMod
 import CITOMod2 as CITOMod
 import POStagger_text as tagger
 import ngramProfiler 
 
-# def main(f):
-# 	obj = json.loads(f)
-# 	print('hello')
-# 	print(mainB(obj)['overall'][aviScore])
 
 # accepts a JSON object, unpacks it, analyzes it and sends it back
 def main(obj):
-	#corpusMetrics = getCorpusMetrics(obj['corpus'])
 	index = -1
 	avgSentence = 0
 	numSentences = 0
 	totalText = ""
 	parObj = obj['text']
+	obj['corpus'][0] = corpus
+	corpus = 'database\\' + corpus
 	for item in parObj:
 		index += 1
 		body = item['paragraph']		
@@ -62,7 +59,7 @@ def main(obj):
 
 	overall = obj['overall'][0]
 	(aviScore,totWords,totSentences,aviAge) = AVIscoreMod.mainAVI(totalText)
-	(CLIB, CILT) = CITOMod.mainCITO(totalText)
+	(CLIB, CILT, avgLetters, freqCommonWords, typeTokenFrequency, avgWords) = CITOMod.mainCITO(totalText)
 	overall['aviScore'] = aviScore
 	overall['aviAge'] = aviAge
 	index = -1
@@ -78,8 +75,13 @@ def main(obj):
 	overall['clibScore'] = CLIB
 	obj['overall'][0] = overall
 
-	obj['corpus'][0] = corpus
-	
+	obj['corpus'][0] = 
+	obj['info'][0]['corpusSet'] = Set
+	corpusSet = pickle.load(open('database\\' + Set, 'rb'))
+	corpus['avgLetters'] = corpusSet['avgLetters']
+	corpus['freqCommonWords'] = corpusSet['freqCommonWords']
+	corpus['typeTokenFrequency'] = corpusSet['typeTokenFrequency']
+	corpus['avgWords'] = corpusSet['avgWords']
 	return obj
 
 # prepare text by putting each sentence on a new line
@@ -93,13 +95,6 @@ def prepareText(body):
 		text += line
 	print(text)
 	return text
-
-
-def getCorpusMetrics(corpus):
-	
-
-
-
 
 
 # This function states the commandline arguments that are needed

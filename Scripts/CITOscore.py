@@ -6,10 +6,7 @@ import sys, getopt, argparse, re, math, pickle
 # This is the main function of the code which calculates the CITO score
 
 def main():
-	# outputFile = open('database\\averages', 'w+')
 	List = ['www.3fm.nl', 'www.360magazine.nl', 'www.bright.nl', 'www.kidsweek.nl', 'www.nos.nl', 'www.nrc.nl', 'www.politie.nl']
-	# List = ['www.nos.nl']
-	# List = ['test']
 	standards = {}
 	for source in List:
 		print(source)
@@ -23,13 +20,6 @@ def main():
 		standards['freqCommonWords'] = freqCommonWords
 		standards['typeTokenFrequency'] = typeTokenFrequency
 		standards['avgWords'] = avgWords
-		# outputFile.write(source + '\n')
-		# outputFile.write('CLIB: ' + str(CLIB) + '\n')
-		# outputFile.write('CILT: ' + str(CILT) + '\n')
-		# outputFile.write('avgLetters: ' + str(avgLetters) + '\n')
-		# outputFile.write('freqCommonWords: ' + str(freqCommonWords) + '\n')
-		# outputFile.write('typeTokenFrequency: ' + str(typeTokenFrequency) + '\n')
-		# outputFile.write('avgWords: ' + str(avgWords) + '\n\n')
 		file = open('database\\' + source + '_averages', 'wb')
 		pickle.dump(standards,file)
 		file.close()
