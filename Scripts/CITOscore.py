@@ -1,27 +1,39 @@
 # -*- coding: utf-8 -*-
 
 from collections import Counter
-import sys, getopt, argparse, re, math
+import sys, getopt, argparse, re, math, pickle
 
 # This is the main function of the code which calculates the CITO score
 
 def main():
-	outputFile = open('database\\averages', 'w+')
+	# outputFile = open('database\\averages', 'w+')
 	List = ['www.3fm.nl', 'www.360magazine.nl', 'www.bright.nl', 'www.kidsweek.nl', 'www.nos.nl', 'www.nrc.nl', 'www.politie.nl']
 	# List = ['www.nos.nl']
 	# List = ['test']
+	standards = {}
 	for source in List:
+		print(source)
 		corpus = 'database\\' + source
 		output = 'banaan'
 		common = 'database\\common.txt'
 		(CLIB, CILT, avgLetters, freqCommonWords, typeTokenFrequency, avgWords) = main2(corpus, output, common)
-		outputFile.write(source + '\n')
-		outputFile.write('CLIB: ' + str(CLIB) + '\n')
-		outputFile.write('CILT: ' + str(CILT) + '\n')
-		outputFile.write('avgLetters: ' + str(avgLetters) + '\n')
-		outputFile.write('freqCommonWords: ' + str(freqCommonWords) + '\n')
-		outputFile.write('typeTokenFrequency: ' + str(typeTokenFrequency) + '\n')
-		outputFile.write('avgWords: ' + str(avgWords) + '\n\n')
+		standards['CLIB'] = CLIB
+		standards['CILT'] = CILT
+		standards['avgLetters'] = avgLetters
+		standards['freqCommonWords'] = freqCommonWords
+		standards['typeTokenFrequency'] = typeTokenFrequency
+		standards['avgWords'] = avgWords
+		# outputFile.write(source + '\n')
+		# outputFile.write('CLIB: ' + str(CLIB) + '\n')
+		# outputFile.write('CILT: ' + str(CILT) + '\n')
+		# outputFile.write('avgLetters: ' + str(avgLetters) + '\n')
+		# outputFile.write('freqCommonWords: ' + str(freqCommonWords) + '\n')
+		# outputFile.write('typeTokenFrequency: ' + str(typeTokenFrequency) + '\n')
+		# outputFile.write('avgWords: ' + str(avgWords) + '\n\n')
+		file = open('database\\' + source + '_averages', 'wb')
+		pickle.dump(standards,file)
+		file.close()
+
 def main2(corpus, output, common):
 	try:
 		file = open(corpus, mode='r')
