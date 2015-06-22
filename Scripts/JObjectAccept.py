@@ -72,10 +72,8 @@ def main(obj):
 
 	corpusText = obj['corpus'][0]
 
-
-	print 'averages of corpus path:',corpus + '_averages'
 	corpusSet = pickle.load(open(corpus + '_averages', 'rb'))
-
+	#corpusSet = pickle.load(open('database\\' + corpus, 'rb'))
 	corpusText['avgLetters'] = corpusSet['avgLetters']
 	corpusText['freqCommonWords'] = corpusSet['freqCommonWords']
 	corpusText['typeTokenFrequency'] = corpusSet['typeTokenFrequency']
