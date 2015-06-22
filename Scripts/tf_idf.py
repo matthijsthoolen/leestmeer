@@ -6,22 +6,22 @@ import sys, getopt, re, pickle
 from itertools import permutations
 
 def main():
-	fm = pickle.load(open('database\\3fm_POS_nGrams', 'rb'))
-	threesixty = pickle.load(open('database\\360_POS_nGrams', 'rb'))
-	bright = pickle.load(open('database\\bright_POS_nGrams', 'rb'))
-	kidsweek = pickle.load(open('database\\kidsweek_POS_nGrams', 'rb'))
-	nos = pickle.load(open('database\\nos_POS_nGrams', 'rb'))
-	nrc = pickle.load(open('database\\nrc_POS_nGrams', 'rb'))
-	sevendays = pickle.load(open('database\\sevendays_POS_nGrams', 'rb'))
+	fm = pickle.load(open('database/www.3fm.nl_POS_nGrams', 'rb'))
+	threesixty = pickle.load(open('database/www.360magazine.nl_POS_nGrams', 'rb'))
+	bright = pickle.load(open('database/www.bright.nl_POS_nGrams', 'rb'))
+	kidsweek = pickle.load(open('database/www.kidsweek.nl_POS_nGrams', 'rb'))
+	nos = pickle.load(open('database/www.nos.nl_POS_nGrams', 'rb'))
+	nrc = pickle.load(open('database/www.nrc.nl_POS_nGrams', 'rb'))
+	sevendays = pickle.load(open('database/www.sevendays.nl_POS_nGrams', 'rb'))
 	List = [(fm,'3fm_POS_nGrams'), (threesixty, '360_POS_nGrams'), (bright, 'bright_POS_nGrams'), (kidsweek, 'kidsweek_POS_nGrams'), (nos, 'nos_POS_nGrams'), (nrc, 'nrc_POS_nGrams'), (sevendays, 'sevendays_POS_nGrams')]
 	for source,name in List:
-		for x in source:
+		for (x,m) in source:
 			freq = 0
 			for source,name in List:
-				if source[x] > 0:
+				if source[m] > 0:
 					freq += 1
 			source[x] = source[x] * math.log10(7/freq)
-		with open('database\\' +name + '_idf', 'rb') as f:
+		with open('database//' +name + '_idf', 'rb') as f:
 			pickle.dump(source, f, protocol=2)
 
 

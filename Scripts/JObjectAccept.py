@@ -51,6 +51,27 @@ def main(obj):
 			resemblance = textDifferenceMod.main(corpus + '_POS_nGrams',POStags)
 			print 'paragraph resemblance:',resemblance
 			
+			CILTdiff = math.fabs(corpusSet['CILT'] - CILT)
+			CLIBdiff = math.fabs(corpusSet['CLIB'] - CLIB)
+			typeTokenFrDiff = math.fabs(corpusSet['typeTokenFrequency'] - typeTokenFrequency)
+			freqCommonWordsDiff = math.fabs(corpusSet['freqCommonWords'] - freqCommonWords)
+			avgLettersDiff = math.fabs(corpusSet['avgLetters'] - avgLetters)
+			avgWordsDiff = math.fabs(corpusSet['avgWords'] - avgWords)
+
+			# calculate difference between corpus and paragraph
+			if math.fabs(corpusSet['CILT'] - CILT) > 4:
+				print 'CILT score off, corpus average:', corpusSet['CILT']
+				print 'frequency common words off by:', freqCommonWordsDiff
+				print 'avgLetters per word off by:', avgLettersDiff
+				
+			
+			if math.fabs(corpusSet['CLIB'] - CLIB) > 4:
+				print 'CLIB score off, corpus average:', corpusSet['CLIB']
+				print 'frequency common words off by:', freqCommonWordsDiff
+				print 'avgLetters per word off by:', avgLettersDiff
+				print 'typeTokenFrequency off by:', typeTokenFrequency
+				print 'avgWords per sentence off by:', avgWords
+
 			# Put data in the JSON object
 			item['aviScore'] = aviScore
 			item['aviAge'] = aviAge
