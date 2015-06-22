@@ -14,6 +14,7 @@ import ngramProfiler
 
 # accepts a JSON object, unpacks it, analyzes it and sends it back
 def main(obj):
+	#corpusMetrics = getCorpusMetrics(obj['corpus'])
 	index = -1
 	avgSentence = 0
 	numSentences = 0
@@ -92,6 +93,14 @@ def prepareText(body):
 		text += line
 	print(text)
 	return text
+
+
+def getCorpusMetrics(corpus):
+	
+
+
+
+
 
 # This function states the commandline arguments that are needed
 # for the program to run.
