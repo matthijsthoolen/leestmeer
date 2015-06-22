@@ -19,6 +19,7 @@ def main(obj):
 	parObj = obj['text']
 	corpus = obj['info']['corpusSet']
 	corpus = 'database/' + corpus
+	print 'corpus path:',corpus
 	for item in parObj:
 		index += 1
 		body = item['paragraph']		
@@ -34,6 +35,7 @@ def main(obj):
 			POStags = tagger.getPOStags(text)
 			nGrams = ngramProfiler.main(POStags,3)
 			resemblance = textDifferenceMod.main(corpus + '_POS_nGrams',text)
+			print 'alinea resemblance:',resemblance
 			
 			# Put data in the JSON object
 			item['aviScore'] = aviScore
@@ -69,7 +71,11 @@ def main(obj):
 	obj['overall'][0] = overall
 
 	corpusText = obj['corpus'][0]
-	corpusSet = pickle.load(open(corpus, 'rb'))
+
+
+	print 'averages of corpus path:',corpus + '_averages'
+	corpusSet = pickle.load(open(corpus + '_averages', 'rb'))
+
 	corpusText['avgLetters'] = corpusSet['avgLetters']
 	corpusText['freqCommonWords'] = corpusSet['freqCommonWords']
 	corpusText['typeTokenFrequency'] = corpusSet['typeTokenFrequency']

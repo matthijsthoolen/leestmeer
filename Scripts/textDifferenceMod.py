@@ -13,7 +13,7 @@ def main(corpus,text):
 			P1 = pickle.load(f)
 
 			#testCorpus = 'database/tests/3fm_POS'
-			print 'Score of ', corpus, ' for ',paragraph
+			print 'Score of ', corpus, ' for ', text
 			# analyze current text, returns counter
 			P2 = ngramProfiler.main(text,3)
 
