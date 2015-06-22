@@ -39,6 +39,7 @@ def main(obj):
 			item['aviAge'] = aviAge
 			item['clibScore'] = CLIB
 			item['ciltScore'] = CILT
+			item['resemblance'] = resemblance
 			item['analytics']['totalWords'] = totWords
 			item['analytics']['avgWords'] = avgWords
 			item['analytics']['avgLetters'] = avgLetters
@@ -66,13 +67,14 @@ def main(obj):
 	overall['clibScore'] = CLIB
 	obj['overall'][0] = overall
 
-	obj['corpus'][0] = 
-	obj['info'][0]['corpusSet'] = Set
+	corpusText = obj['corpus'][0]
+	Set = obj['info'][0]['corpusSet'] 
 	corpusSet = pickle.load(open('database\\' + Set, 'rb'))
-	corpus['avgLetters'] = corpusSet['avgLetters']
-	corpus['freqCommonWords'] = corpusSet['freqCommonWords']
-	corpus['typeTokenFrequency'] = corpusSet['typeTokenFrequency']
-	corpus['avgWords'] = corpusSet['avgWords']
+	corpusText['avgLetters'] = corpusSet['avgLetters']
+	corpusText['freqCommonWords'] = corpusSet['freqCommonWords']
+	corpusText['typeTokenFrequency'] = corpusSet['typeTokenFrequency']
+	corpusText['avgWords'] = corpusSet['avgWords']
+	obj['corpus'][0] = corpusText
 	return obj
 
 # prepare text by putting each sentence on a new line

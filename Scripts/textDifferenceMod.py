@@ -19,7 +19,8 @@ def main(corpus,text):
 
 	except IOError: 
 		print('Cannot open '+corpus)
-	calcDiffUw(P1, P2)
+	return(calcDiffUw(P1, P2))
+
 
 
 
@@ -60,7 +61,7 @@ def calcDiffUw(P1, P2):
 	D4 = (intrsct * 1.0) / (intrsct + (len(P1)-intrsct) + (len(P2l)-intrsct)) * 100
 	print 'Tversky index:', D4
 
-	return D1
+	return D3
 
 
 # This function states the commandline arguments that are needed
