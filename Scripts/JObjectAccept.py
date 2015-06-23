@@ -50,27 +50,20 @@ def main(obj):
 			nGrams = ngramProfiler.main(POStags,3)
 			resemblance = textDifferenceMod.main(corpus + '_POS_nGrams',POStags)
 			print 'paragraph resemblance:',resemblance
-			
-			CILTdiff = math.fabs(corpusSet['CILT'] - CILT)
-			CLIBdiff = math.fabs(corpusSet['CLIB'] - CLIB)
-			typeTokenFrDiff = math.fabs(corpusSet['typeTokenFrequency'] - typeTokenFrequency)
-			freqCommonWordsDiff = math.fabs(corpusSet['freqCommonWords'] - freqCommonWords)
-			avgLettersDiff = math.fabs(corpusSet['avgLetters'] - avgLetters)
-			avgWordsDiff = math.fabs(corpusSet['avgWords'] - avgWords)
 
 			# calculate difference between corpus and paragraph
 			if math.fabs(corpusSet['CILT'] - CILT) > 4:
-				print 'CILT score off, corpus average:', corpusSet['CILT']
-				print 'frequency common words off by:', freqCommonWordsDiff
-				print 'avgLetters per word off by:', avgLettersDiff
+				print '\nCILT score off, is:', CILT, 'should be:',corpusSet['CILT']
+				print 'Frequency common words off, is:', 0.28*freqCommonWords, ' should be:', 0.28*corpusSet['freqCommonWords'] 
+				print 'avgLetters per word off, is:', 12.33*avgLetters, ' should be:', 12.33*corpusSet['avgLetters'],'\n'
 				
 			
 			if math.fabs(corpusSet['CLIB'] - CLIB) > 4:
-				print 'CLIB score off, corpus average:', corpusSet['CLIB']
-				print 'frequency common words off by:', freqCommonWordsDiff
-				print 'avgLetters per word off by:', avgLettersDiff
-				print 'typeTokenFrequency off by:', typeTokenFrequency
-				print 'avgWords per sentence off by:', avgWords
+				print '\nCILT score off, is:', CLIB, 'should be:',corpusSet['CLIB']
+				print 'Frequency common words off, is:',0.474*freqCommonWords, ' should be:', 0.474*corpusSet['freqCommonWords'] 
+				print 'avgLetters per word off, is:', 6.603*avgLetters, ' should be:', 6.603*corpusSet['avgLetters']
+				print 'typeTokenFrequency off, is:', 0.365*typeTokenFrequency, ' should be:', 0.365*corpusSet['typeTokenFrequency']
+				print 'avgWords per sentence off, is:', 1.425*avgWords, ' should be:', 1.425*corpusSet['avgWords'], '\n'
 
 			# Put data in the JSON object
 			item['aviScore'] = aviScore

@@ -28,8 +28,7 @@ def mainCITO(text):
 			totWords += wordCount
 		
 	uniqueWords = Counter(allWords.split())
-	# print(uniqueWords)
-	typeTokenFrequency = len(uniqueWords) / totWords
+	typeTokenFrequency = (len(uniqueWords) * 1.0) / totWords
 	
 	commonFile = open(common)
 	commonText = commonFile.read()
@@ -37,13 +36,12 @@ def mainCITO(text):
 	totCommonWords = 0
 	
 	for commonWord in commonWords:
-		# print(str(commonWord + ' exists: '+ uniqueWords[commonWord]))
-		totCommonWords += uniqueWords[commonWord]
-		
-	freqCommonWords = totCommonWords / totWords
+		totCommonWords = totCommonWords + uniqueWords[commonWord]
 
-	avgWords = totWords/totSentences
-	avgLetters = totLetters/totWords
+	freqCommonWords = (totCommonWords * 1.0) / totWords 
+
+	avgWords = totWords/(totSentences * 1.0)
+	avgLetters = totLetters/(totWords * 1.0)
 
 	CLIB = round(46 - 6.603 * avgLetters + 0.474 * freqCommonWords - 0.365 * typeTokenFrequency + 1.425 * avgWords)
 	print 'average letters is:', avgLetters
