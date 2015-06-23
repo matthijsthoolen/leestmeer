@@ -17,13 +17,16 @@ def main():
 	for source,name in List:
 		for x in source:
 			freq = 0
-			for source,name in List:
-				for i in range(0,len(source)):
-					if source[x] > 0:
-						freq += 1
-			source[x] = source[x] * math.log10(7/freq)
+			for source2,name2 in List:
+				if source2[x] > 0:
+					# print(str(x) + ': ' + str(source[x]))
+					freq += 1
+			source[x] = source[x] * (1+math.log10(7/freq))
+			# print(source[x])
 		with open('database\\' +name + '_idf', 'wb') as f:
+			print(name)
 			print(source)
+			# print(name)
 			pickle.dump(source, f, protocol=2)
 
 
