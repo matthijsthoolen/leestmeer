@@ -102,8 +102,10 @@ def mainAVI(text):
 
 	# print(totNumberofWords)
 	# print(totSyllableCount)
-	avgWords = totWords/totSentences
-	avgSyllables = totSyllables/totWords
+	avgWords = totWords/(totSentences*1.0)
+	avgSyllables = totSyllables/(totWords*1.0)
+
+	
 
 	# if output=='debug':
 	# 	print('Average amount of words per sentence: ' + str(avgWords))
@@ -111,7 +113,7 @@ def mainAVI(text):
 	
 	aviScore = math.ceil(195 - (2 * avgWords) - (200/3*avgSyllables)-0.5)
 	aviAge = calcAge(aviScore)
-	tup = (aviScore,totWords,totSentences,aviAge)
+	tup = (aviScore,totWords,totSentences,aviAge,avgSyllables)
 	return tup
 	
 	# if output=='avi':

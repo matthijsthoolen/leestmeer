@@ -5,7 +5,7 @@ import sys, argparse, re, pickle, math
 import ngramProfiler
 import ast
 
-def main(corpus):
+def main(corpus, paragraph):
 	try:
 		with open(corpus, 'rb') as f:
 
@@ -29,15 +29,14 @@ def main(corpus):
 def calcDiffUw(P1, P2):
 	D = 0.0
 
+	P1l = Counter(list(P1))
 	P2l = Counter(list(P2))
 
 	intrsct = []
 
-	[ngramsCorpus, ngramFrCorpus] = zip(*P1)
-
 	# Find intersection between P1 and P2
 	for x in P2l:
-		if x in ngramsCorpus:
+		if x in P1l:
 			intrsct.append(x)
 
 	intrsct = len(intrsct)
@@ -71,7 +70,7 @@ def calcDiffUw(P1, P2):
 if __name__ == "__main__":
 	parser = argparse.ArgumentParser()
 	parser.add_argument("-corpus", "--corpus", help="File of corpus")
-	# parser.add_argument("-text", "--text", help="Text as string")
+	parser.add_argument("-text", "--text", help="Text as string")
 	#Name and location of the text file to be parsed
 	args = parser.parse_args()
-	main(args.corpus)
+	main(args.corpus,args.text)

@@ -1,4 +1,5 @@
 import textDifference
+from collections import Counter
 
 
 def main(paragraph):

@@ -26,6 +26,7 @@ def main(corpus,text):
 def calcDiffUw(P1, P2):
 	D = 0.0
 
+
 	P2l = Counter(list(P2))
 
 	intrsct = []
