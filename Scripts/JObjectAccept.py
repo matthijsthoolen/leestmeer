@@ -20,6 +20,20 @@ def main(obj):
 	corpus = obj['info']['corpusSet']
 	corpus = 'database/' + corpus
 	print 'corpus path:',corpus
+
+	# Get corpus statistics
+	corpusText = obj['corpus'][0]
+	corpusSet = pickle.load(open(corpus + '_averages', 'rb'))
+	#corpusSet = pickle.load(open('database\\' + corpus, 'rb'))
+	corpusText['avgLetters'] = corpusSet['avgLetters']
+	corpusText['freqCommonWords'] = corpusSet['freqCommonWords']
+	corpusText['typeTokenFrequency'] = corpusSet['typeTokenFrequency']
+	corpusText['avgWords'] = corpusSet['avgWords']
+	corpusText['CILT'] = corpusSet['CILT']
+    	corpusText['CLIB'] = corpusSet['CLIB']
+	obj['corpus'][0] = corpusText
+
+	# Analyze each paragraph
 	for item in parObj:
 		index += 1
 		body = item['paragraph']		
@@ -34,9 +48,30 @@ def main(obj):
 			# Do a POStag analysis on the text, and calculate ngrams of those
 			POStags = tagger.getPOStags(text)
 			nGrams = ngramProfiler.main(POStags,3)
-			resemblance = textDifferenceMod.main(corpus + '_POS_nGrams',text)
-			print 'alinea resemblance:',resemblance
+			resemblance = textDifferenceMod.main(corpus + '_POS_nGrams',POStags)
+			print 'paragraph resemblance:',resemblance
 			
+			CILTdiff = math.fabs(corpusSet['CILT'] - CILT)
+			CLIBdiff = math.fabs(corpusSet['CLIB'] - CLIB)
+			typeTokenFrDiff = math.fabs(corpusSet['typeTokenFrequency'] - typeTokenFrequency)
+			freqCommonWordsDiff = math.fabs(corpusSet['freqCommonWords'] - freqCommonWords)
+			avgLettersDiff = math.fabs(corpusSet['avgLetters'] - avgLetters)
+			avgWordsDiff = math.fabs(corpusSet['avgWords'] - avgWords)
+
+			# calculate difference between corpus and paragraph
+			if math.fabs(corpusSet['CILT'] - CILT) > 4:
+				print 'CILT score off, corpus average:', corpusSet['CILT']
+				print 'frequency common words off by:', freqCommonWordsDiff
+				print 'avgLetters per word off by:', avgLettersDiff
+				
+			
+			if math.fabs(corpusSet['CLIB'] - CLIB) > 4:
+				print 'CLIB score off, corpus average:', corpusSet['CLIB']
+				print 'frequency common words off by:', freqCommonWordsDiff
+				print 'avgLetters per word off by:', avgLettersDiff
+				print 'typeTokenFrequency off by:', typeTokenFrequency
+				print 'avgWords per sentence off by:', avgWords
+
 			# Put data in the JSON object
 			item['aviScore'] = aviScore
 			item['aviAge'] = aviAge
@@ -51,6 +86,10 @@ def main(obj):
 			totalText += body
 			totalText += '\n\n'
 			obj['text'][index] = item
+
+			
+
+
 
 	overall = obj['overall'][0]
 	(aviScore,totWords,totSentences,aviAge) = AVIscoreMod.mainAVI(totalText)
@@ -69,19 +108,6 @@ def main(obj):
 	overall['ciltScore'] = CILT
 	overall['clibScore'] = CLIB
 	obj['overall'][0] = overall
-
-	corpusText = obj['corpus'][0]
-
-	corpusSet = pickle.load(open(corpus + '_averages', 'rb'))
-	#corpusSet = pickle.load(open('database\\' + corpus, 'rb'))
-	corpusText['avgLetters'] = corpusSet['avgLetters']
-	corpusText['freqCommonWords'] = corpusSet['freqCommonWords']
-	corpusText['typeTokenFrequency'] = corpusSet['typeTokenFrequency']
-	corpusText['avgWords'] = corpusSet['avgWords']
-	corpusText['CILT'] = corpusSet['CILT']
-	corpusText['CLIB'] = corpusSet['CLIB']
-
-	obj['corpus'][0] = corpusText
 	return obj
 
 # prepare text by putting each sentence on a new line

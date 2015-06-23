@@ -46,6 +46,7 @@ def mainCITO(text):
 	avgLetters = totLetters/totWords
 
 	CLIB = round(46 - 6.603 * avgLetters + 0.474 * freqCommonWords - 0.365 * typeTokenFrequency + 1.425 * avgWords)
+	print 'average letters is:', avgLetters
 	CILT = round(105 - (114.49 + 0.28 * freqCommonWords - 12.33 * avgLetters))
 	
 	return (CLIB, CILT, avgLetters, freqCommonWords, typeTokenFrequency, avgWords)
