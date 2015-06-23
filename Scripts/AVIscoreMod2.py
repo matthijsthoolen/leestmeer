@@ -36,7 +36,7 @@ def mainAVI(text):
 		
 	avgSyllables = totSyllables / (totWords*1.0)
 
-	print 'avgSyllables:',avgSyllables, 'avgWords', avgWords
+	#print 'avgSyllables:',avgSyllables, 'avgWords', avgWords
 
 	aviScore = math.ceil(195 - (2 * avgWords) - (200/3*avgSyllables)-0.5)
 	aviAge = calcAge(aviScore)

@@ -19,7 +19,7 @@ def getPOStags(text):
 		# IF line not empty, tag the line with POS tags and write to file
 		if line:
 			# Delete punctuation marks
-			line = line.decode('latin-1')
+			#line = line.decode('latin-1')
 			line = re.sub(r'[#|&|>|=|(|)|"|:|,|;|-|\+]','',line)
 			
 			newLine = ""

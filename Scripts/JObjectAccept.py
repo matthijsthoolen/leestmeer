@@ -39,16 +39,17 @@ def main(obj):
 		body = item['paragraph']		
 		if body:
 			#print("print die paragraph")
-			text = prepareText(body).decode('latin-1')
+			text = prepareText(body)
+			#.decode('latin-1')
 											
 			# Calculate metrics of current text
 			(aviScore,totWords,totSentences,aviAge) = AVIscoreMod.mainAVI(text)
-			(CLIB, CILT, avgLetters, freqCommonWords, typeTokenFrequency, avgWords) = CITOMod.mainCITO(body)
+			(CLIB, CILT, avgLetters, freqCommonWords, typeTokenFrequency, avgWords) = CITOMod.mainCITO(text)
 											
 			# Do a POStag analysis on the text, and calculate ngrams of those
-			#POStags = tagger.getPOStags(text)
-			#nGrams = ngramProfiler.main(POStags,3)
-			#resemblance = textDifferenceMod.main(corpus + '_POS_nGrams',POStags)
+			POStags = tagger.getPOStags(text)
+			nGrams = ngramProfiler.main(POStags,3)
+			resemblance = textDifferenceMod.main(corpus + '_POS_nGrams',POStags)
 			#print 'paragraph resemblance:',resemblance
 
 			# calculate difference between corpus and paragraph
@@ -70,7 +71,7 @@ def main(obj):
 			item['aviAge'] = aviAge
 			item['clibScore'] = CLIB
 			item['ciltScore'] = CILT
-			#item['resemblance'] = resemblance
+			item['resemblance'] = resemblance
 			item['analytics']['totalWords'] = totWords
 			item['analytics']['avgWords'] = avgWords
 			item['analytics']['avgLetters'] = avgLetters
@@ -101,6 +102,9 @@ def main(obj):
 	overall['ciltScore'] = CILT
 	overall['clibScore'] = CLIB
 	obj['overall'][0] = overall
+
+	#print obj
+
 	return obj
 
 # prepare text by putting each sentence on a new line
