@@ -15,7 +15,12 @@ def main():
 	sevendays = pickle.load(open('database/www.sevendays.nl_POS_nGrams', 'rb'))
 	List = [(fm,'3fm_POS_nGrams'), (threesixty, '360_POS_nGrams'), (bright, 'bright_POS_nGrams'), (kidsweek, 'kidsweek_POS_nGrams'), (nos, 'nos_POS_nGrams'), (nrc, 'nrc_POS_nGrams'), (sevendays, 'sevendays_POS_nGrams')]
 	for source,name in List:
+<<<<<<< HEAD
 		tot = sum(source.values())
+=======
+		print(source)
+		# tot = sum(source.values())
+>>>>>>> 9fd9337d5e4c2eb301a64baac81ebeb66d102dfa
 		for (x,m) in source:
 			freq = 0
 			for source2,name2 in List:

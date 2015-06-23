@@ -1,4 +1,6 @@
 import textDifference, argparse, sys
+import textDifference
+from collections import Counter
 
 
 def main(paragraph):

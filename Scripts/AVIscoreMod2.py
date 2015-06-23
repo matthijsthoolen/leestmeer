@@ -18,6 +18,8 @@ def mainAVI(text):
 	totSentences = 0
 	avgWords = 0
 	avgSyllables = 0
+
+	#print(text)
 	sentences = text.splitlines()
 
 	for sentence in sentences:
@@ -30,9 +32,11 @@ def mainAVI(text):
 				totSyllables += syllableCount
 			totWords += wordCount
 
-	avgWords = totWords/totSentences
+	avgWords = totWords / (totSentences*1.0)
 		
-	avgSyllables = totSyllables/totWords
+	avgSyllables = totSyllables / (totWords*1.0)
+
+	print 'avgSyllables:',avgSyllables, 'avgWords', avgWords
 
 	aviScore = math.ceil(195 - (2 * avgWords) - (200/3*avgSyllables)-0.5)
 	aviAge = calcAge(aviScore)
