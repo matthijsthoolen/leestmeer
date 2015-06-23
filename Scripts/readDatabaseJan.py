@@ -5,7 +5,7 @@ import html
 import xml.etree.ElementTree as ET
 import AVIscoreMod
 
-def main(corpus):
+def main():
 	# Opens the pickled file as 'content'. This is a dictionary of features
 	# of every article:
 	# 1. identifier (source of the article)
@@ -25,9 +25,10 @@ def main(corpus):
 	
 	for article in content:
 		loc = urllib.parse.urlparse(article['identifier']).netloc
+		cat = article['category']
 		# bod = HP.feed(article['body'])
 		body = remove_tags(html.unescape(article['body']))
-		bod = re.split('\.[\s|\n]|\!+|\?+',body)
+		# bod = re.split('\.[\s|\n]|\!+|\?+',body)
 		# body = remove_tags(article['body'])
 		# bod = bytes(body, 'utf-8')
 		# print(bytes(body,'utf-8'))
@@ -42,9 +43,9 @@ def main(corpus):
 			loc = 'www.nos.nl'
 			# bod = bytes(body, 'utf-8')
 		try:
-			file = open('database\\' + loc,'a')
+			file = open('database\\genresplit' + loc + '_' + cat,'a')
 		except IOError:
-			file = open('database\\' + loc,'w')
+			file = open('database\\genresplit' + loc + '_' + cat,'w')
 		for line in bod:
 			file.write(line + '\n\n')
 		file.close()
@@ -58,8 +59,8 @@ def remove_tags(text):
 	return TAG_RE.sub('', textN)
 
 if __name__ == "__main__":
-	parser = argparse.ArgumentParser()
-	parser.add_argument("-corpus", "--corpus", help="Pickled file", default="articles.pickle")
-	# Name and location of the pickled articles file
-	args = parser.parse_args()
-	main(args.corpus)
+	# parser = argparse.ArgumentParser()
+	# parser.add_argument("-corpus", "--corpus", help="Pickled file", default="articles.pickle")
+	# # Name and location of the pickled articles file
+	# args = parser.parse_args()
+	main()
