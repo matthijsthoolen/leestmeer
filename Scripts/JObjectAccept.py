@@ -30,7 +30,7 @@ def main(obj):
 	corpusText['typeTokenFrequency'] = corpusSet['typeTokenFrequency']
 	corpusText['avgWords'] = corpusSet['avgWords']
 	corpusText['CILT'] = corpusSet['CILT']
-    	corpusText['CLIB'] = corpusSet['CLIB']
+	corpusText['CLIB'] = corpusSet['CLIB']
 	obj['corpus'][0] = corpusText
 
 	# Analyze each paragraph
