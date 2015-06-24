@@ -11,6 +11,9 @@ import textDifferenceMod
 
 # accepts a JSON object, unpacks it, analyzes it and sends it back
 def main(obj):
+	avgLettersThreshold = 1.0
+	avgWordsThreshold = 3.0
+
 	#print(obj)
 	index = -1
 	avgSentence = 0
@@ -29,8 +32,8 @@ def main(obj):
 	corpusText['freqCommonWords'] = corpusSet['freqCommonWords']
 	corpusText['typeTokenFrequency'] = corpusSet['typeTokenFrequency']
 	corpusText['avgWords'] = corpusSet['avgWords']
-	corpusText['CILT'] = corpusSet['CILT']
-    	corpusText['CLIB'] = corpusSet['CLIB']
+	corpusText['ciltScore'] = corpusSet['CILT']
+    	corpusText['clibScore'] = corpusSet['CLIB']
 	obj['corpus'][0] = corpusText
 
 	# Analyze each paragraph
@@ -38,9 +41,8 @@ def main(obj):
 		index += 1
 		body = item['paragraph']		
 		if body:
-			#print("print die paragraph")
+			text = body.encode('utf-8')
 			text = prepareText(body)
-			#.decode('latin-1')
 											
 			# Calculate metrics of current text
 			(aviScore,totWords,totSentences,aviAge) = AVIscoreMod.mainAVI(text)
@@ -52,19 +54,44 @@ def main(obj):
 			resemblance = textDifferenceMod.main(corpus + '_POS_nGrams',POStags)
 			#print 'paragraph resemblance:',resemblance
 
-			# calculate difference between corpus and paragraph
-			if math.fabs(corpusSet['CILT'] - CILT) > 4:
-				print '\nCILT score off, is:', CILT, 'should be:',corpusSet['CILT']
-				print 'Frequency common words off, is:', 0.28*freqCommonWords, ' should be:', 0.28*corpusSet['freqCommonWords'] 
-				print 'avgLetters per word off, is:', 12.33*avgLetters, ' should be:', 12.33*corpusSet['avgLetters'],'\n'
+
+			# verbeteringen:
+			# freqCommonWords -> sidebar (of synoniemen)
+			# TypeTokenFrequency -> sidebar (of (anti-)synoniemen)
+			# avgLetters 	-> te lang: lange woorden + sidebar
+			#		-> te kort: sidebar
+			# avgWords -> 
+
+			# Delete dummy from JSON object
+			item['highlights'] = []			
+
+			# Find words which deviate from the average in length, and put them in the JSON object
+			if((avgLetters - corpusSet['avgLetters']) > avgLettersThreshold):
+				print 'avgLetters moeten worden gehighlight'
+				highlightWords = findLongWords(text, corpusSet['avgLetters'])
+				for word in highlightWords:
+					item['highlights'].append({'text':word, 'color':1, 'hint':1})
+
+			# Find sentences which deviate from the average in length, and put them in the JSON object
+			if(math.fabs(avgWords - corpusSet['avgWords']) > avgWordsThreshold):
+				highlightSentences = findLongSentences(text, avgWords, corpusSet['avgWords'])
+				for sentence in highlightSentences:
+					item['highlights'].append({'text':sentence, 'color':5, 'hint':5})
 				
-			
-			if math.fabs(corpusSet['CLIB'] - CLIB) > 4:
-				print '\nCILT score off, is:', CLIB, 'should be:',corpusSet['CLIB']
-				print 'Frequency common words off, is:',0.474*freqCommonWords, ' should be:', 0.474*corpusSet['freqCommonWords'] 
-				print 'avgLetters per word off, is:', 6.603*avgLetters, ' should be:', 6.603*corpusSet['avgLetters']
-				print 'typeTokenFrequency off, is:', 0.365*typeTokenFrequency, ' should be:', 0.365*corpusSet['typeTokenFrequency']
-				print 'avgWords per sentence off, is:', 1.425*avgWords, ' should be:', 1.425*corpusSet['avgWords'], '\n'
+			print('Highlights:')
+			print(item['highlights'])
+
+			# calculate difference between corpus and paragraph
+			if math.fabs(corpusSet['CILT'] - CILT) > 5:
+				print '\nCILT score off, is:', CILT, 'should be:',corpusSet['CILT']
+				print 'Frequency common words off, is:', freqCommonWords, ' should be:', corpusSet['freqCommonWords'] 
+				print 'avgLetters per word off, is:', avgLetters, ' should be:', corpusSet['avgLetters'],'\n'
+			if math.fabs(corpusSet['CLIB'] - CLIB) > 5:
+				print '\nCLIB score off, is:', CLIB, 'should be:',corpusSet['CLIB']
+				print 'Frequency common words off, is:',freqCommonWords, ' should be:', corpusSet['freqCommonWords'] 
+				print 'avgLetters per word off, is:', avgLetters, ' should be:', corpusSet['avgLetters']
+				print 'typeTokenFrequency off, is:', typeTokenFrequency, ' should be:',corpusSet['typeTokenFrequency']
+				print 'avgWords per sentence off, is:', avgWords, ' should be:', corpusSet['avgWords'], '\n'
 
 			# Put data in the JSON object
 			item['aviScore'] = aviScore
@@ -119,6 +146,46 @@ def prepareText(body):
 		text += line
 	print(text)
 	return text
+
+
+# find words which are too long in the current paragraph
+def findLongWords(text, avgLettersCorpus):
+
+	wordLengthThreshold = avgLettersCorpus + 2
+	highlightWords = []
+	sentences = text.splitlines()
+
+	for sentence in sentences:
+		if sentence:
+			words = re.split('\s',sentence)
+			for word in words:
+				if (len(word) - avgLettersCorpus) > wordLengthThreshold:
+					highlightWords.append(word)
+
+	return highlightWords
+	
+	
+
+# find setences which are too short or long, depending on the deviation of the average
+def findLongSentences(text, avgWords, avgWordsCorpus):
+	
+	sentenceLowerHigher = avgWords - avgWordsCorpus
+	sentenceLengthThreshold = avgWordsCorpus + 3
+	sentences = text.splitlines()
+	highlightSentences = []
+
+	for sentence in sentences:
+		if sentence:
+			# hightlight long sentences if the average sentence is too long
+			if ((len(sentence) - avgWordsCorpus) > sentenceLengthThreshold) and (sentenceLowerHigher > 0):
+					highlightSentences.append(sentence)
+			# hightlight short sentences if the average sentence is too short
+			if ((len(sentence) - avgWordsCorpus) < sentenceLengthThreshold) and (sentenceLowerHigher < 0):
+					highlightSentences.append(sentence)
+	
+	return highlightSentences
+
+
 
 # This function states the commandline arguments that are needed
 # for the program to run.
