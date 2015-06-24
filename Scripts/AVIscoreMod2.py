@@ -21,7 +21,7 @@ def mainAVI(text):
 
 	#print(text)
 	sentences = text.splitlines()
-
+	
 	for sentence in sentences:
 		if sentence:
 			totSentences += 1

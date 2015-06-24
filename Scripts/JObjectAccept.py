@@ -11,8 +11,11 @@ import textDifferenceMod
 
 # accepts a JSON object, unpacks it, analyzes it and sends it back
 def main(obj):
-	avgLettersThreshold = 1.0
-	avgWordsThreshold = 3.0
+	standardDeviationLetters = 1.2 # need to calculate this
+	standardDeviationWords = 1.0 # still need to calculate this
+	avgWordsThreshold = 2.1 + standardDeviationWords
+	avgLettersThreshold = 0.0
+
 
 	#print(obj)
 	index = -1
@@ -43,6 +46,7 @@ def main(obj):
 		if body:
 			text = body.encode('utf-8')
 			text = prepareText(body)
+			avgLettersThreshold = 0.0
 											
 			# Calculate metrics of current text
 			(aviScore,totWords,totSentences,aviAge) = AVIscoreMod.mainAVI(text)
@@ -64,34 +68,42 @@ def main(obj):
 
 			# Delete dummy from JSON object
 			item['highlights'] = []			
-
-			# Find words which deviate from the average in length, and put them in the JSON object
-			if((avgLetters - corpusSet['avgLetters']) > avgLettersThreshold):
-				print 'avgLetters moeten worden gehighlight'
-				highlightWords = findLongWords(text, corpusSet['avgLetters'])
-				for word in highlightWords:
-					item['highlights'].append({'text':word, 'color':1, 'hint':1})
-
-			# Find sentences which deviate from the average in length, and put them in the JSON object
-			if(math.fabs(avgWords - corpusSet['avgWords']) > avgWordsThreshold):
-				highlightSentences = findLongSentences(text, avgWords, corpusSet['avgWords'])
-				for sentence in highlightSentences:
-					item['highlights'].append({'text':sentence, 'color':5, 'hint':5})
 				
 			print('Highlights:')
 			print(item['highlights'])
 
+			wordHighlights= False
+			sentenceHighlights = False
+			
 			# calculate difference between corpus and paragraph
 			if math.fabs(corpusSet['CILT'] - CILT) > 5:
+				wordHighlights = True
+				avgLettersThreshold = 0.405 + standardDeviationLetters
 				print '\nCILT score off, is:', CILT, 'should be:',corpusSet['CILT']
 				print 'Frequency common words off, is:', freqCommonWords, ' should be:', corpusSet['freqCommonWords'] 
 				print 'avgLetters per word off, is:', avgLetters, ' should be:', corpusSet['avgLetters'],'\n'
-			if math.fabs(corpusSet['CLIB'] - CLIB) > 5:
+			if math.fabs(corpusSet['CLIB'] - CLIB) > 3:
+				wordHighlights = True
+				sentenceHighlights = True
+				avgLettersThreshold = 0.45432 + standardDeviationLetters
 				print '\nCLIB score off, is:', CLIB, 'should be:',corpusSet['CLIB']
 				print 'Frequency common words off, is:',freqCommonWords, ' should be:', corpusSet['freqCommonWords'] 
 				print 'avgLetters per word off, is:', avgLetters, ' should be:', corpusSet['avgLetters']
 				print 'typeTokenFrequency off, is:', typeTokenFrequency, ' should be:',corpusSet['typeTokenFrequency']
 				print 'avgWords per sentence off, is:', avgWords, ' should be:', corpusSet['avgWords'], '\n'
+
+
+			# Find words which deviate from the average in length, and put them in the JSON object
+			if(((avgLetters - corpusSet['avgLetters']) > avgLettersThreshold) and wordHighlights):
+				highlightWords = findLongWords(text, corpusSet['avgLetters'],avgLettersThreshold)
+				for word in highlightWords:
+					item['highlights'].append({'text':word, 'color':1, 'hint':1})
+
+			# Find sentences which deviate from the average in length, and put them in the JSON object
+			if((math.fabs(avgWords - corpusSet['avgWords']) > avgWordsThreshold) and sentenceHighlights):
+				highlightSentences = findLongSentences(text, avgWords, corpusSet['avgWords'],avgWordsThreshold)
+				for sentence in highlightSentences:
+					item['highlights'].append({'text':sentence, 'color':5, 'hint':5})
 
 			# Put data in the JSON object
 			item['aviScore'] = aviScore
@@ -149,9 +161,8 @@ def prepareText(body):
 
 
 # find words which are too long in the current paragraph
-def findLongWords(text, avgLettersCorpus):
+def findLongWords(text, avgLettersCorpus, avgLettersThreshold):
 
-	wordLengthThreshold = avgLettersCorpus + 2
 	highlightWords = []
 	sentences = text.splitlines()
 
@@ -159,7 +170,7 @@ def findLongWords(text, avgLettersCorpus):
 		if sentence:
 			words = re.split('\s',sentence)
 			for word in words:
-				if (len(word) - avgLettersCorpus) > wordLengthThreshold:
+				if (len(word) - avgLettersCorpus) > avgLettersThreshold:
 					highlightWords.append(word)
 
 	return highlightWords
@@ -167,20 +178,19 @@ def findLongWords(text, avgLettersCorpus):
 	
 
 # find setences which are too short or long, depending on the deviation of the average
-def findLongSentences(text, avgWords, avgWordsCorpus):
+def findLongSentences(text, avgWords, avgWordsCorpus, avgWordsThreshold):
 	
 	sentenceLowerHigher = avgWords - avgWordsCorpus
-	sentenceLengthThreshold = avgWordsCorpus + 3
 	sentences = text.splitlines()
 	highlightSentences = []
 
 	for sentence in sentences:
 		if sentence:
 			# hightlight long sentences if the average sentence is too long
-			if ((len(sentence) - avgWordsCorpus) > sentenceLengthThreshold) and (sentenceLowerHigher > 0):
+			if ((len(sentence) - avgWordsCorpus) > avgWordsThreshold) and (sentenceLowerHigher > 0):
 					highlightSentences.append(sentence)
 			# hightlight short sentences if the average sentence is too short
-			if ((len(sentence) - avgWordsCorpus) < sentenceLengthThreshold) and (sentenceLowerHigher < 0):
+			if ((len(sentence) - avgWordsCorpus) < -avgWordsThreshold) and (sentenceLowerHigher < 0):
 					highlightSentences.append(sentence)
 	
 	return highlightSentences
