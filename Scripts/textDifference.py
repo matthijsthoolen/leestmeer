@@ -5,11 +5,7 @@ import sys, argparse, re, pickle, math
 import ngramProfiler
 import ast
 
-<<<<<<< HEAD
 def main(corpus,paragraph):
-=======
-def main(corpus, paragraph):
->>>>>>> 9fd9337d5e4c2eb301a64baac81ebeb66d102dfa
 	try:
 		with open(corpus, 'rb') as f:
 
@@ -32,22 +28,12 @@ def main(corpus, paragraph):
 
 def calcDiffUw(P1, P2):
 	D = 0.0
-<<<<<<< HEAD
-=======
-
-	P1l = Counter(list(P1))
->>>>>>> 9fd9337d5e4c2eb301a64baac81ebeb66d102dfa
 	P2l = Counter(list(P2))
 	P1l = Counter(list(P1))
 	plusje = P2l + P1l
 
 	intrsct = []
 
-<<<<<<< HEAD
-	
-
-=======
->>>>>>> 9fd9337d5e4c2eb301a64baac81ebeb66d102dfa
 	# Find intersection between P1 and P2
 	for x in P2l:
 		if x in P1l:
