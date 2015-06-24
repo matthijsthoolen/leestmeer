@@ -6,7 +6,7 @@ import sys, getopt, argparse, re, math, pickle
 # This is the main function of the code which calculates the CITO score
 
 def main():
-	List = ['www.3fm.nl', 'www.360magazine.nl', 'www.bright.nl', 'www.kidsweek.nl', 'www.nos.nl', 'www.nrc.nl', 'www.politie.nl']
+	List = ['www.3fm.nl', 'www.360magazine.nl', 'www.bright.nl', 'www.kidsweek.nl', 'www.nos.nl', 'www.nrc.nl', 'www.sevendays.nl']
 	standards = {}
 	for source in List:
 		print(source)
@@ -67,9 +67,9 @@ def main2(corpus, output, common):
 
 	uniqueWords = Counter(allWords.split())
 	# print(list(uniqueWords.elements()))
-	typeTokenFrequency = len(uniqueWords) / totWords
+	typeTokenFrequency = (len(uniqueWords) * 1.0) / totWords
 
-	commonFile = open(common, encoding='utf-8', mode='r')
+	commonFile = open(common, mode='r')
 	commonText = commonFile.read()
 	commonLines = commonText.splitlines()
 	commonWords = re.split(',', commonText)
@@ -81,13 +81,10 @@ def main2(corpus, output, common):
 		totCommonWords += uniqueWords[commonWord]
 	print('totCommonwords: ' + str(totCommonWords))
 		
-	freqCommonWords = totCommonWords / totWords
+	freqCommonWords = (totCommonWords * 1.0) / totWords 
 
-	if output=='debug':
-		print(sentences)
-
-	avgWords = totWords/totSentences
-	avgLetters = totLetters/totWords
+	avgWords = totWords/(totSentences * 1.0)
+	avgLetters = totLetters/(totWords * 1.0)
 
 	if output=='debug':
 		print('Average amount of words per sentence: ' + str(avgWords))
