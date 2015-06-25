@@ -84,12 +84,18 @@ def main(obj):
 			
 			# calculate difference between corpus and paragraph
 			if math.fabs(corpusSet['CILT'] - CILT) > 5:
+				item['checks']['wordHighlights'] = True
+				item['checks']['freqCommonWordsHighlights'] = True
 				wordHighlights = True
 				avgLettersThreshold = 0.405 + standardDeviationLetters
 				print '\nCILT score off, is:', CILT, 'should be:',corpusSet['CILT']
 				print 'Frequency common words off, is:', freqCommonWords, ' should be:', corpusSet['freqCommonWords'] 
 				print 'avgLetters per word off, is:', avgLetters, ' should be:', corpusSet['avgLetters'],'\n'
 			if math.fabs(corpusSet['CLIB'] - CLIB) > 3:
+				item['checks']['sentenceHighlights'] = True
+				item['checks']['typeTokenFrequencyHighlights'] = True
+				item['checks']['wordHighlights'] = True
+				item['checks']['freqCommonWordsHighlights'] = True
 				wordHighlights = True
 				sentenceHighlights = True
 				avgLettersThreshold = 0.45432 + standardDeviationLetters
@@ -102,16 +108,12 @@ def main(obj):
 
 			# Find words which deviate from the average in length, and put them in the JSON object
 			if(((avgLetters - corpusSet['avgLetters']) > avgLettersThreshold) and wordHighlights):
-				item['checks']['wordHighlights'] = True
-				item['checks']['freqCommonWordsHighlights'] = True
 				highlightWords = findLongWords(text, corpusSet['avgLetters'],avgLettersThreshold)
 				for word in highlightWords:
 					item['highlights'].append({'text':word, 'color':1, 'hint':1})
 
 			# Find sentences which deviate from the average in length, and put them in the JSON object
 			if((math.fabs(avgWords - corpusSet['avgWords']) > avgWordsThreshold) and sentenceHighlights):
-				item['checks']['sentenceHighlights'] = True
-				item['checks']['typeTokenFrequencyHighlights'] = True
 				highlightSentences = findLongSentences(text, avgWords, corpusSet['avgWords'],avgWordsThreshold)
 				for sentence in highlightSentences:
 					item['highlights'].append({'text':sentence, 'color':5, 'hint':5})
