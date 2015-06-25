@@ -11,13 +11,11 @@ import textDifferenceMod
 
 # accepts a JSON object, unpacks it, analyzes it and sends it back
 def main(obj):
-	standardDeviationLetters = 1.2 # need to calculate this
+	standardDeviationLetters = 1.2 # still need to calculate this
 	standardDeviationWords = 1.0 # still need to calculate this
 	avgWordsThreshold = 2.1 + standardDeviationWords
 	avgLettersThreshold = 0.0
 
-
-	#print(obj)
 	index = -1
 	avgSentence = 0
 	numSentences = 0
@@ -30,7 +28,6 @@ def main(obj):
 	# Get corpus statistics
 	corpusText = obj['corpus'][0]
 	corpusSet = pickle.load(open(corpus + '_averages', 'rb'))
-	#corpusSet = pickle.load(open('database\\' + corpus, 'rb'))
 	corpusText['avgLetters'] = corpusSet['avgLetters']
 	corpusText['freqCommonWords'] = corpusSet['freqCommonWords']
 	corpusText['typeTokenFrequency'] = corpusSet['typeTokenFrequency']
@@ -60,7 +57,7 @@ def main(obj):
 			# Do a POStag analysis on the text, and calculate ngrams of those
 			POStags = tagger.getPOStags(text)
 			nGrams = ngramProfiler.main(POStags,3)
-			resemblance = textDifferenceMod.main(corpus + '_POS_nGrams',POStags)
+			resemblance = textDifference.main(corpus + '_POS_nGrams',POStags)
 			#print 'paragraph resemblance:',resemblance
 
 

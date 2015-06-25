@@ -3,10 +3,13 @@
 from collections import Counter
 import sys, getopt, argparse, re, math
 
-# This is the main function of the code which calculates the CITO score
+# This is the main function of the code which calculates the CITO scores
+# for a text and returns them and their variables as a tuple
 
 def mainCITO(text):
-	common = 'database/common.txt'
+
+	# Instantiates various variables
+	common = 'database/common.txt' #text file of common words (hardcoded)
 	lettersCount = 0
 	totLetters = 0
 	totSentences = 0
@@ -14,14 +17,15 @@ def mainCITO(text):
 	totWords = 0
 	avgLetters = 0
 	allWords = ""
+
+	# Loops through all sentences in the text, removes various punctuation marks
+	# and counts the words and letters.
 	sentences = text.splitlines()	
-	#sentences = re.split('\.[\s|\n]|\!+|\?+',text)
 	for sentence in sentences:
 		if sentence:
 			wordCount = 0
 			if sentence:
 				totSentences += 1
-
 			words = re.split('\s+',sentence)
 			wordCount += len(words)
 			for word in words:
@@ -29,20 +33,24 @@ def mainCITO(text):
 				totLetters += lettersCount
 				allWords += word + ' '
 			totWords += wordCount
-		
+	
+	# Count up all unique words and calculate the type-token-frequency
 	uniqueWords = Counter(allWords.split())
 	typeTokenFrequency = (len(uniqueWords) * 1.0) / totWords
 	
+	# Opens the text file of common words
 	commonFile = open(common)
 	commonText = commonFile.read()
 	commonWords = re.split(',', commonText)
 	totCommonWords = 0
 	
+	# Counts how many words in the text are common words
 	for commonWord in commonWords:
 		totCommonWords = totCommonWords + uniqueWords[commonWord]
 
-	freqCommonWords = (totCommonWords * 1.0) / totWords 
-
+	# Calculations for some of the variables in the CITO formulas
+	# The '*1.0' are fixes for integer divisions
+	freqCommonWords = (totCommonWords * 1.0) / (totWords*1.0) 
 	avgWords = totWords/(totSentences * 1.0)
 	avgLetters = totLetters/(totWords * 1.0)
 

@@ -4,15 +4,15 @@ import sys, getopt, argparse, re
 from itertools import permutations
 
 # Prepares an already tagged corpus and creates N-Gram model
+# This code is used for strings of text.
 def main(text, n):
 	words = prepareText(text,n)
 	nGrams = makeNgrams(n, words)
-	# if n == 3:
-	# 	del nGrams['</s> <s> <s>']
 	c = Counter(nGrams)
 	return c
 
-
+# Prepares the tagged text by adding the START and STOP symbols based on
+# the nGram size.
 def prepareText(corpus, n):
 	lines = corpus.splitlines()
 	words = []
@@ -40,9 +40,7 @@ def makeNgrams(n, words):
 # for the program to run.
 if __name__ == "__main__":
 	parser = argparse.ArgumentParser()
-	# parser.add_argument("-corpus", "--corpus", help="File of corpus")
 	parser.add_argument("-text", "--text", help="Text as string")
-	parser.add_argument("-n")
-	#Name and location of the text file to be parsed
+	parser.add_argument("-n" help="The size of the nGrams (std:3)", default=3)
 	args = parser.parse_args()
 	main(args.text, args.n)
