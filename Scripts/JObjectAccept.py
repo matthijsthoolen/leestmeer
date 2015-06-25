@@ -156,7 +156,7 @@ def prepareText(body):
 		line += '\n'
 		#print(line)
 		text += line
-	print(text)
+	#print(text)
 	return text
 
 
