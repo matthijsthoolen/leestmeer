@@ -6,7 +6,7 @@ import AVIscoreMod2 as AVIscoreMod
 import CITOMod2 as CITOMod
 import POStagger_text as tagger
 import ngramProfiler 
-import textDifference
+import textDifferenceMod
 
 
 # accepts a JSON object, unpacks it, analyzes it and sends it back
@@ -57,7 +57,7 @@ def main(obj):
 			# Do a POStag analysis on the text, and calculate ngrams of those
 			POStags = tagger.getPOStags(text)
 			nGrams = ngramProfiler.main(POStags,3)
-			resemblance = textDifference.main(corpus + '_POS_nGrams',POStags)
+			resemblance = textDifferenceMod.main(corpus + '_POS_nGrams',POStags)
 			#print 'paragraph resemblance:',resemblance
 
 
@@ -71,10 +71,10 @@ def main(obj):
 			# Delete dummy highlights from JSON object, and set the word
 			item['highlights'] = []	
 			item['checks'] = []
-			item['checks']['wordHighlights'] = false
-			item['checks']['sentenceHighlights'] = false
-			item['checks']['freqCommonWordsHighlights'] = false
-			item['checks']['typeTokenFrequencyHighlights'] = false
+			item['checks']['wordHighlights'] = False
+			item['checks']['sentenceHighlights'] = False
+			item['checks']['freqCommonWordsHighlights'] = False
+			item['checks']['typeTokenFrequencyHighlights'] = False
 				
 			print('Highlights:')
 			print(item['highlights'])

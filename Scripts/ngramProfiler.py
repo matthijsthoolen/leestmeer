@@ -41,6 +41,6 @@ def makeNgrams(n, words):
 if __name__ == "__main__":
 	parser = argparse.ArgumentParser()
 	parser.add_argument("-text", "--text", help="Text as string")
-	parser.add_argument("-n" help="The size of the nGrams (std:3)", default=3)
+	parser.add_argument("-n", help="The size of the nGrams (std:3)", default=3)
 	args = parser.parse_args()
 	main(args.text, args.n)

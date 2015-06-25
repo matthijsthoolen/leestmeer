@@ -12,7 +12,7 @@ def main(corpus,paragraph):
 			# get corpus, is a list of tupples
 			P1 = pickle.load(f)
 
-			paragraph = 'database\\tests\\3fm_POS'
+			#paragraph = 'database\\tests\\3fm_POS'
 			print ('Score of ' + str(corpus) + ' for '  + str(paragraph))
 			# analyze current text, returns counter
 			file = open(paragraph, 'r')
