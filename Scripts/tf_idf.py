@@ -5,6 +5,7 @@ from collections import OrderedDict
 import sys, getopt, re, pickle,math
 from itertools import permutations
 
+# Calculates the Inverse Document Frequency for the corpus POS nGram profiles
 def main():
 	fm = pickle.load(open('database/www.3fm.nl_POS_nGrams', 'rb'))
 	threesixty = pickle.load(open('database/www.360magazine.nl_POS_nGrams', 'rb'))
@@ -15,24 +16,14 @@ def main():
 	sevendays = pickle.load(open('database/www.sevendays.nl_POS_nGrams', 'rb'))
 	List = [(fm,'3fm_POS_nGrams'), (threesixty, '360_POS_nGrams'), (bright, 'bright_POS_nGrams'), (kidsweek, 'kidsweek_POS_nGrams'), (nos, 'nos_POS_nGrams'), (nrc, 'nrc_POS_nGrams'), (sevendays, 'sevendays_POS_nGrams')]
 	for source,name in List:
-<<<<<<< HEAD
 		tot = sum(source.values())
-=======
-		print(source)
-		# tot = sum(source.values())
->>>>>>> 9fd9337d5e4c2eb301a64baac81ebeb66d102dfa
 		for (x,m) in source:
 			freq = 0
 			for source2,name2 in List:
 				if source2[x] > 0:
-					# print(str(x) + ': ' + str(source[x]))
 					freq += 1
 			source[x] = (source[x]/tot) * (1+math.log10(7/freq))
-			# print(source[x])
 		with open('database\\' +name + '_idf', 'wb') as f:
-			print(name)
-			print(source)
-			# print(name)
 			pickle.dump(source, f, protocol=2)
 
 

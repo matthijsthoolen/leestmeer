@@ -3,7 +3,8 @@
 from collections import Counter
 import sys, getopt, argparse, re, math, pickle
 
-# This is the main function of the code which calculates the CITO score
+# This is the code which calculates the CITO score for a corpus of text
+# and dumps it into a pickled file as a dictionary
 
 def main():
 	List = ['www.3fm.nl', 'www.360magazine.nl', 'www.bright.nl', 'www.kidsweek.nl', 'www.nos.nl', 'www.nrc.nl', 'www.sevendays.nl']
@@ -11,9 +12,8 @@ def main():
 	for source in List:
 		print(source)
 		corpus = 'database\\' + source
-		output = 'banaan'
 		common = 'database\\common.txt'
-		(CLIB, CILT, avgLetters, freqCommonWords, typeTokenFrequency, avgWords) = main2(corpus, output, common)
+		(CLIB, CILT, avgLetters, freqCommonWords, typeTokenFrequency, avgWords) = main2(corpus, common)
 		standards['CLIB'] = CLIB
 		standards['CILT'] = CILT
 		standards['avgLetters'] = avgLetters
@@ -24,99 +24,69 @@ def main():
 		pickle.dump(standards,file,protocol=2)
 		file.close()
 
-def main2(corpus, output, common):
+# Calculates the different values of the CITO scores (CLIB and CILT) and
+# returns them as a tuple.
+
+def main2(corpus, common):
 	try:
 		file = open(corpus, mode='r')
 		text = file.read()
-		# text = text.replace('\.\n','\. ').replace('\n','')
 		file.close()	
 	except IOError:	
 		print('Cannot open '+corpus)
 		sys.exit()
 
+	# Instantiates various variables
 	lettersCount = 0
 	totLetters = 0
 	totSentences = 0
-	avgWords = 0
+	avgWords = 0.0
 	totWords = 0
-	avgLetters = 0
+	avgLetters = 0.0
 	allWords = ""
-	# punc = re.compile(':|,|;')
-	# text = punc.sub(text)
-	# text = re.replace(':|,|;', '', text)
+
+	# Loops through all sentences in the text, removes various punctuation marks
+	# and counts the words and letters.
 	sentences = text.splitlines()
 	for sentence in sentences:
-		# sentence = sentence.replace('[:|,|;|-]', '')
 		sentence = re.sub(r'[:|,|;|-]', '', sentence)
-		# print(sentence)
 		wordCount = 0
 		if sentence:
 			totSentences += 1
-
 		words = re.split('\s+',sentence)
 		wordCount += len(words)
 		for word in words:
-			lettersCount = countLetters(word)
-			if (lettersCount > 0) & (output=='debug'):
-				print(word + ': ' +  str(lettersCount))
-			totLetters += lettersCount
+			totLetters += len(word)
 			allWords += word + ' '
 		totWords += wordCount
-		# print(allWords)
-		# allWords += words
 
+	# Count up all unique words and calculate the type-token-frequency
 	uniqueWords = Counter(allWords.split())
-	# print(list(uniqueWords.elements()))
-	typeTokenFrequency = (len(uniqueWords) * 1.0) / totWords
+	typeTokenFrequency = (len(uniqueWords) * 1.0) / totWords *1.0
 
+	# Opens the text file of common words
 	commonFile = open(common, mode='r')
 	commonText = commonFile.read()
 	commonLines = commonText.splitlines()
 	commonWords = re.split(',', commonText)
 	totCommonWords = 0
 
+	# Counts how many words in the text are common words
 	for commonWord in commonWords:
-		# if uniqueWords[commonWord] > 5:
-		# 	print(str(commonWord + ' exists: '+ str(uniqueWords[commonWord])))
 		totCommonWords += uniqueWords[commonWord]
-	print('totCommonwords: ' + str(totCommonWords))
-		
-	freqCommonWords = (totCommonWords * 1.0) / totWords 
 
+	# Calculations for some of the variables in the CITO formulas
+	# The '*1.0' are fixes for integer divisions
+	freqCommonWords = (totCommonWords * 1.0) / (totWords * 1.0)
 	avgWords = totWords/(totSentences * 1.0)
 	avgLetters = totLetters/(totWords * 1.0)
 
-	if output=='debug':
-		print('Average amount of words per sentence: ' + str(avgWords))
-		print('Average amount of letters per word: ' + str(avgLetters))
-
-	print(avgLetters)
-	print(freqCommonWords)
-	print(typeTokenFrequency)
-	print(avgWords)
+	# The acutal CITO score calculations
 	CLIB = 46 - 6.603 * avgLetters + 0.474 * freqCommonWords - 0.365 * typeTokenFrequency + 1.425 * avgWords
 	CILT = 105 - (114.49 + 0.28 * freqCommonWords - 12.33 * avgLetters)
 
-# if output=='CLIB':
-	print('CLIB: ' + str(CLIB))
-	# return CLIB
-# elif output=='CILT':
-	print('CILT: ' + str(CILT))
-	# return CILT
 	return (CLIB, CILT, avgLetters, freqCommonWords, typeTokenFrequency, avgWords)
 
-
-def countLetters(word):
-	return len(word)
-
-
-# This function states the commandline arguments that are needed
-# for the program to run.
+# Code necessary to make this file run from the console
 if __name__ == "__main__":
-	# parser = argparse.ArgumentParser()
-	# parser.add_argument("-corpus", "--corpus", help="Textfile of corpus", default="input.txt")
-	# parser.add_argument("-output", "--output", help="Give the type of output, CLIB=CLIB score, CILT=CILT score, debug=info", default="debug")
-	# parser.add_argument("-common", "--common", help="Textfile of common words", default="database\\common.txt")
-	# args = parser.parse_args()
-	# main(args.corpus, args.output, args.common)
 	main()

@@ -30,8 +30,6 @@ def main(paragraph):
 # for the program to run.
 if __name__ == "__main__":
 	parser = argparse.ArgumentParser()
-	parser.add_argument("-corpus", "--corpus", help="File of corpus")
-	# parser.add_argument("-text", "--text", help="Text as string")
-	#Name and location of the text file to be parsed
+	parser.add_argument("-corpus", "--corpus", help="Paragraph of text")
 	args = parser.parse_args()
 	main(args.corpus)

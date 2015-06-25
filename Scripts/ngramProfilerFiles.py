@@ -6,6 +6,7 @@ import sys, getopt, argparse, re, pickle, math
 from itertools import permutations
 
 # Prepares an already tagged corpus and creates N-Gram model
+# This code is for the use on files of text.
 def main(corpus, n):
 	file = open(corpus, 'r')
 	text = file.read()
@@ -19,7 +20,8 @@ def main(corpus, n):
 	file.close()
 
 
-# append start/end symbols to each sentence
+# Prepares the tagged text by adding the START and STOP symbols based on
+# the nGram size.
 def prepareText(corpus, n):
 	lines = corpus.splitlines()
 	words = []
@@ -42,7 +44,7 @@ def prepareText(corpus, n):
 def makeNgrams(n, words):
 	# Make n-grams of words, and ignore n-grams only consisting of start/ends and 
 	# n-grams only existing of unknown words
-	ignore = {'</s> <s> <s>','</s> <s> <s> <s>','Misc Misc Misc'}
+	ignore = {'</s> <s> <s>','Misc Misc Misc'}
 	nGrams = Counter([' '.join(words[i:i+n]) for i in range(len(words)-n+1) if ' '.join(words[i:i+n]) not in ignore])
 	
 	print("Unique nGrams:")
@@ -59,9 +61,7 @@ def makeNgrams(n, words):
 # for the program to run.
 if __name__ == "__main__":
 	parser = argparse.ArgumentParser()
-	# parser.add_argument("-corpus", "--corpus", help="File of corpus")
-	parser.add_argument("-corpus", "--corpus", help="file")
-	parser.add_argument("-n")
-	#Name and location of the text file to be parsed
+	parser.add_argument("-corpus", "--corpus", help="file of text")
+	parser.add_argument("-n" help="The size of the nGrams (std:3)", default=3)
 	args = parser.parse_args()
 	main(args.corpus, args.n)
