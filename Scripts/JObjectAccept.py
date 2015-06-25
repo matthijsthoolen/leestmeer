@@ -41,9 +41,14 @@ def main(obj):
 
 	# Analyze each paragraph
 	for item in parObj:
+		hasContent = False
 		index += 1
 		body = item['paragraph']		
-		if body:
+		testSen = body.splitlines()
+		for sen in testSen:
+			if sen:
+				hasContent = True
+		if hasContent:
 			text = body.encode('utf-8')
 			text = prepareText(body)
 			avgLettersThreshold = 0.0
