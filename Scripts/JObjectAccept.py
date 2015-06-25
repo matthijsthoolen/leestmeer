@@ -41,9 +41,14 @@ def main(obj):
 
 	# Analyze each paragraph
 	for item in parObj:
+		hasContent = False
 		index += 1
 		body = item['paragraph']		
-		if body:
+		testSen = body.splitlines()
+		for sen in testSen:
+			if sen:
+				hasContent = True
+		if hasContent:
 			text = body.encode('utf-8')
 			text = prepareText(body)
 			avgLettersThreshold = 0.0
@@ -66,8 +71,13 @@ def main(obj):
 			#		-> te kort: sidebar
 			# avgWords -> 
 
-			# Delete dummy from JSON object
-			item['highlights'] = []			
+			# Delete dummy highlights from JSON object, and set the word
+			item['highlights'] = []	
+			item['checks'] = []
+			item['checks']['wordHighlights'] = false
+			item['checks']['sentenceHighlights'] = false
+			item['checks']['freqCommonWordsHighlights'] = false
+			item['checks']['typeTokenFrequencyHighlights'] = false
 				
 			print('Highlights:')
 			print(item['highlights'])
@@ -95,12 +105,16 @@ def main(obj):
 
 			# Find words which deviate from the average in length, and put them in the JSON object
 			if(((avgLetters - corpusSet['avgLetters']) > avgLettersThreshold) and wordHighlights):
+				item['checks']['wordHighlights'] = true
+				item['checks']['freqCommonWordsHighlights'] = true
 				highlightWords = findLongWords(text, corpusSet['avgLetters'],avgLettersThreshold)
 				for word in highlightWords:
 					item['highlights'].append({'text':word, 'color':1, 'hint':1})
 
 			# Find sentences which deviate from the average in length, and put them in the JSON object
 			if((math.fabs(avgWords - corpusSet['avgWords']) > avgWordsThreshold) and sentenceHighlights):
+				item['checks']['sentenceHighlights'] = true
+				item['checks']['typeTokenFrequencyHighlights'] = true
 				highlightSentences = findLongSentences(text, avgWords, corpusSet['avgWords'],avgWordsThreshold)
 				for sentence in highlightSentences:
 					item['highlights'].append({'text':sentence, 'color':5, 'hint':5})

@@ -59,6 +59,8 @@ def main(corpus, output):
 	
 	if output=='avi':
 		print('AVI Score: ' + str(aviScore))
+		if aviScore<0:
+			aviScore = 0
 		return aviScore
 	elif output=='age':
 		if (aviAge > 0):
