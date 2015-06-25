@@ -70,7 +70,7 @@ def main(obj):
 
 			# Delete dummy highlights from JSON object, and set the word
 			item['highlights'] = []	
-			item['checks'] = []
+			#item['checks'] = {}
 			item['checks']['wordHighlights'] = False
 			item['checks']['sentenceHighlights'] = False
 			item['checks']['freqCommonWordsHighlights'] = False
@@ -102,16 +102,16 @@ def main(obj):
 
 			# Find words which deviate from the average in length, and put them in the JSON object
 			if(((avgLetters - corpusSet['avgLetters']) > avgLettersThreshold) and wordHighlights):
-				item['checks']['wordHighlights'] = true
-				item['checks']['freqCommonWordsHighlights'] = true
+				item['checks']['wordHighlights'] = True
+				item['checks']['freqCommonWordsHighlights'] = True
 				highlightWords = findLongWords(text, corpusSet['avgLetters'],avgLettersThreshold)
 				for word in highlightWords:
 					item['highlights'].append({'text':word, 'color':1, 'hint':1})
 
 			# Find sentences which deviate from the average in length, and put them in the JSON object
 			if((math.fabs(avgWords - corpusSet['avgWords']) > avgWordsThreshold) and sentenceHighlights):
-				item['checks']['sentenceHighlights'] = true
-				item['checks']['typeTokenFrequencyHighlights'] = true
+				item['checks']['sentenceHighlights'] = True
+				item['checks']['typeTokenFrequencyHighlights'] = True
 				highlightSentences = findLongSentences(text, avgWords, corpusSet['avgWords'],avgWordsThreshold)
 				for sentence in highlightSentences:
 					item['highlights'].append({'text':sentence, 'color':5, 'hint':5})
