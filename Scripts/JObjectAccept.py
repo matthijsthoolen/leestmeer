@@ -6,7 +6,7 @@ import AVIscoreMod2 as AVIscoreMod
 import CITOMod2 as CITOMod
 import POStagger_text as tagger
 import ngramProfiler 
-import textDifference
+import textDifferenceMod
 
 
 # accepts a JSON object, unpacks it, analyzes it and sends it back
