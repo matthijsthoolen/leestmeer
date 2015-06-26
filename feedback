@@ -1,0 +1,42 @@
+Raquel shit:
+
+- front page: add your full names and the name and details of the client
+
+- end product: you need to make a bit more clear what the end product you are delivering is; you should be able to describe this at a high level in a couple of lines; it should already appear in the abstract (and also later). Don't say "CITO score" in the abstract, nobody will understand it before having read the report.
+
+- the structure of section 2 could be improved; perhaps sections 2.1-2.3 are part of one subsection separately from 2.4?
+
+- "Resulting Product Vision" is a weird name. A vision is something you start with or that generally defines your aims, but it's not "resulting". Do you perhaps mean resulting end product here? and if so, shouldn't this be section 3?
+
+- overall the bibliography and citation policy is poor, you need to provide references for everything (NLTK, the POS tagger you use, the AVI score, etc, everything and the first time you mention something).
+
+- at the beginning of the conclusion you must restate again what you are delivering as a result of the project (the first sentence is too vague).
+
+
+
+Sander:
+In the end a reader must be able to understand what you set out to do, how you did that, and whether (and why!) it was successful or not. Prioritize your efforts on making a convincing case on the knowledge you are contributing with this report. I don't expect you to fully resolve all the points in the remaining time.
+
+You end the abstract with a pretty bold statement (this method is DEMONSTRATED to be a better ... than with higher NLP), this statement is not supported by your report. Even apart from the fact that you probably should compare it explicitly with POS tagging and not with NLP in general. Either show conclusively that the statement is true, or tone it down. Or else you'll receive the wrath of any present NLP experts ;)
+
+2.1, an important nuance is that AVI can classify all documents in the sense that it can classify them as "above 11 years". Now you can rightfully question whether that is enough for the application that you are working with, but it might be good enough for other applications. So a rephrasing would be more acurate where AVI can actually classify every text, but it cannot support every target audience.
+
+2.4, "Dubenaderentch" news agencies? I'm probably the only person in the world who doesn't know that name, but it would be good if you could either explain in a footnote or include a reference
+
+3.4, include reference to the Wiktionary source where you retrieved the common words
+
+4, this is really a combination of Results/Analysis with Conclusion/Discussion and Future Work/Client recommendations sections. Take them apart.
+
+page 8/ 2nd paragraph, I can vaguely understand this because I remember our discussions, but you should really try to explain it better. I would expect section 3.5 to contain this. Explain how you compare (i.e. calculate) the similarity between the trigrams of POS tags in both the text and the corpus, explain what it means linguistically and what type of feedback it could generate.
+
+page 8, the appropriate reference to figures always includes the word figure, as numbers can also refer to tables. The LaTeX snipped I normally used is "Figure~\figref{..}".
+
+page 8/ caption Fig 1, "NOS"? Of course I understand what you mean, but it is the first time you use this is the report. Readers will be left guessing whether it is some new abbreviation for normalized POS tags or something else. Introduce this earlier in the article and refer to it with the word "dataset" or "articles" to make it more clear.
+
+page 8/ caption Fig 1, Is it the plot of frequencies of POS tags or of trigrams of POS tags?
+
+How do you know? Show this somehow. Some initial ideas: Try to show the histogram distributions of CILB and CILT metrics for the different sources. Or plot the clusters of the different sources on the CILB and CILT dimensions in a 2D scatter plot. Or show a box-plot of the distribution of CILB and CILT metric values for all articles in the different clusters
+
+References: Use the "url" package to properly format url's that have underscores in them
+
+nowhere, I'm really missing the step from metrics to generating suggestions. I wouldn't go as far as saying you explicitly state you have done that, but you at least mention several times that it is (a crucial) part of the application. So if you did indeed manage to do this then explain how this works, preferably including examples of paragraphs with their resulting feedback. And even better would be to show and characterize examples of where the approach would not provide desireable feedback. In case you haven't managed to actually implement this step, which is possible, show how you would image this step to happen given what you have right now. Due to your own setup you've raised a curiosity about this feedback and stated that it is an important element (which I agree on), but I feel like not much of that curiosity has been answered at the end.

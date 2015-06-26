@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 
 from collections import Counter
-import sys, getopt, argparse, re, math
+import sys, getopt, re, math
+
 
 # This is the main function of the code which calculates the AVI score
 # for a body of text. It does this by first calculating the average
@@ -11,28 +12,20 @@ import sys, getopt, argparse, re, math
 # This code is mostly unused in the final product implementation
 # however it might still be used if it's decided that the AVI score
 # should be more prominent later on.
-def main(corpus, output):
-	try:
-		file = open(corpus, encoding='utf-8', mode='r')
-		text = file.read()
-		text = text.replace('\n',' ').replace('\"','')
-		file.close()	
-	except IOError:	
-		print('Cannot open '+corpus)
-		sys.exit()
 
+def mainAVI(text):
 	# Instantiates various variables
 	wordCount = 0
 	syllableCount = 0
 	totWords = 0
 	totSyllables = 0
 	totSentences = 0
-	avgWords = 0
-	avgSyllables = 0
+	avgWords = 0.0
+	avgSyllables = 0.0
 
-	# Loops over all sentences and calculates the average amount of syllables
-	# and words per sentence
-	sentences = re.split('\.[\s|\n]|\!+|\?+',text)
+	# Loops over all sentences in the text and calculates the average amount
+	# of syllables and words.
+	sentences = text.splitlines()
 	for sentence in sentences:
 		if sentence:
 			totSentences += 1
@@ -41,27 +34,16 @@ def main(corpus, output):
 			for word in words:
 				syllableCount = countSyllables(word)
 				totSyllables += syllableCount
-			totWords += wordCoun
-	avgWords = totWords/totSentences
-	avgSyllables = totSyllables/totWords
+			totWords += wordCount
+	avgWords = totWords / (totSentences*1.0)
+	avgSyllables = totSyllables / (totWords*1.0)
 
-	# Calculates the AVI-score and the subsequent AVI-age group
+	# The actual calculations of the AVI-score and subsequent AVI-age group
 	aviScore = math.ceil(195 - (2 * avgWords) - (200/3*avgSyllables)-0.5)
 	aviAge = calcAge(aviScore)
-	
-	if output=='avi':
-		print('AVI Score: ' + str(aviScore))
-		if aviScore < 0:
-			aviScore = 0
-		return aviScore
-	elif output=='age':
-		if (aviAge > 0):
-			print('AVI Age: ' + str(aviAge))
-			return aviAge
-		else:
-			print('output unspecified')
-			return 'unspecified'
-			
+
+	return (aviScore,totWords,totSentences,aviAge)
+		
 #aviScore is used to calculate the AVI Age
 def calcAge(aviScore):
 	if 127 >= aviScore >= 123:
@@ -118,24 +100,14 @@ def isSyllable(curLetter, prevLetter):
 # difficulties with encoding.
 # Once fixed, the appropriate code can be uncommented to allow it to function again.
 def syllableExceptions(curLetter, prevLetter):
+	curLetter = curLetter.encode('utf-8')#.decode('latin-1')
+	prevLetter = prevLetter.encode('utf-8')#.decode('latin-1')
 	e = 'E'
 	a = 'A'
-	# trema = 'ËÏ'
+# 	trema = 'ËÏ'
 	if not(e.find(prevLetter.upper()) == -1):
 		if not(a.find(curLetter.upper()) == -1):
 			return  True	
-
-	# if not(trema.find(curLetter.upper()) == -1):
-	# 	return True
-
-	return False
-
-
-# This function states the commandline arguments that are needed
-# for the program to run.
-if __name__ == "__main__":
-	parser = argparse.ArgumentParser()
-	parser.add_argument("-corpus", "--corpus", help="Textfile of corpus", default="input.txt")
-	parser.add_argument("-output", "--output", help="Give the type of output, avi=avi score, age=avi age, debug=info", default="avi")
-	args = parser.parse_args()
-	main(args.corpus, args.output)
+# 	if not(trema.find(curLetter.upper()) == -1):
+# 		return True
+ 	return False

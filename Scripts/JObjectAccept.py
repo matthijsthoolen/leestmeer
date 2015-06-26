@@ -2,11 +2,11 @@
 
 from collections import Counter
 import sys, getopt, argparse, re, math, json, pickle
-import AVIscoreMod2 as AVIscoreMod
+import AVIscore
 import CITOMod2 as CITOMod
 import POStagger_text as tagger
-import ngramProfiler 
-import textDifferenceMod
+import ngramProfiler_text
+import textDifference
 
 
 # accepts a JSON object, unpacks it, analyzes it and sends it back
@@ -51,13 +51,13 @@ def main(obj):
 			avgLettersThreshold = 0.0
 											
 			# Calculate metrics of current text
-			(aviScore,totWords,totSentences,aviAge) = AVIscoreMod.mainAVI(text)
+			(aviScore,totWords,totSentences,aviAge) = AVIscore.mainAVI(text)
 			(CLIB, CILT, avgLetters, freqCommonWords, typeTokenFrequency, avgWords) = CITOMod.mainCITO(text)
 											
 			# Do a POStag analysis on the text, and calculate ngrams of those
 			POStags = tagger.getPOStags(text)
-			nGrams = ngramProfiler.main(POStags,3)
-			resemblance = textDifferenceMod.main(corpus + '_POS_nGrams',POStags)
+			nGrams = ngramProfiler_text.main(POStags,3)
+			resemblance = textDifference.main(corpus + '_POS_nGrams',POStags)
 			#print 'paragraph resemblance:',resemblance
 
 
@@ -137,7 +137,7 @@ def main(obj):
 
 
 	overall = obj['overall'][0]
-	(aviScore,totWords,totSentences,aviAge) = AVIscoreMod.mainAVI(totalText)
+	(aviScore,totWords,totSentences,aviAge) = AVIscore.mainAVI(totalText)
 	(CLIB, CILT, avgLetters, freqCommonWords, typeTokenFrequency, avgWords) = CITOMod.mainCITO(totalText)
 	overall['aviScore'] = aviScore
 	overall['aviAge'] = aviAge

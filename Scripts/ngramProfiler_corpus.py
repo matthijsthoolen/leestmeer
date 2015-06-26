@@ -6,7 +6,7 @@ import sys, getopt, argparse, re, pickle, math
 from itertools import permutations
 
 # Prepares an already tagged corpus and creates N-Gram model
-# This code is for the use on files of text.
+# This code is for the use on files of text. (such as corpora files)
 def main(corpus, n):
 	file = open(corpus, 'r')
 	text = file.read()
@@ -62,6 +62,6 @@ def makeNgrams(n, words):
 if __name__ == "__main__":
 	parser = argparse.ArgumentParser()
 	parser.add_argument("-corpus", "--corpus", help="file of text")
-	parser.add_argument("-n" help="The size of the nGrams (std:3)", default=3)
+	parser.add_argument("-n", help="The size of the nGrams (std:3)", default=3)
 	args = parser.parse_args()
 	main(args.corpus, args.n)
