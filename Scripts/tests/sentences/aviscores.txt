@@ -1,6 +1,0 @@
-#test	syllables	calculation	score	level
-sentence1	11	177-81.48=	96	5
-sentence2	30	182.33-105.26=	77	9
-sentence3	11	175-73.34=	102	4
-special1 	3	193-200=	-7	>9
-special2 	2	193-133.33=	60	>9

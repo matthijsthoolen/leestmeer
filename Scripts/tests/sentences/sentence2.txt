@@ -1,1 +1,0 @@
-Dit is een test bestand. Hiermee testen wij de AVI-Score. De script wordt geacht de score juist te berekenen.
