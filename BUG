@@ -1,0 +1,3 @@
+Currently, there exists a bug in the text editor that causes random and intermittant crashes when loading up large articles. 
+The specific source of this bug is a large amount of paragraphs separated by hard returns. 
+We have been unable to fix this before handing in the final product.
