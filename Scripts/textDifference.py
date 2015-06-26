@@ -2,7 +2,7 @@
 
 from collections import Counter
 import sys, argparse, re, pickle, math
-import ngramProfiler
+import ngramProfiler_text
 import ast
 
 # This file calculates the text difference based on the POS Ngrams, between a corpus and a text.
@@ -18,7 +18,7 @@ def main(corpus,text):
 			print 'Score of ', corpus
 			print 'For ', text
 			# analyze current text, returns counter
-			P2 = ngramProfiler.main(text,3)
+			P2 = ngramProfiler_text.main(text,3)
 
 			return(calcDiffUw(P1, P2))
 	except IOError: 

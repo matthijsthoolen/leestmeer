@@ -3,7 +3,7 @@
 from collections import Counter
 import sys, getopt, argparse, re, math, json, pickle
 import AVIscore
-import CITOMod2 as CITOMod
+import CITOscore_text
 import POStagger_text as tagger
 import ngramProfiler_text
 import textDifference
@@ -52,7 +52,7 @@ def main(obj):
 											
 			# Calculate metrics of current text
 			(aviScore,totWords,totSentences,aviAge) = AVIscore.mainAVI(text)
-			(CLIB, CILT, avgLetters, freqCommonWords, typeTokenFrequency, avgWords) = CITOMod.mainCITO(text)
+			(CLIB, CILT, avgLetters, freqCommonWords, typeTokenFrequency, avgWords) = CITOscore_text.mainCITO(text)
 											
 			# Do a POStag analysis on the text, and calculate ngrams of those
 			POStags = tagger.getPOStags(text)
@@ -138,7 +138,7 @@ def main(obj):
 
 	overall = obj['overall'][0]
 	(aviScore,totWords,totSentences,aviAge) = AVIscore.mainAVI(totalText)
-	(CLIB, CILT, avgLetters, freqCommonWords, typeTokenFrequency, avgWords) = CITOMod.mainCITO(totalText)
+	(CLIB, CILT, avgLetters, freqCommonWords, typeTokenFrequency, avgWords) = CITOscore_text.mainCITO(totalText)
 	overall['aviScore'] = aviScore
 	overall['aviAge'] = aviAge
 	index = -1

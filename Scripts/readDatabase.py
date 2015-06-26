@@ -2,7 +2,6 @@
 import sys, getopt, re, urlparse, chardet
 from bs4 import BeautifulSoup as BS
 import cPickle as pickle
-import AVIscoreMod
 
 def main():
 	# Opens the pickled file as 'content'. This is a dictionary of features
